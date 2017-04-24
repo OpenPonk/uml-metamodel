@@ -1,6 +1,6 @@
 initialization
 initializeDirectGeneralizations
-	generalizations := {
+	directGeneralizations := {
 		sharedGeneralizations at: #Class.
 		sharedGeneralizations at: #Association.
 	}

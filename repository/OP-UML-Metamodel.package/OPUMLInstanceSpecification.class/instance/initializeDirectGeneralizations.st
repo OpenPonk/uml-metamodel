@@ -1,6 +1,6 @@
 initialization
 initializeDirectGeneralizations
-	generalizations := {
+	directGeneralizations := {
 		sharedGeneralizations at: #DeploymentTarget.
 		sharedGeneralizations at: #PackageableElement.
 		sharedGeneralizations at: #DeployedArtifact.

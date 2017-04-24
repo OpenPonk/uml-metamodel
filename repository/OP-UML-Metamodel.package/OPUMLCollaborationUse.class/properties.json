@@ -11,5 +11,5 @@
 	"name" : "OPUMLCollaborationUse",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

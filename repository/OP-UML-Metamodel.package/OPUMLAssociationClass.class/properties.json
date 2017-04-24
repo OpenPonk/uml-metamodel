@@ -10,5 +10,5 @@
 	"name" : "OPUMLAssociationClass",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

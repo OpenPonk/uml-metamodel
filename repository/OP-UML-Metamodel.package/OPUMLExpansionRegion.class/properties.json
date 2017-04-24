@@ -12,5 +12,5 @@
 	"name" : "OPUMLExpansionRegion",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

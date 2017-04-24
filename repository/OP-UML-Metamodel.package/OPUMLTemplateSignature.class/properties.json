@@ -12,5 +12,5 @@
 	"name" : "OPUMLTemplateSignature",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

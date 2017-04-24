@@ -12,5 +12,5 @@
 	"name" : "OPUMLClassifierTemplateParameter",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

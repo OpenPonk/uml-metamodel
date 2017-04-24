@@ -14,5 +14,5 @@
 	"name" : "OPUMLLifeline",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

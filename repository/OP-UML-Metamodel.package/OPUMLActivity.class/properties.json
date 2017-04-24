@@ -17,5 +17,5 @@
 	"name" : "OPUMLActivity",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

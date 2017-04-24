@@ -1,6 +1,6 @@
 initialization
 initializeDirectGeneralizations
-	generalizations := {
+	directGeneralizations := {
 		sharedGeneralizations at: #MultiplicityElement.
 		sharedGeneralizations at: #TypedElement.
 		sharedGeneralizations at: #Feature.

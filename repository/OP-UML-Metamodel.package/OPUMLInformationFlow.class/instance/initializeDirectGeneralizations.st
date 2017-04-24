@@ -1,6 +1,6 @@
 initialization
 initializeDirectGeneralizations
-	generalizations := {
+	directGeneralizations := {
 		sharedGeneralizations at: #DirectedRelationship.
 		sharedGeneralizations at: #PackageableElement.
 	}

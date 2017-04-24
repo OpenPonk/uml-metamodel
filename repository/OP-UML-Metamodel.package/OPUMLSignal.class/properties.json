@@ -10,5 +10,5 @@
 	"name" : "OPUMLSignal",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

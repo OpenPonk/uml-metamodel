@@ -12,5 +12,5 @@
 	"name" : "OPUMLCombinedFragment",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

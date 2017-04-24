@@ -11,5 +11,5 @@
 	"name" : "OPUMLPackageMerge",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

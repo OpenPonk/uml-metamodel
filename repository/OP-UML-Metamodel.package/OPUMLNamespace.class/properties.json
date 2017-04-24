@@ -15,5 +15,5 @@
 	"name" : "OPUMLNamespace",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

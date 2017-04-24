@@ -1,6 +1,6 @@
 initialization
 initializeDirectGeneralizations
-	generalizations := {
+	directGeneralizations := {
 		sharedGeneralizations at: #TemplateableElement.
 		sharedGeneralizations at: #ParameterableElement.
 		sharedGeneralizations at: #BehavioralFeature.

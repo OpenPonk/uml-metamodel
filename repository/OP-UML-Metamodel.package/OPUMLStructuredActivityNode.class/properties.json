@@ -16,5 +16,5 @@
 	"name" : "OPUMLStructuredActivityNode",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

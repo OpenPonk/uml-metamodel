@@ -11,5 +11,5 @@
 	"name" : "OPUMLFeature",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

@@ -15,5 +15,5 @@
 	"name" : "OPUMLBehavioralFeature",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

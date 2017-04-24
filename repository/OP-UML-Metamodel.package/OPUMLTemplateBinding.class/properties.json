@@ -12,5 +12,5 @@
 	"name" : "OPUMLTemplateBinding",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

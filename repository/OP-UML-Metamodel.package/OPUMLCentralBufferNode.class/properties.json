@@ -10,5 +10,5 @@
 	"name" : "OPUMLCentralBufferNode",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

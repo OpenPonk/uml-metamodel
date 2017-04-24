@@ -1,5 +1,4 @@
 initialization
 initializeDirectGeneralizations
-	generalizations := {
-		sharedGeneralizations at: #Element.
+	directGeneralizations := {
 	}

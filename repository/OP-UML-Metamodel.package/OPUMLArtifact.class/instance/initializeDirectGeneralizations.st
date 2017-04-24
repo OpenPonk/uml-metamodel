@@ -1,6 +1,6 @@
 initialization
 initializeDirectGeneralizations
-	generalizations := {
+	directGeneralizations := {
 		sharedGeneralizations at: #Classifier.
 		sharedGeneralizations at: #DeployedArtifact.
 	}

@@ -11,5 +11,5 @@
 	"name" : "OPUMLDurationConstraint",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

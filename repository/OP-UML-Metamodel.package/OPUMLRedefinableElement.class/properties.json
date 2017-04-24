@@ -12,5 +12,5 @@
 	"name" : "OPUMLRedefinableElement",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

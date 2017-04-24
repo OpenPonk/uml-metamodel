@@ -10,5 +10,5 @@
 	"name" : "OPUMLLiteralReal",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

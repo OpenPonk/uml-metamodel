@@ -12,5 +12,5 @@
 	"name" : "OPUMLDeployment",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

@@ -12,5 +12,5 @@
 	"name" : "OPUMLOccurrenceSpecification",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

@@ -10,5 +10,5 @@
 	"name" : "OPUMLActionExecutionSpecification",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

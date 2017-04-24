@@ -12,5 +12,5 @@
 	"name" : "OPUMLReadLinkObjectEndQualifierAction",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

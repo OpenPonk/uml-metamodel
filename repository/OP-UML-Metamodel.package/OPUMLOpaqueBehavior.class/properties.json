@@ -11,5 +11,5 @@
 	"name" : "OPUMLOpaqueBehavior",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

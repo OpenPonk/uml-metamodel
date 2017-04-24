@@ -17,5 +17,5 @@
 	"name" : "OPUMLParameter",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }

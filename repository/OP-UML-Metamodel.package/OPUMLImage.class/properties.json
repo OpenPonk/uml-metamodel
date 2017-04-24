@@ -12,5 +12,5 @@
 	"name" : "OPUMLImage",
 	"pools" : [
 		 ],
-	"super" : "OPUMLBootstrapObject",
+	"super" : "OPUMLElement",
 	"type" : "normal" }
