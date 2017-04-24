@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfUMLMetamodel",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/24/2017 23:48",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfUMLMetamodel",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
