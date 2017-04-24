@@ -1,0 +1,19 @@
+{
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"extendedRegion",
+		"transition",
+		"stateMachine",
+		"subvertex",
+		"state",
+		"redefinitionContext" ],
+	"name" : "OPUMLRegion",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "OP-UML-Metamodel-SimpleClassifiers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"ownedAttribute",
+		"ownedOperation" ],
+	"name" : "OPUMLDataType",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

@@ -1,0 +1,18 @@
+{
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"ownedEnd",
+		"endType",
+		"isDerived",
+		"memberEnd",
+		"navigableOwnedEnd" ],
+	"name" : "OPUMLAssociation",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

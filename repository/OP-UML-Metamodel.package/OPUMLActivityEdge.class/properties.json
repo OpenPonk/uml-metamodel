@@ -1,0 +1,23 @@
+{
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"activity",
+		"guard",
+		"redefinedEdge",
+		"weight",
+		"inPartition",
+		"interrupts",
+		"inStructuredNode",
+		"inGroup",
+		"target",
+		"source" ],
+	"name" : "OPUMLActivityEdge",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

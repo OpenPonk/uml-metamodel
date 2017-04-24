@@ -1,0 +1,29 @@
+{
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"inheritedMember",
+		"substitution",
+		"generalization",
+		"attribute",
+		"ownedTemplateSignature",
+		"general",
+		"powertypeExtent",
+		"templateParameter",
+		"isFinalSpecialization",
+		"representation",
+		"redefinedClassifier",
+		"ownedUseCase",
+		"collaborationUse",
+		"isAbstract",
+		"feature",
+		"useCase" ],
+	"name" : "OPUMLClassifier",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

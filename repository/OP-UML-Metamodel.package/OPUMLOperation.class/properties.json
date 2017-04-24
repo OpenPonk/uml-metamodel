@@ -1,0 +1,29 @@
+{
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"redefinedOperation",
+		"datatype",
+		"lower",
+		"bodyCondition",
+		"precondition",
+		"ownedParameter",
+		"templateParameter",
+		"isQuery",
+		"isUnique",
+		"upper",
+		"owningClass",
+		"interface",
+		"type",
+		"isOrdered",
+		"raisedException",
+		"postcondition" ],
+	"name" : "OPUMLOperation",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

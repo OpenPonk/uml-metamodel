@@ -1,0 +1,15 @@
+{
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"signal",
+		"target" ],
+	"name" : "OPUMLSendSignalAction",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

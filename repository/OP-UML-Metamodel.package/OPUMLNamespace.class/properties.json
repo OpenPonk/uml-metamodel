@@ -1,0 +1,19 @@
+{
+	"category" : "OP-UML-Metamodel-CommonStructure",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"packageImport",
+		"member",
+		"ownedMember",
+		"importedMember",
+		"elementImport",
+		"ownedRule" ],
+	"name" : "OPUMLNamespace",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

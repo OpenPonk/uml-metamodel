@@ -1,0 +1,15 @@
+{
+	"category" : "OP-UML-Metamodel-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"minint",
+		"maxint" ],
+	"name" : "OPUMLInteractionConstraint",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

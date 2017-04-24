@@ -1,0 +1,22 @@
+{
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"redefinitionContext",
+		"source",
+		"effect",
+		"guard",
+		"container",
+		"target",
+		"kind",
+		"trigger",
+		"redefinedTransition" ],
+	"name" : "OPUMLTransition",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

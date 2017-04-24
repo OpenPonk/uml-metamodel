@@ -1,0 +1,15 @@
+{
+	"category" : "OP-UML-Metamodel-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"fragment",
+		"guard" ],
+	"name" : "OPUMLInteractionOperand",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

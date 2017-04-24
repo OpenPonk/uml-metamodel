@@ -1,0 +1,15 @@
+{
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"featuringClassifier",
+		"isStatic" ],
+	"name" : "OPUMLFeature",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

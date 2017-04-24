@@ -1,0 +1,17 @@
+{
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"general",
+		"isSubstitutable",
+		"generalizationSet",
+		"specific" ],
+	"name" : "OPUMLGeneralization",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

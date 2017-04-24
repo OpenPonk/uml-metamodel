@@ -1,0 +1,17 @@
+{
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"outputValue",
+		"inputValue",
+		"body",
+		"language" ],
+	"name" : "OPUMLOpaqueAction",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

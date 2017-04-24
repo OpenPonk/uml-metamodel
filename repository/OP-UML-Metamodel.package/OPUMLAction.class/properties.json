@@ -1,0 +1,19 @@
+{
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"localPostcondition",
+		"localPrecondition",
+		"context",
+		"input",
+		"isLocallyReentrant",
+		"output" ],
+	"name" : "OPUMLAction",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

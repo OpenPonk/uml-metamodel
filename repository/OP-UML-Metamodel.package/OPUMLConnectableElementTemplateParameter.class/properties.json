@@ -1,0 +1,14 @@
+{
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"parameteredElement" ],
+	"name" : "OPUMLConnectableElementTemplateParameter",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

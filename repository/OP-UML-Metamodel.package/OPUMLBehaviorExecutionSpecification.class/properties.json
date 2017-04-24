@@ -1,0 +1,14 @@
+{
+	"category" : "OP-UML-Metamodel-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"behavior" ],
+	"name" : "OPUMLBehaviorExecutionSpecification",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

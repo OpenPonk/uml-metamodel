@@ -1,0 +1,16 @@
+{
+	"category" : "OP-UML-Metamodel-CommonStructure",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"context",
+		"specification",
+		"constrainedElement" ],
+	"name" : "OPUMLConstraint",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

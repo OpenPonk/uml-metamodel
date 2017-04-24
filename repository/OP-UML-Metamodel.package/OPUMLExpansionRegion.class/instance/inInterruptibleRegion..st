@@ -1,0 +1,3 @@
+accessing - ActivityNode
+inInterruptibleRegion: anInterruptibleActivityRegion
+	(sharedGeneralizations at: #ActivityNode) inInterruptibleRegion: anInterruptibleActivityRegion

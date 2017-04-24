@@ -1,0 +1,14 @@
+{
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"instvars" : [
+		"ownedPort" ],
+	"name" : "OPUMLEncapsulatedClassifier",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

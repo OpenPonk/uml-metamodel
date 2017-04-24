@@ -1,0 +1,17 @@
+{
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"isMultireceive",
+		"selection",
+		"isMulticast",
+		"transformation" ],
+	"name" : "OPUMLObjectFlow",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

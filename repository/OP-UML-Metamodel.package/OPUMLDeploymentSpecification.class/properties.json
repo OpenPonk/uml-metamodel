@@ -1,0 +1,16 @@
+{
+	"category" : "OP-UML-Metamodel-Deployments",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"executionLocation",
+		"deploymentLocation",
+		"deployment" ],
+	"name" : "OPUMLDeploymentSpecification",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "OP-UML-Metamodel-Values",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"symbol",
+		"operand" ],
+	"name" : "OPUMLExpression",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

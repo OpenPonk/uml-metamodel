@@ -1,0 +1,19 @@
+{
+	"category" : "OP-UML-Metamodel-SimpleClassifiers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"nestedClassifier",
+		"redefinedInterface",
+		"ownedAttribute",
+		"ownedReception",
+		"protocol",
+		"ownedOperation" ],
+	"name" : "OPUMLInterface",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

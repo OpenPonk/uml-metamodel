@@ -1,0 +1,4 @@
+accessing
+inInterruptibleRegion: anInterruptibleActivityRegion
+	"InterruptibleActivityRegions containing the ActivityNode."
+	inInterruptibleRegion := anInterruptibleActivityRegion

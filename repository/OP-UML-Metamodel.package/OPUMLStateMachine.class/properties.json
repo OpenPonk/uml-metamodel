@@ -1,0 +1,17 @@
+{
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"connectionPoint",
+		"extendedStateMachine",
+		"region",
+		"submachineState" ],
+	"name" : "OPUMLStateMachine",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

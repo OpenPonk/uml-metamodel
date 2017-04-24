@@ -1,0 +1,15 @@
+{
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
+	"instvars" : [
+		"specificMachine",
+		"generalMachine" ],
+	"name" : "OPUMLProtocolConformance",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

@@ -1,0 +1,22 @@
+{
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"decider",
+		"result",
+		"loopVariable",
+		"isTestedFirst",
+		"loopVariableInput",
+		"bodyOutput",
+		"bodyPart",
+		"setupPart",
+		"test" ],
+	"name" : "OPUMLLoopNode",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

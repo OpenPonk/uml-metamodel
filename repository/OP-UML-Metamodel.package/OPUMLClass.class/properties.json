@@ -1,0 +1,21 @@
+{
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"nestedClassifier",
+		"superClass",
+		"isActive",
+		"ownedAttribute",
+		"isAbstract",
+		"ownedReception",
+		"ownedOperation",
+		"extension" ],
+	"name" : "OPUMLClass",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

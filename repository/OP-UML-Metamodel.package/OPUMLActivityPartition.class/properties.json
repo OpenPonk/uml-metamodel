@@ -1,0 +1,20 @@
+{
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"instvars" : [
+		"represents",
+		"isDimension",
+		"node",
+		"edge",
+		"isExternal",
+		"subpartition",
+		"superPartition" ],
+	"name" : "OPUMLActivityPartition",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

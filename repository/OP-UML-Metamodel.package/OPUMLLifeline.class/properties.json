@@ -1,0 +1,18 @@
+{
+	"category" : "OP-UML-Metamodel-Interactions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"coveredBy",
+		"decomposedAs",
+		"represents",
+		"interaction",
+		"selector" ],
+	"name" : "OPUMLLifeline",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

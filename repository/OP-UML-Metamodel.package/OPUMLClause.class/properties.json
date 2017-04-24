@@ -1,0 +1,19 @@
+{
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"instvars" : [
+		"body",
+		"decider",
+		"predecessorClause",
+		"successorClause",
+		"test",
+		"bodyOutput" ],
+	"name" : "OPUMLClause",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

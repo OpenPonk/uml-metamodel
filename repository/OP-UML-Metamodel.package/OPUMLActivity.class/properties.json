@@ -1,0 +1,21 @@
+{
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"instvars" : [
+		"isSingleExecution",
+		"group",
+		"node",
+		"edge",
+		"structuredNode",
+		"variable",
+		"isReadOnly",
+		"partition" ],
+	"name" : "OPUMLActivity",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }

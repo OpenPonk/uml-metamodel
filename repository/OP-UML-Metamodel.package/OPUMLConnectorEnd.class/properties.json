@@ -1,0 +1,16 @@
+{
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"instvars" : [
+		"role",
+		"definingEnd",
+		"partWithPort" ],
+	"name" : "OPUMLConnectorEnd",
+	"pools" : [
+		 ],
+	"super" : "OPUMLBootstrapObject",
+	"type" : "normal" }
