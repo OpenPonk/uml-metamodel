@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
 	"instvars" : [
-		"condition",
-		"parameter" ],
+		"conditions",
+		"parameters" ],
 	"name" : "OPUMLParameterSet",
 	"pools" : [
 		 ],

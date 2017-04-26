@@ -8,11 +8,11 @@
 	"instvars" : [
 		"activity",
 		"mustIsolate",
-		"structuredNodeInput",
-		"edge",
-		"node",
-		"structuredNodeOutput",
-		"variable" ],
+		"nodes",
+		"edges",
+		"structuredNodeInputs",
+		"variables",
+		"structuredNodeOutputs" ],
 	"name" : "OPUMLStructuredActivityNode",
 	"pools" : [
 		 ],

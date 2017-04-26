@@ -7,7 +7,7 @@
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
 	"instvars" : [
 		"ownedTemplateSignature",
-		"templateBinding" ],
+		"templateBindings" ],
 	"name" : "OPUMLTemplateableElement",
 	"pools" : [
 		 ],

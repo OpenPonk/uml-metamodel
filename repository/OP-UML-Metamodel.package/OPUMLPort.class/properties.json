@@ -7,12 +7,12 @@
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
 	"instvars" : [
 		"isBehavior",
-		"required",
-		"redefinedPort",
-		"provided",
+		"requireds",
+		"redefinedPorts",
 		"isService",
 		"protocol",
-		"isConjugated" ],
+		"isConjugated",
+		"provideds" ],
 	"name" : "OPUMLPort",
 	"pools" : [
 		 ],

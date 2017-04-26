@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
 	"instvars" : [
-		"toBefore",
+		"toBefores",
 		"covered",
-		"toAfter" ],
+		"toAfters" ],
 	"name" : "OPUMLOccurrenceSpecification",
 	"pools" : [
 		 ],

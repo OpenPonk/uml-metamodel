@@ -9,8 +9,8 @@
 		"directGeneralizations",
 		"sharedGeneralizations",
 		"owner",
-		"ownedComment",
-		"ownedElement" ],
+		"ownedElements",
+		"ownedComments" ],
 	"name" : "OPUMLElement",
 	"pools" : [
 		 ],

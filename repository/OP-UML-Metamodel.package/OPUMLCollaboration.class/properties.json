@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
-		"collaborationRole" ],
+		"collaborationRoles" ],
 	"name" : "OPUMLCollaboration",
 	"pools" : [
 		 ],

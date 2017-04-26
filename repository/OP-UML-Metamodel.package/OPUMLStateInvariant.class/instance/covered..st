@@ -1,3 +1,4 @@
-accessing - InteractionFragment
+accessing
 covered: aLifeline
-	(sharedGeneralizations at: #InteractionFragment) covered: aLifeline
+	"References the Lifeline on which the StateInvariant appears."
+	covered := aLifeline

@@ -1,3 +1,4 @@
-accessing - InstanceSpecification
-classifier: aClassifier
-	(sharedGeneralizations at: #InstanceSpecification) classifier: aClassifier
+accessing
+classifier: anEnumeration
+	"The classifier of this EnumerationLiteral derived to be equal to its Enumeration."
+	classifier := anEnumeration

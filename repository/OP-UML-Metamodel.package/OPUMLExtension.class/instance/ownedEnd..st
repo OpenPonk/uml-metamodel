@@ -1,3 +1,4 @@
-accessing - Association
-ownedEnd: aProperty
-	(sharedGeneralizations at: #Association) ownedEnd: aProperty
+accessing
+ownedEnd: anExtensionEnd
+	"References the end of the extension that is typed by a Stereotype."
+	ownedEnd := anExtensionEnd

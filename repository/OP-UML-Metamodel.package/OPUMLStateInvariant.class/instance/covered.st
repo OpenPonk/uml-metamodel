@@ -1,3 +1,4 @@
-accessing - InteractionFragment
+accessing
 covered
-	^ (sharedGeneralizations at: #InteractionFragment) covered
+	"References the Lifeline on which the StateInvariant appears."
+	^ covered

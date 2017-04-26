@@ -6,12 +6,12 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
-		"localPostcondition",
-		"localPrecondition",
+		"outputs",
+		"inputs",
+		"localPostconditions",
 		"context",
-		"input",
 		"isLocallyReentrant",
-		"output" ],
+		"localPreconditions" ],
 	"name" : "OPUMLAction",
 	"pools" : [
 		 ],

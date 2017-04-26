@@ -13,7 +13,7 @@
 		"container",
 		"target",
 		"kind",
-		"trigger",
+		"triggers",
 		"redefinedTransition" ],
 	"name" : "OPUMLTransition",
 	"pools" : [

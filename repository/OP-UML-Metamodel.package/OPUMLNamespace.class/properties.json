@@ -6,12 +6,12 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
-		"packageImport",
-		"member",
-		"ownedMember",
-		"importedMember",
-		"elementImport",
-		"ownedRule" ],
+		"elementImports",
+		"importedMembers",
+		"members",
+		"packageImports",
+		"ownedRules",
+		"ownedMembers" ],
 	"name" : "OPUMLNamespace",
 	"pools" : [
 		 ],

@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
-		"deployedElement",
-		"deployment" ],
+		"deployedElements",
+		"deployments" ],
 	"name" : "OPUMLDeploymentTarget",
 	"pools" : [
 		 ],

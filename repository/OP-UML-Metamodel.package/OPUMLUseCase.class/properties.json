@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
 	"instvars" : [
-		"extensionPoint",
-		"extend",
-		"include",
-		"subject" ],
+		"extends",
+		"extensionPoints",
+		"includes",
+		"subjects" ],
 	"name" : "OPUMLUseCase",
 	"pools" : [
 		 ],

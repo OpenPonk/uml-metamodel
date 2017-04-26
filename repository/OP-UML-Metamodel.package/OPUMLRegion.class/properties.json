@@ -7,9 +7,9 @@
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
 	"instvars" : [
 		"extendedRegion",
-		"transition",
+		"transitions",
 		"stateMachine",
-		"subvertex",
+		"subvertexs",
 		"state",
 		"redefinitionContext" ],
 	"name" : "OPUMLRegion",

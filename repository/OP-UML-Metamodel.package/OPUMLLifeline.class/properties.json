@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
 	"instvars" : [
-		"coveredBy",
-		"decomposedAs",
 		"represents",
+		"decomposedAs",
+		"coveredBies",
 		"interaction",
 		"selector" ],
 	"name" : "OPUMLLifeline",

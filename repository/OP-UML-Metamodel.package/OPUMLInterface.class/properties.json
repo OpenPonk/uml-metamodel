@@ -6,12 +6,12 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
-		"nestedClassifier",
-		"redefinedInterface",
-		"ownedAttribute",
-		"ownedReception",
+		"redefinedInterfaces",
+		"nestedClassifiers",
+		"ownedAttributes",
 		"protocol",
-		"ownedOperation" ],
+		"ownedOperations",
+		"ownedReceptions" ],
 	"name" : "OPUMLInterface",
 	"pools" : [
 		 ],

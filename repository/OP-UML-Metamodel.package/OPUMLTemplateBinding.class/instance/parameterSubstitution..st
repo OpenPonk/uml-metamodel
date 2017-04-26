@@ -1,4 +1,0 @@
-accessing
-parameterSubstitution: aTemplateParameterSubstitution
-	"The TemplateParameterSubstitutions owned by this TemplateBinding."
-	parameterSubstitution := aTemplateParameterSubstitution

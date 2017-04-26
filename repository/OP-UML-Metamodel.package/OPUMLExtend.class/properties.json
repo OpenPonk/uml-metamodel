@@ -9,7 +9,7 @@
 		"condition",
 		"extendedCase",
 		"extension",
-		"extensionLocation" ],
+		"extensionLocations" ],
 	"name" : "OPUMLExtend",
 	"pools" : [
 		 ],

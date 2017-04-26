@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
 	"instvars" : [
+		"triggers",
 		"isUnmarshall",
-		"result",
-		"trigger" ],
+		"results" ],
 	"name" : "OPUMLAcceptEventAction",
 	"pools" : [
 		 ],

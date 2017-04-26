@@ -7,7 +7,7 @@
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
 		"object",
-		"result",
+		"results",
 		"unmarshallType" ],
 	"name" : "OPUMLUnmarshallAction",
 	"pools" : [

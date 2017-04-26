@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
 	"instvars" : [
-		"ownedPort" ],
+		"ownedPorts" ],
 	"name" : "OPUMLEncapsulatedClassifier",
 	"pools" : [
 		 ],

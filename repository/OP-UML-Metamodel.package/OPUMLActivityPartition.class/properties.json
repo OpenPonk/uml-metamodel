@@ -7,11 +7,11 @@
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
 	"instvars" : [
 		"represents",
+		"nodes",
 		"isDimension",
-		"node",
-		"edge",
+		"subpartitions",
+		"edges",
 		"isExternal",
-		"subpartition",
 		"superPartition" ],
 	"name" : "OPUMLActivityPartition",
 	"pools" : [

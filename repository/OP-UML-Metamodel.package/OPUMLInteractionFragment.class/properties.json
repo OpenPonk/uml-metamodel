@@ -8,8 +8,8 @@
 	"instvars" : [
 		"enclosingOperand",
 		"enclosingInteraction",
-		"covered",
-		"generalOrdering" ],
+		"covereds",
+		"generalOrderings" ],
 	"name" : "OPUMLInteractionFragment",
 	"pools" : [
 		 ],

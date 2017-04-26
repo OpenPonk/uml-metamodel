@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
+		"generalizationSets",
 		"general",
 		"isSubstitutable",
-		"generalizationSet",
 		"specific" ],
 	"name" : "OPUMLGeneralization",
 	"pools" : [

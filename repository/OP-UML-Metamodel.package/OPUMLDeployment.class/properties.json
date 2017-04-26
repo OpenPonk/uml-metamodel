@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
 	"instvars" : [
-		"deployedArtifact",
-		"configuration",
+		"deployedArtifacts",
+		"configurations",
 		"location" ],
 	"name" : "OPUMLDeployment",
 	"pools" : [

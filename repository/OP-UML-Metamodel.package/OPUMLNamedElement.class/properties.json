@@ -10,7 +10,7 @@
 		"qualifiedName",
 		"nameExpression",
 		"name",
-		"clientDependency",
+		"clientDependencies",
 		"namespace" ],
 	"name" : "OPUMLNamedElement",
 	"pools" : [

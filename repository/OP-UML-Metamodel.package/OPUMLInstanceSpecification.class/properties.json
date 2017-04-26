@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
 	"instvars" : [
-		"classifier",
-		"slot",
+		"slots",
+		"classifiers",
 		"specification" ],
 	"name" : "OPUMLInstanceSpecification",
 	"pools" : [
