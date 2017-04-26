@@ -1,4 +1,4 @@
 accessing
 annotatedElements
 	"References the Element(s) being commented."
-	^ annotatedElements
+	^ annotatedElements ifNil: [ annotatedElements := OrderedCollection new ]

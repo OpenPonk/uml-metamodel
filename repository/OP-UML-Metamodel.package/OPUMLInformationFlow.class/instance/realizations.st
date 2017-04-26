@@ -1,4 +1,4 @@
 accessing
 realizations
 	"Determines which Relationship will realize the specified flow."
-	^ realizations
+	^ realizations ifNil: [ realizations := OrderedCollection new ]

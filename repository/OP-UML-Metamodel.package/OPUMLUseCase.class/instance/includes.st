@@ -1,4 +1,4 @@
 accessing
 includes
 	"The Include relationships owned by this UseCase."
-	^ includes
+	^ includes ifNil: [ includes := OrderedCollection new ]

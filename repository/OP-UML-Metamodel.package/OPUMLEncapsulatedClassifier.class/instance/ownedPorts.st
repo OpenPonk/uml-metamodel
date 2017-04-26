@@ -1,4 +1,4 @@
 accessing
 ownedPorts
 	"The Ports owned by the EncapsulatedClassifier."
-	^ ownedPorts
+	^ ownedPorts ifNil: [ ownedPorts := OrderedCollection new ]

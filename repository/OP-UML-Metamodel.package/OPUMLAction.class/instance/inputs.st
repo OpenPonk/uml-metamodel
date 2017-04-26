@@ -1,4 +1,4 @@
 accessing
 inputs
 	"The ordered set of InputPins representing the inputs to the Action."
-	^ inputs
+	^ inputs ifNil: [ inputs := OrderedCollection new ]

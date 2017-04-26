@@ -1,4 +1,4 @@
 accessing
 structuredNodes
 	"Top-level StructuredActivityNodes in the Activity."
-	^ structuredNodes
+	^ structuredNodes ifNil: [ structuredNodes := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 parameterSubstitutions
 	"The TemplateParameterSubstitutions owned by this TemplateBinding."
-	^ parameterSubstitutions
+	^ parameterSubstitutions ifNil: [ parameterSubstitutions := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 nestedClassifiers
 	"The Classifiers owned by the Class that are not ownedBehaviors."
-	^ nestedClassifiers
+	^ nestedClassifiers ifNil: [ nestedClassifiers := OrderedCollection new ]

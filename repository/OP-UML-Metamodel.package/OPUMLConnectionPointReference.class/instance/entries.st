@@ -1,4 +1,4 @@
 accessing
 entries
 	"The entryPoint Pseudostates corresponding to this connection point."
-	^ entries
+	^ entries ifNil: [ entries := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 redefinedClassifiers
 	"The Classifiers redefined by this Classifier."
-	^ redefinedClassifiers
+	^ redefinedClassifiers ifNil: [ redefinedClassifiers := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 ownedTypes
 	"References the packaged elements that are Types."
-	^ ownedTypes
+	^ ownedTypes ifNil: [ ownedTypes := OrderedCollection new ]

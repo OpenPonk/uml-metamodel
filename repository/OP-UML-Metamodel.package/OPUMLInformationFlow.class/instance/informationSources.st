@@ -1,4 +1,4 @@
 accessing
 informationSources
 	"Defines from which source the conveyed InformationItems are initiated."
-	^ informationSources
+	^ informationSources ifNil: [ informationSources := OrderedCollection new ]

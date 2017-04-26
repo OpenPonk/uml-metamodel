@@ -1,4 +1,4 @@
 accessing
 operands
 	"The set of operands of the combined fragment."
-	^ operands
+	^ operands ifNil: [ operands := OrderedCollection new ]

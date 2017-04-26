@@ -1,4 +1,4 @@
 accessing
 ownedBehaviors
 	"Behaviors owned by a BehavioredClassifier."
-	^ ownedBehaviors
+	^ ownedBehaviors ifNil: [ ownedBehaviors := OrderedCollection new ]

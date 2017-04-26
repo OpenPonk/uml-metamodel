@@ -1,4 +1,4 @@
 accessing
 generals
 	"The generalizing Classifiers for this Classifier."
-	^ generals
+	^ generals ifNil: [ generals := OrderedCollection new ]

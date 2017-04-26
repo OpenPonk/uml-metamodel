@@ -1,4 +1,4 @@
 accessing
 outputValues
 	"The OutputPins on which the OpaqueAction provides outputs."
-	^ outputValues
+	^ outputValues ifNil: [ outputValues := OrderedCollection new ]

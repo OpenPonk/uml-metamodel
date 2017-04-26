@@ -1,4 +1,4 @@
 accessing
 ownedLiterals
 	"The ordered set of literals owned by this Enumeration."
-	^ ownedLiterals
+	^ ownedLiterals ifNil: [ ownedLiterals := OrderedCollection new ]

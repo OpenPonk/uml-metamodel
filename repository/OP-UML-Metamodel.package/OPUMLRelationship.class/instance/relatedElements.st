@@ -1,4 +1,4 @@
 accessing
 relatedElements
 	"Specifies the elements related by the Relationship."
-	^ relatedElements
+	^ relatedElements ifNil: [ relatedElements := OrderedCollection new ]

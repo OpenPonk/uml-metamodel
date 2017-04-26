@@ -1,4 +1,4 @@
 accessing
 covereds
 	"References the Lifelines that the InteractionFragment involves."
-	^ covereds
+	^ covereds ifNil: [ covereds := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 ownedUseCases
 	"The UseCases owned by this classifier."
-	^ ownedUseCases
+	^ ownedUseCases ifNil: [ ownedUseCases := OrderedCollection new ]

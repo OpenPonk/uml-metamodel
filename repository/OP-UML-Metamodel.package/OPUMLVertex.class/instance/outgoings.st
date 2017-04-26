@@ -1,4 +1,4 @@
 accessing
 outgoings
 	"Specifies the Transitions departing from this Vertex."
-	^ outgoings
+	^ outgoings ifNil: [ outgoings := OrderedCollection new ]

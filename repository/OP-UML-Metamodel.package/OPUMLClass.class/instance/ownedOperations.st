@@ -1,4 +1,4 @@
 accessing
 ownedOperations
 	"The Operations owned by the Class."
-	^ ownedOperations
+	^ ownedOperations ifNil: [ ownedOperations := OrderedCollection new ]

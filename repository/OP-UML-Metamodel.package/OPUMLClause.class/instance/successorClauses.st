@@ -1,4 +1,4 @@
 accessing
 successorClauses
 	"A set of Clauses that may not evaluate their tests unless the test for this Clause evaluates to false."
-	^ successorClauses
+	^ successorClauses ifNil: [ successorClauses := OrderedCollection new ]

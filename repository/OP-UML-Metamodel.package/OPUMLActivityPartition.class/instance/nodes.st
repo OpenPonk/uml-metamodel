@@ -1,4 +1,4 @@
 accessing
 nodes
 	"ActivityNodes immediately contained in the ActivityPartition."
-	^ nodes
+	^ nodes ifNil: [ nodes := OrderedCollection new ]

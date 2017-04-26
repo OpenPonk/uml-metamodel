@@ -1,4 +1,4 @@
 accessing
 inheritedParameters
 	"The formal template parameters of the extended signatures."
-	^ inheritedParameters
+	^ inheritedParameters ifNil: [ inheritedParameters := OrderedCollection new ]

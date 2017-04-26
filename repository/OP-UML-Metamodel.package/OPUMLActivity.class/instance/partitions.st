@@ -1,4 +1,4 @@
 accessing
 partitions
 	"Top-level ActivityPartitions in the Activity."
-	^ partitions
+	^ partitions ifNil: [ partitions := OrderedCollection new ]

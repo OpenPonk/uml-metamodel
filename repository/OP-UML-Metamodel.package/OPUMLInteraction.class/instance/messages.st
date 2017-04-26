@@ -1,4 +1,4 @@
 accessing
 messages
 	"The Messages contained in this Interaction."
-	^ messages
+	^ messages ifNil: [ messages := OrderedCollection new ]

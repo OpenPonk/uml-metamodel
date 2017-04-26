@@ -1,4 +1,4 @@
 accessing
 subExpressions
 	"The StringExpressions that constitute this StringExpression."
-	^ subExpressions
+	^ subExpressions ifNil: [ subExpressions := OrderedCollection new ]

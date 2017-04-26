@@ -1,4 +1,4 @@
 accessing
 edges
 	"ActivityEdges expressing flow between the nodes of the Activity."
-	^ edges
+	^ edges ifNil: [ edges := OrderedCollection new ]

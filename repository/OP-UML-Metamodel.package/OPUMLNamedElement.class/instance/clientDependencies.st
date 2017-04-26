@@ -1,4 +1,4 @@
 accessing
 clientDependencies
 	"Indicates the Dependencies that reference this NamedElement as a client."
-	^ clientDependencies
+	^ clientDependencies ifNil: [ clientDependencies := OrderedCollection new ]

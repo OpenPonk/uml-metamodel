@@ -1,4 +1,4 @@
 accessing
 nodes
 	"ActivityNodes immediately contained in the InterruptibleActivityRegion."
-	^ nodes
+	^ nodes ifNil: [ nodes := OrderedCollection new ]

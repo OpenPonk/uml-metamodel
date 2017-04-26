@@ -1,4 +1,4 @@
 accessing
 fragments
 	"The fragments of the operand."
-	^ fragments
+	^ fragments ifNil: [ fragments := OrderedCollection new ]

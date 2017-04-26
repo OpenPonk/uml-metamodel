@@ -1,4 +1,4 @@
 accessing
 ownedRules
 	"Specifies a set of Constraints owned by this Namespace."
-	^ ownedRules
+	^ ownedRules ifNil: [ ownedRules := OrderedCollection new ]

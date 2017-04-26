@@ -1,4 +1,4 @@
 accessing
 inGroups
 	"ActivityGroups containing the ActivityNode."
-	^ inGroups
+	^ inGroups ifNil: [ inGroups := OrderedCollection new ]

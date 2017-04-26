@@ -1,4 +1,4 @@
 accessing
 collaborationUses
 	"The CollaborationUses owned by the Classifier."
-	^ collaborationUses
+	^ collaborationUses ifNil: [ collaborationUses := OrderedCollection new ]

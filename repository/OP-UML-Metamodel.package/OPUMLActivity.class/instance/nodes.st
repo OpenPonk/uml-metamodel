@@ -1,4 +1,4 @@
 accessing
 nodes
 	"ActivityNodes coordinated by the Activity."
-	^ nodes
+	^ nodes ifNil: [ nodes := OrderedCollection new ]

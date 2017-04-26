@@ -1,4 +1,4 @@
 accessing
 arguments
 	"The arguments of the Message."
-	^ arguments
+	^ arguments ifNil: [ arguments := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 packageImports
 	"References the PackageImports owned by the Namespace."
-	^ packageImports
+	^ packageImports ifNil: [ packageImports := OrderedCollection new ]

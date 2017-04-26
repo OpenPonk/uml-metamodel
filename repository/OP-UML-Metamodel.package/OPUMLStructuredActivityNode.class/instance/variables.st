@@ -1,4 +1,4 @@
 accessing
 variables
 	"The Variables defined in the scope of the StructuredActivityNode."
-	^ variables
+	^ variables ifNil: [ variables := OrderedCollection new ]

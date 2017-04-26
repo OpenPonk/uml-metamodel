@@ -1,4 +1,4 @@
 accessing
 languages
 	"If provided, a specification of the language used for each of the body Strings."
-	^ languages
+	^ languages ifNil: [ languages := OrderedCollection new ]

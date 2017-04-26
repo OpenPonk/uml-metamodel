@@ -1,4 +1,4 @@
 accessing
 structuredNodeInputs
 	"The InputPins owned by the StructuredActivityNode."
-	^ structuredNodeInputs
+	^ structuredNodeInputs ifNil: [ structuredNodeInputs := OrderedCollection new ]

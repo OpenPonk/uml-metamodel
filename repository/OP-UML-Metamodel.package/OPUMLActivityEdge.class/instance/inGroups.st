@@ -1,4 +1,4 @@
 accessing
 inGroups
 	"ActivityGroups containing the ActivityEdge."
-	^ inGroups
+	^ inGroups ifNil: [ inGroups := OrderedCollection new ]

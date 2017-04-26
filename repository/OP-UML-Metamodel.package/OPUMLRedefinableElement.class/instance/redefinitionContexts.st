@@ -1,4 +1,4 @@
 accessing
 redefinitionContexts
 	"The contexts that this element may be redefined from."
-	^ redefinitionContexts
+	^ redefinitionContexts ifNil: [ redefinitionContexts := OrderedCollection new ]

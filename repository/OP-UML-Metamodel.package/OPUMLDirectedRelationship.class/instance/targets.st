@@ -1,4 +1,4 @@
 accessing
 targets
 	"Specifies the target Element(s) of the DirectedRelationship."
-	^ targets
+	^ targets ifNil: [ targets := OrderedCollection new ]

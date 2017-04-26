@@ -1,4 +1,4 @@
 accessing
 executableNodes
 	"The ordered set of ExecutableNodes to be sequenced."
-	^ executableNodes
+	^ executableNodes ifNil: [ executableNodes := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 packagedElements
 	"Specifies the packageable elements that are owned by this Package."
-	^ packagedElements
+	^ packagedElements ifNil: [ packagedElements := OrderedCollection new ]

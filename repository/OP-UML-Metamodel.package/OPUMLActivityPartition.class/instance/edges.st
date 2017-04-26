@@ -1,4 +1,4 @@
 accessing
 edges
 	"ActivityEdges immediately contained in the ActivityPartition."
-	^ edges
+	^ edges ifNil: [ edges := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 parameterSets
 	"The ParameterSets containing the parameter. See ParameterSet."
-	^ parameterSets
+	^ parameterSets ifNil: [ parameterSets := OrderedCollection new ]

@@ -1,4 +1,4 @@
 accessing
 ownedElements
 	"The Elements owned by this Element."
-	^ ownedElements
+	^ ownedElements ifNil: [ ownedElements := OrderedCollection new ]

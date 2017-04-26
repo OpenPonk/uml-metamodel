@@ -1,4 +1,4 @@
 accessing
 parameters
 	"Parameters in the ParameterSet."
-	^ parameters
+	^ parameters ifNil: [ parameters := OrderedCollection new ]

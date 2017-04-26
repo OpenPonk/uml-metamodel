@@ -1,4 +1,4 @@
 accessing
 superClasses
 	"The superclasses of a Class, derived from its Generalizations."
-	^ superClasses
+	^ superClasses ifNil: [ superClasses := OrderedCollection new ]

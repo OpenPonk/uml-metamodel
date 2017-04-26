@@ -1,4 +1,4 @@
 accessing
 ownedAttributes
 	"The Properties owned by the StructuredClassifier."
-	^ ownedAttributes
+	^ ownedAttributes ifNil: [ ownedAttributes := OrderedCollection new ]

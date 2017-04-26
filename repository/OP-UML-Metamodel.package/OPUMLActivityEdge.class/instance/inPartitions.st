@@ -1,4 +1,4 @@
 accessing
 inPartitions
 	"ActivityPartitions containing the ActivityEdge."
-	^ inPartitions
+	^ inPartitions ifNil: [ inPartitions := OrderedCollection new ]

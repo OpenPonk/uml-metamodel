@@ -1,4 +1,4 @@
 accessing
 regions
 	"The Regions owned directly by the State."
-	^ regions
+	^ regions ifNil: [ regions := OrderedCollection new ]

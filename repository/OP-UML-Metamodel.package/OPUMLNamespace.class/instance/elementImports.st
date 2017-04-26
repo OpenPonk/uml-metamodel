@@ -1,4 +1,4 @@
 accessing
 elementImports
 	"References the ElementImports owned by the Namespace."
-	^ elementImports
+	^ elementImports ifNil: [ elementImports := OrderedCollection new ]

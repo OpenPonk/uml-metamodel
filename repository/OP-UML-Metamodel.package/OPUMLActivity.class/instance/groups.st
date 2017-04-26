@@ -1,4 +1,4 @@
 accessing
 groups
 	"Top-level ActivityGroups in the Activity."
-	^ groups
+	^ groups ifNil: [ groups := OrderedCollection new ]

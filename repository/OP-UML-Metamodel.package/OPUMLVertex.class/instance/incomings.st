@@ -1,4 +1,4 @@
 accessing
 incomings
 	"Specifies the Transitions entering this Vertex."
-	^ incomings
+	^ incomings ifNil: [ incomings := OrderedCollection new ]

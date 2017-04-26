@@ -1,4 +1,4 @@
 accessing
 ownedReceptions
 	"The Receptions owned by the Class."
-	^ ownedReceptions
+	^ ownedReceptions ifNil: [ ownedReceptions := OrderedCollection new ]

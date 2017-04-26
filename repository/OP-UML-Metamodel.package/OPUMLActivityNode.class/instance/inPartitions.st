@@ -1,4 +1,4 @@
 accessing
 inPartitions
 	"ActivityPartitions containing the ActivityNode."
-	^ inPartitions
+	^ inPartitions ifNil: [ inPartitions := OrderedCollection new ]

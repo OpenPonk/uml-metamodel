@@ -1,4 +1,4 @@
 accessing
 extendedSignatures
 	"The signatures extended by this RedefinableTemplateSignature."
-	^ extendedSignatures
+	^ extendedSignatures ifNil: [ extendedSignatures := OrderedCollection new ]

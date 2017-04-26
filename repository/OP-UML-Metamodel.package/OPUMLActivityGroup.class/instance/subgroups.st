@@ -1,4 +1,4 @@
 accessing
 subgroups
 	"Other ActivityGroups immediately contained in this ActivityGroup."
-	^ subgroups
+	^ subgroups ifNil: [ subgroups := OrderedCollection new ]

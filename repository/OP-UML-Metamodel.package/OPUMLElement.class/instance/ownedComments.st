@@ -1,4 +1,4 @@
 accessing
 ownedComments
 	"The Comments owned by this Element."
-	^ ownedComments
+	^ ownedComments ifNil: [ ownedComments := OrderedCollection new ]

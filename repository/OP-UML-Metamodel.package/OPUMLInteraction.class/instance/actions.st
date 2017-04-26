@@ -1,4 +1,4 @@
 accessing
 actions
 	"Actions owned by the Interaction."
-	^ actions
+	^ actions ifNil: [ actions := OrderedCollection new ]

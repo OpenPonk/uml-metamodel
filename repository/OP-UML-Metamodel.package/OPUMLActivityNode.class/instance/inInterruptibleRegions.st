@@ -1,4 +1,4 @@
 accessing
 inInterruptibleRegions
 	"InterruptibleActivityRegions containing the ActivityNode."
-	^ inInterruptibleRegions
+	^ inInterruptibleRegions ifNil: [ inInterruptibleRegions := OrderedCollection new ]

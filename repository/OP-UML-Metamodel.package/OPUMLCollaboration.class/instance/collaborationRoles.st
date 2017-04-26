@@ -1,4 +1,4 @@
 accessing
 collaborationRoles
 	"Represents the participants in the Collaboration."
-	^ collaborationRoles
+	^ collaborationRoles ifNil: [ collaborationRoles := OrderedCollection new ]
