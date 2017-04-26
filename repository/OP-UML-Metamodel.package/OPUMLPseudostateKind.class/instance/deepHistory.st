@@ -1,0 +1,3 @@
+accessing
+deepHistory
+	^ #PseudostateKind::deepHistory

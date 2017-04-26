@@ -1,0 +1,3 @@
+accessing
+terminate
+	^ #PseudostateKind::terminate

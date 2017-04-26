@@ -1,0 +1,3 @@
+accessing
+junction
+	^ #PseudostateKind::junction

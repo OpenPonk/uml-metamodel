@@ -1,0 +1,3 @@
+accessing
+exitPoint
+	^ #PseudostateKind::exitPoint
