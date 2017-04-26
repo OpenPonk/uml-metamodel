@@ -1,4 +1,4 @@
 accessing
 messageSort
 	"The sort of communication reflected by the Message."
-	^ messageSort
+	^ messageSort ifNil: [ messageSort := OPUMLMessageSort new synchCall ]
