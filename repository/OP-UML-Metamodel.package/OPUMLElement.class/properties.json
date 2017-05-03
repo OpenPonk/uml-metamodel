@@ -6,13 +6,11 @@
 		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
 	"instvars" : [
-		"directGeneralizations",
-		"sharedGeneralizations",
-		"owner",
 		"ownedElements",
+		"owner",
 		"ownedComments" ],
 	"name" : "OPUMLElement",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "OPUMLMetaElement",
 	"type" : "normal" }

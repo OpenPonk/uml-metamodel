@@ -7,6 +7,7 @@ SystemOrganization addCategory: 'OP-UML-Metamodel-CommonStructure'!
 SystemOrganization addCategory: 'OP-UML-Metamodel-Deployments'!
 SystemOrganization addCategory: 'OP-UML-Metamodel-InformationFlows'!
 SystemOrganization addCategory: 'OP-UML-Metamodel-Interactions'!
+SystemOrganization addCategory: 'OP-UML-Metamodel-Meta'!
 SystemOrganization addCategory: 'OP-UML-Metamodel-Packages'!
 SystemOrganization addCategory: 'OP-UML-Metamodel-SimpleClassifiers'!
 SystemOrganization addCategory: 'OP-UML-Metamodel-StateMachines'!
