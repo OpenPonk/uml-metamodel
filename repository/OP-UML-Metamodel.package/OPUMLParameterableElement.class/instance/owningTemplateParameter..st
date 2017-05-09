@@ -1,4 +1,12 @@
 accessing
 owningTemplateParameter: aTemplateParameter
 	"The formal TemplateParameter that owns this ParameterableElement."
-	owningTemplateParameter := aTemplateParameter
+	|anOldOwningTemplateParameter|
+	anOldOwningTemplateParameter := owningTemplateParameter.
+	owningTemplateParameter := aTemplateParameter.
+	OPUMLToOneLink
+		on: self
+		thisSelector: #owningTemplateParameter
+		otherSelector: #ownedParameteredElement
+		from: anOldOwningTemplateParameter
+		to: owningTemplateParameter

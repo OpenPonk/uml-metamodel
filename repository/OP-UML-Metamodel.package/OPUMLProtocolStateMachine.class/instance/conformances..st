@@ -1,4 +1,6 @@
 accessing
 conformances: aProtocolConformance
 	"Conformance between ProtocolStateMachine "
-	conformances := aProtocolConformance
+	self conformances
+		removeAll;
+		addAll: aProtocolConformance

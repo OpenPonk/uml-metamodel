@@ -1,4 +1,6 @@
 accessing
 ownedAttributes: aProperty
 	"The attributes owned by the DataType."
-	ownedAttributes := aProperty
+	self ownedAttributes
+		removeAll;
+		addAll: aProperty

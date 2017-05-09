@@ -1,3 +1,4 @@
-accessing - BehavioralFeature
+accessing
 ownedParameters
-	^ (sharedGeneralizations at: #BehavioralFeature) ownedParameters
+	"The parameters owned by this Operation."
+	^ ownedParameters ifNil: [ ownedParameters := OPUMLToManyLinks on: self opposite: #operation: ]

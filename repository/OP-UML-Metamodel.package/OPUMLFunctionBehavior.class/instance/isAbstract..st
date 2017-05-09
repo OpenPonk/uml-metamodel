@@ -1,3 +1,3 @@
-accessing - Classifier
+accessing - Class
 isAbstract: aBoolean
-	(sharedGeneralizations at: #Classifier) isAbstract: aBoolean
+	(sharedGeneralizations at: #Class) isAbstract: aBoolean

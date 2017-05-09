@@ -1,4 +1,4 @@
 accessing
 ownedTypes
 	"References the packaged elements that are Types."
-	^ ownedTypes ifNil: [ ownedTypes := OrderedCollection new ]
+	^ ownedTypes ifNil: [ ownedTypes := OPUMLToManyLinks on: self opposite: #package: ]

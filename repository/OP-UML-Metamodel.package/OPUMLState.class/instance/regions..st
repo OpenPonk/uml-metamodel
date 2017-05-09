@@ -1,4 +1,6 @@
 accessing
 regions: aRegion
 	"The Regions owned directly by the State."
-	regions := aRegion
+	self regions
+		removeAll;
+		addAll: aRegion

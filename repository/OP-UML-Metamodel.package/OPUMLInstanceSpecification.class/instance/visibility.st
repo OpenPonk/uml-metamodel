@@ -1,3 +1,3 @@
-accessing - NamedElement
+accessing - PackageableElement
 visibility
-	^ (sharedGeneralizations at: #NamedElement) visibility
+	^ (sharedGeneralizations at: #PackageableElement) visibility

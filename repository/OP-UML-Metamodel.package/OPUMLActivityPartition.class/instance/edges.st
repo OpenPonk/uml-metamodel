@@ -1,4 +1,4 @@
 accessing
 edges
 	"ActivityEdges immediately contained in the ActivityPartition."
-	^ edges ifNil: [ edges := OrderedCollection new ]
+	^ edges ifNil: [ edges := OPUMLManyToManyLinks on: self opposite: #inPartitions ]

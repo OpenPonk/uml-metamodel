@@ -1,3 +1,3 @@
-accessing - LinkAction
-endDatas: aLinkEndData
-	(sharedGeneralizations at: #LinkAction) endDatas: aLinkEndData
+accessing - CreateLinkAction
+endDatas: aLinkEndCreationData
+	(sharedGeneralizations at: #CreateLinkAction) endDatas: aLinkEndCreationData

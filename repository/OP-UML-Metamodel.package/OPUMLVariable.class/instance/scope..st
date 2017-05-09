@@ -1,4 +1,8 @@
 accessing
 scope: aStructuredActivityNode
 	"A StructuredActivityNode that owns the Variable."
-	scope := aStructuredActivityNode
+	scope := OPUMLToOneLink
+		on: self
+		update: #variables
+		from: scope
+		to: aStructuredActivityNode

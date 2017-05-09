@@ -1,3 +1,4 @@
-accessing - TemplateableElement
+accessing
 ownedTemplateSignature
-	^ (sharedGeneralizations at: #TemplateableElement) ownedTemplateSignature
+	"The optional RedefinableTemplateSignature specifying the formal template parameters."
+	^ ownedTemplateSignature

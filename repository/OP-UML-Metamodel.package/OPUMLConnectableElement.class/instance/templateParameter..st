@@ -1,3 +1,12 @@
-accessing - ParameterableElement
-templateParameter: aTemplateParameter
-	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
+accessing
+templateParameter: aConnectableElementTemplateParameter
+	"The ConnectableElementTemplateParameter for this ConnectableElement parameter."
+	|anOldTemplateParameter|
+	anOldTemplateParameter := templateParameter.
+	templateParameter := aConnectableElementTemplateParameter.
+	OPUMLToOneLink
+		on: self
+		thisSelector: #templateParameter
+		otherSelector: #parameteredElement
+		from: anOldTemplateParameter
+		to: templateParameter

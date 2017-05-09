@@ -1,4 +1,6 @@
 accessing
 containedEdges: anActivityEdge
 	"ActivityEdges immediately contained in the ActivityGroup."
-	containedEdges := anActivityEdge
+	self containedEdges
+		removeAll;
+		addAll: anActivityEdge

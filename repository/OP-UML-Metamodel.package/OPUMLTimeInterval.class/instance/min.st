@@ -1,3 +1,4 @@
-accessing - Interval
+accessing
 min
-	^ (sharedGeneralizations at: #Interval) min
+	"Refers to the TimeExpression denoting the minimum value of the range."
+	^ min

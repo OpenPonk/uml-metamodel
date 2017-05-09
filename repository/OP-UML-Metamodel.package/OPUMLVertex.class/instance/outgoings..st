@@ -1,4 +1,6 @@
 accessing
 outgoings: aTransition
 	"Specifies the Transitions departing from this Vertex."
-	outgoings := aTransition
+	self outgoings
+		removeAll;
+		addAll: aTransition

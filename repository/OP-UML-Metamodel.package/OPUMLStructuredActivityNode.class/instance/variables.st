@@ -1,4 +1,4 @@
 accessing
 variables
 	"The Variables defined in the scope of the StructuredActivityNode."
-	^ variables ifNil: [ variables := OrderedCollection new ]
+	^ variables ifNil: [ variables := OPUMLToManyLinks on: self opposite: #scope: ]

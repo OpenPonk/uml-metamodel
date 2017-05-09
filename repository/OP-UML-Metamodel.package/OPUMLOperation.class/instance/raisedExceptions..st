@@ -1,3 +1,4 @@
-accessing - BehavioralFeature
+accessing
 raisedExceptions: aType
-	(sharedGeneralizations at: #BehavioralFeature) raisedExceptions: aType
+	"The Types representing exceptions that may be raised during an invocation of this operation."
+	raisedExceptions := aType

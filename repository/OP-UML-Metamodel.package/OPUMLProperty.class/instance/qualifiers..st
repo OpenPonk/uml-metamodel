@@ -1,4 +1,6 @@
 accessing
 qualifiers: aProperty
 	"An optional list of ordered qualifier attributes for the end."
-	qualifiers := aProperty
+	self qualifiers
+		removeAll;
+		addAll: aProperty

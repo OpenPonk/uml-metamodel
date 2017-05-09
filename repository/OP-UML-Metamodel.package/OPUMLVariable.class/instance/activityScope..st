@@ -1,4 +1,8 @@
 accessing
 activityScope: anActivity
 	"An Activity that owns the Variable."
-	activityScope := anActivity
+	activityScope := OPUMLToOneLink
+		on: self
+		update: #variables
+		from: activityScope
+		to: anActivity

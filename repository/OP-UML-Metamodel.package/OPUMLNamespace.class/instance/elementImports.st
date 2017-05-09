@@ -1,4 +1,4 @@
 accessing
 elementImports
 	"References the ElementImports owned by the Namespace."
-	^ elementImports ifNil: [ elementImports := OrderedCollection new ]
+	^ elementImports ifNil: [ elementImports := OPUMLToManyLinks on: self opposite: #importingNamespace: ]

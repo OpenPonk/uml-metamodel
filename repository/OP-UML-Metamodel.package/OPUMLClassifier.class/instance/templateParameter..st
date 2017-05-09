@@ -1,3 +1,12 @@
-accessing - ParameterableElement
-templateParameter: aTemplateParameter
-	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
+accessing
+templateParameter: aClassifierTemplateParameter
+	"TheClassifierTemplateParameter that exposes this element as a formal parameter."
+	|anOldTemplateParameter|
+	anOldTemplateParameter := templateParameter.
+	templateParameter := aClassifierTemplateParameter.
+	OPUMLToOneLink
+		on: self
+		thisSelector: #templateParameter
+		otherSelector: #parameteredElement
+		from: anOldTemplateParameter
+		to: templateParameter

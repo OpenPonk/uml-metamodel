@@ -1,3 +1,4 @@
-accessing - ParameterableElement
+accessing
 templateParameter
-	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
+	"The ConnectableElementTemplateParameter for this ConnectableElement parameter."
+	^ templateParameter

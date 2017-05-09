@@ -1,3 +1,3 @@
-accessing - Classifier
+accessing - Class
 isAbstract
-	^ (sharedGeneralizations at: #Classifier) isAbstract
+	^ (sharedGeneralizations at: #Class) isAbstract

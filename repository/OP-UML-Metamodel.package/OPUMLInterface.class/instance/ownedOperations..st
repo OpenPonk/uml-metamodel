@@ -1,4 +1,6 @@
 accessing
 ownedOperations: anOperation
 	"The Operations owned by the Interface."
-	ownedOperations := anOperation
+	self ownedOperations
+		removeAll;
+		addAll: anOperation

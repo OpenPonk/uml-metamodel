@@ -1,3 +1,4 @@
-accessing - TemplateParameter
+accessing
 parameteredElement
-	^ (sharedGeneralizations at: #TemplateParameter) parameteredElement
+	"The Operation exposed by this OperationTemplateParameter."
+	^ parameteredElement

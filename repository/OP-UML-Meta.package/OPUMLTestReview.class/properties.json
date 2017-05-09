@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"book" ],
+		"book",
+		"score" ],
 	"name" : "OPUMLTestReview",
 	"pools" : [
 		 ],

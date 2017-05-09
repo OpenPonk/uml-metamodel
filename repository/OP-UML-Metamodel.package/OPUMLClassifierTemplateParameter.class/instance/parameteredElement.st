@@ -1,3 +1,4 @@
-accessing - TemplateParameter
+accessing
 parameteredElement
-	^ (sharedGeneralizations at: #TemplateParameter) parameteredElement
+	"The Classifier exposed by this ClassifierTemplateParameter."
+	^ parameteredElement

@@ -1,4 +1,8 @@
 accessing
 useCase: anUseCase
 	"The UseCase that owns this ExtensionPoint."
-	useCase := anUseCase
+	useCase := OPUMLToOneLink
+		on: self
+		update: #extensionPoints
+		from: useCase
+		to: anUseCase

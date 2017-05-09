@@ -1,4 +1,4 @@
 accessing
 substitutions
 	"The Substitutions owned by this Classifier."
-	^ substitutions ifNil: [ substitutions := OrderedCollection new ]
+	^ substitutions ifNil: [ substitutions := OPUMLToManyLinks on: self opposite: #substitutingClassifier: ]

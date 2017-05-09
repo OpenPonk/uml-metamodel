@@ -1,4 +1,8 @@
 accessing
 templateBinding: aTemplateBinding
 	"The TemplateBinding that owns this TemplateParameterSubstitution."
-	templateBinding := aTemplateBinding
+	templateBinding := OPUMLToOneLink
+		on: self
+		update: #parameterSubstitutions
+		from: templateBinding
+		to: aTemplateBinding

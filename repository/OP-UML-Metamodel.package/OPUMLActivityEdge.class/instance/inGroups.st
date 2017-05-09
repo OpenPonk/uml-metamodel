@@ -1,4 +1,4 @@
 accessing
 inGroups
 	"ActivityGroups containing the ActivityEdge."
-	^ inGroups ifNil: [ inGroups := OrderedCollection new ]
+	^ inGroups ifNil: [ inGroups := OPUMLManyToManyLinks on: self opposite: #containedEdges ]

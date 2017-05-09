@@ -1,3 +1,4 @@
-accessing - Interval
+accessing
 max
-	^ (sharedGeneralizations at: #Interval) max
+	"Refers to the TimeExpression denoting the maximum value of the range."
+	^ max

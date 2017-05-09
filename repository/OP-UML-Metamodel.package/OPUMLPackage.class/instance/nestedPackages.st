@@ -1,4 +1,4 @@
 accessing
 nestedPackages
 	"References the packaged elements that are Packages."
-	^ nestedPackages ifNil: [ nestedPackages := OrderedCollection new ]
+	^ nestedPackages ifNil: [ nestedPackages := OPUMLToManyLinks on: self opposite: #nestingPackage: ]

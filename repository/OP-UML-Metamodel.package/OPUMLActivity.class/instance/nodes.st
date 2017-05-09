@@ -1,4 +1,4 @@
 accessing
 nodes
 	"ActivityNodes coordinated by the Activity."
-	^ nodes ifNil: [ nodes := OrderedCollection new ]
+	^ nodes ifNil: [ nodes := OPUMLToManyLinks on: self opposite: #activity: ]

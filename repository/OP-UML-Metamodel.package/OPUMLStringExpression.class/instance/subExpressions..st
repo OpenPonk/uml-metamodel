@@ -1,4 +1,6 @@
 accessing
 subExpressions: aStringExpression
 	"The StringExpressions that constitute this StringExpression."
-	subExpressions := aStringExpression
+	self subExpressions
+		removeAll;
+		addAll: aStringExpression

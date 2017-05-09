@@ -1,3 +1,4 @@
-accessing - LinkAction
-endDatas: aLinkEndData
-	(sharedGeneralizations at: #LinkAction) endDatas: aLinkEndData
+accessing
+endDatas: aLinkEndDestructionData
+	"The LinkEndData that the values of the Association ends for the links to be destroyed."
+	endDatas := aLinkEndDestructionData

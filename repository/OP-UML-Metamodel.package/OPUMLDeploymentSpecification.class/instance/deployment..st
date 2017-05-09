@@ -1,4 +1,8 @@
 accessing
 deployment: aDeployment
 	"The deployment with which the DeploymentSpecification is associated."
-	deployment := aDeployment
+	deployment := OPUMLToOneLink
+		on: self
+		update: #configurations
+		from: deployment
+		to: aDeployment

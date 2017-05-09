@@ -1,3 +1,4 @@
-accessing - ParameterableElement
+accessing
 templateParameter
-	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
+	"The OperationTemplateParameter that exposes this element as a formal parameter."
+	^ templateParameter

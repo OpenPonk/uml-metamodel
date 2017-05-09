@@ -1,4 +1,8 @@
 accessing
 abstraction: aComponent
 	"The Component that owns this ComponentRealization and which is implemented by its realizing Classifiers."
-	abstraction := aComponent
+	abstraction := OPUMLToOneLink
+		on: self
+		update: #realizations
+		from: abstraction
+		to: aComponent

@@ -1,4 +1,6 @@
 accessing
 lifelines: aLifeline
 	"Specifies the participants in this Interaction."
-	lifelines := aLifeline
+	self lifelines
+		removeAll;
+		addAll: aLifeline

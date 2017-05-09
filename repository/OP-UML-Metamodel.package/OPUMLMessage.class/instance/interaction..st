@@ -1,4 +1,8 @@
 accessing
 interaction: anInteraction
 	"The enclosing Interaction owning the Message."
-	interaction := anInteraction
+	interaction := OPUMLToOneLink
+		on: self
+		update: #messages
+		from: interaction
+		to: anInteraction

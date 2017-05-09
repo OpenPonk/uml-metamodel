@@ -1,3 +1,4 @@
-accessing - Interval
-min: aValueSpecification
-	(sharedGeneralizations at: #Interval) min: aValueSpecification
+accessing
+min: aTimeExpression
+	"Refers to the TimeExpression denoting the minimum value of the range."
+	min := aTimeExpression

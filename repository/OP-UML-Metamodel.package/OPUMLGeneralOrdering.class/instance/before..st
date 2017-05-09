@@ -1,4 +1,8 @@
 accessing
 before: anOccurrenceSpecification
 	"The OccurrenceSpecification referenced comes before the OccurrenceSpecification referenced by after."
-	before := anOccurrenceSpecification
+	before := OPUMLToOneLink
+		on: self
+		update: #toAfters
+		from: before
+		to: anOccurrenceSpecification

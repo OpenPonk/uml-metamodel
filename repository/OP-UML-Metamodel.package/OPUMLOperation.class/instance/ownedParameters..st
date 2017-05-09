@@ -1,3 +1,6 @@
-accessing - BehavioralFeature
+accessing
 ownedParameters: aParameter
-	(sharedGeneralizations at: #BehavioralFeature) ownedParameters: aParameter
+	"The parameters owned by this Operation."
+	self ownedParameters
+		removeAll;
+		addAll: aParameter

@@ -1,4 +1,6 @@
 accessing
 messages: aMessage
 	"The Messages contained in this Interaction."
-	messages := aMessage
+	self messages
+		removeAll;
+		addAll: aMessage

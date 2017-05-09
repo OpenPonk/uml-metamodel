@@ -1,3 +1,4 @@
-accessing - Interval
-max: aValueSpecification
-	(sharedGeneralizations at: #Interval) max: aValueSpecification
+accessing
+max: aTimeExpression
+	"Refers to the TimeExpression denoting the maximum value of the range."
+	max := aTimeExpression

@@ -1,4 +1,4 @@
 accessing
 ownedRules
 	"Specifies a set of Constraints owned by this Namespace."
-	^ ownedRules ifNil: [ ownedRules := OrderedCollection new ]
+	^ ownedRules ifNil: [ ownedRules := OPUMLToManyLinks on: self opposite: #context: ]

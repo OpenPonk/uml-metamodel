@@ -1,3 +1,3 @@
-accessing - ParameterableElement
+accessing - ConnectableElement
 templateParameter
-	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
+	^ (sharedGeneralizations at: #ConnectableElement) templateParameter

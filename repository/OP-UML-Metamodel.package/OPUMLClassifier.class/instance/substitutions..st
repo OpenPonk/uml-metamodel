@@ -1,4 +1,6 @@
 accessing
 substitutions: aSubstitution
 	"The Substitutions owned by this Classifier."
-	substitutions := aSubstitution
+	self substitutions
+		removeAll;
+		addAll: aSubstitution

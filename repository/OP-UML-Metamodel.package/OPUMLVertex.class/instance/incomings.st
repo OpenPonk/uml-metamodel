@@ -1,4 +1,4 @@
 accessing
 incomings
 	"Specifies the Transitions entering this Vertex."
-	^ incomings ifNil: [ incomings := OrderedCollection new ]
+	^ incomings ifNil: [ incomings := OPUMLToManyLinks on: self opposite: #target: ]

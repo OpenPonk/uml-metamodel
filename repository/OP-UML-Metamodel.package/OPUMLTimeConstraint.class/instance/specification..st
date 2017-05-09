@@ -1,3 +1,4 @@
-accessing - Constraint
-specification: aValueSpecification
-	(sharedGeneralizations at: #Constraint) specification: aValueSpecification
+accessing
+specification: aTimeInterval
+	"TheTimeInterval constraining the duration."
+	specification := aTimeInterval

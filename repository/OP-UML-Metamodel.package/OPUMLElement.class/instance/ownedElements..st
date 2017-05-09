@@ -1,4 +1,6 @@
 accessing
 ownedElements: anElement
 	"The Elements owned by this Element."
-	ownedElements := anElement
+	self ownedElements
+		removeAll;
+		addAll: anElement

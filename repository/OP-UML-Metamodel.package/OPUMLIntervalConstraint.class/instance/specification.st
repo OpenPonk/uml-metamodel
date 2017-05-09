@@ -1,3 +1,4 @@
-accessing - Constraint
+accessing
 specification
-	^ (sharedGeneralizations at: #Constraint) specification
+	"The Interval that specifies the condition of the IntervalConstraint."
+	^ specification

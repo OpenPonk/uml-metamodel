@@ -1,4 +1,4 @@
 accessing
 ownedAttributes
 	"The attributes (i.e., the Properties) owned by the Interface."
-	^ ownedAttributes ifNil: [ ownedAttributes := OrderedCollection new ]
+	^ ownedAttributes ifNil: [ ownedAttributes := OPUMLToManyLinks on: self opposite: #interface: ]

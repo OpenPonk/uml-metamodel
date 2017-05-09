@@ -1,3 +1,4 @@
-accessing - Constraint
+accessing
 specification
-	^ (sharedGeneralizations at: #Constraint) specification
+	"TheTimeInterval constraining the duration."
+	^ specification

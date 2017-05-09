@@ -1,4 +1,6 @@
 accessing
 parameterSubstitutions: aTemplateParameterSubstitution
 	"The TemplateParameterSubstitutions owned by this TemplateBinding."
-	parameterSubstitutions := aTemplateParameterSubstitution
+	self parameterSubstitutions
+		removeAll;
+		addAll: aTemplateParameterSubstitution

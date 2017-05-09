@@ -1,3 +1,3 @@
-accessing - ParameterableElement
-templateParameter: aTemplateParameter
-	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
+accessing - ConnectableElement
+templateParameter: aConnectableElementTemplateParameter
+	(sharedGeneralizations at: #ConnectableElement) templateParameter: aConnectableElementTemplateParameter

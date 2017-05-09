@@ -1,4 +1,4 @@
 accessing
 ends
 	"A set of ConnectorEnds that attach to this ConnectableElement."
-	^ ends ifNil: [ ends := OrderedCollection new ]
+	^ ends ifNil: [ ends := OPUMLToManyLinks on: self opposite: #role: ]

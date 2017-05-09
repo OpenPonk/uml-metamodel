@@ -1,4 +1,6 @@
 accessing
 inGroups: anActivityGroup
 	"ActivityGroups containing the ActivityNode."
-	inGroups := anActivityGroup
+	self inGroups
+		removeAll;
+		addAll: anActivityGroup

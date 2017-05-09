@@ -1,4 +1,6 @@
 accessing
 packageImports: aPackageImport
 	"References the PackageImports owned by the Namespace."
-	packageImports := aPackageImport
+	self packageImports
+		removeAll;
+		addAll: aPackageImport

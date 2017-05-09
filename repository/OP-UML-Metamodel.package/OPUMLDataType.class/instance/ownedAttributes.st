@@ -1,4 +1,4 @@
 accessing
 ownedAttributes
 	"The attributes owned by the DataType."
-	^ ownedAttributes ifNil: [ ownedAttributes := OrderedCollection new ]
+	^ ownedAttributes ifNil: [ ownedAttributes := OPUMLToManyLinks on: self opposite: #datatype: ]

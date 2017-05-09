@@ -1,4 +1,8 @@
 accessing
 enclosingInteraction: anInteraction
 	"The Interaction enclosing this InteractionFragment."
-	enclosingInteraction := anInteraction
+	enclosingInteraction := OPUMLToOneLink
+		on: self
+		update: #fragments
+		from: enclosingInteraction
+		to: anInteraction

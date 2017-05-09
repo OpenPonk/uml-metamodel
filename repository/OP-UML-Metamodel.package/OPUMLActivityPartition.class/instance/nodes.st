@@ -1,4 +1,4 @@
 accessing
 nodes
 	"ActivityNodes immediately contained in the ActivityPartition."
-	^ nodes ifNil: [ nodes := OrderedCollection new ]
+	^ nodes ifNil: [ nodes := OPUMLManyToManyLinks on: self opposite: #inPartitions ]

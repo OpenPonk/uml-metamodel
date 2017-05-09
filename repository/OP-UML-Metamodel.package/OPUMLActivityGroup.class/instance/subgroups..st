@@ -1,4 +1,6 @@
 accessing
 subgroups: anActivityGroup
 	"Other ActivityGroups immediately contained in this ActivityGroup."
-	subgroups := anActivityGroup
+	self subgroups
+		removeAll;
+		addAll: anActivityGroup

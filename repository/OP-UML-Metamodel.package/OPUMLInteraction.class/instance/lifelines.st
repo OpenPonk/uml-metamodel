@@ -1,4 +1,4 @@
 accessing
 lifelines
 	"Specifies the participants in this Interaction."
-	^ lifelines ifNil: [ lifelines := OrderedCollection new ]
+	^ lifelines ifNil: [ lifelines := OPUMLToManyLinks on: self opposite: #interaction: ]

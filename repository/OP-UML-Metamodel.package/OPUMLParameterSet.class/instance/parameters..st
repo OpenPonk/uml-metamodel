@@ -1,4 +1,6 @@
 accessing
 parameters: aParameter
 	"Parameters in the ParameterSet."
-	parameters := aParameter
+	self parameters
+		removeAll;
+		addAll: aParameter

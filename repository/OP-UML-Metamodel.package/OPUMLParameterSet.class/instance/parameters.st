@@ -1,4 +1,4 @@
 accessing
 parameters
 	"Parameters in the ParameterSet."
-	^ parameters ifNil: [ parameters := OrderedCollection new ]
+	^ parameters ifNil: [ parameters := OPUMLManyToManyLinks on: self opposite: #parameterSets ]

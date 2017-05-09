@@ -1,4 +1,6 @@
 accessing
 packageMerges: aPackageMerge
 	"References the PackageMerges that are owned by this Package."
-	packageMerges := aPackageMerge
+	self packageMerges
+		removeAll;
+		addAll: aPackageMerge

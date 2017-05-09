@@ -1,4 +1,4 @@
 accessing
 regions
 	"The Regions owned directly by the State."
-	^ regions ifNil: [ regions := OrderedCollection new ]
+	^ regions ifNil: [ regions := OPUMLToManyLinks on: self opposite: #state: ]

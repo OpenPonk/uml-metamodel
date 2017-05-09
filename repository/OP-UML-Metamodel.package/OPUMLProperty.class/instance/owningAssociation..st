@@ -1,4 +1,8 @@
 accessing
 owningAssociation: anAssociation
 	"The owning association of this property, if any."
-	owningAssociation := anAssociation
+	owningAssociation := OPUMLToOneLink
+		on: self
+		update: #ownedEnds
+		from: owningAssociation
+		to: anAssociation

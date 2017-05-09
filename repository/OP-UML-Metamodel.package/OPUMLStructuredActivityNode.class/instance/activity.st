@@ -1,3 +1,4 @@
-accessing - ActivityNode
+accessing
 activity
-	^ (sharedGeneralizations at: #ActivityNode) activity
+	"The Activity immediately containing the StructuredActivityNode, if it is not contained in another StructuredActivityNode."
+	^ activity

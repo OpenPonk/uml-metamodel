@@ -1,4 +1,6 @@
 accessing
 fragments: anInteractionFragment
 	"The fragments of the operand."
-	fragments := anInteractionFragment
+	self fragments
+		removeAll;
+		addAll: anInteractionFragment

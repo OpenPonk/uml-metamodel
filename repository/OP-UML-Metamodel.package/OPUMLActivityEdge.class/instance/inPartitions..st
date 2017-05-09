@@ -1,4 +1,6 @@
 accessing
 inPartitions: anActivityPartition
 	"ActivityPartitions containing the ActivityEdge."
-	inPartitions := anActivityPartition
+	self inPartitions
+		removeAll;
+		addAll: anActivityPartition

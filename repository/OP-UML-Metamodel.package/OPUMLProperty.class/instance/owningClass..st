@@ -1,4 +1,8 @@
 accessing
 owningClass: aClass
 	"The Class that owns this Property, if any."
-	owningClass := aClass
+	owningClass := OPUMLToOneLink
+		on: self
+		update: #ownedAttributes
+		from: owningClass
+		to: aClass

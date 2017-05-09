@@ -1,4 +1,4 @@
 accessing
 outputElements
 	"The ExpansionNodes that form the output collections of the ExpansionRegion."
-	^ outputElements ifNil: [ outputElements := OrderedCollection new ]
+	^ outputElements ifNil: [ outputElements := OPUMLToManyLinks on: self opposite: #regionAsOutput: ]

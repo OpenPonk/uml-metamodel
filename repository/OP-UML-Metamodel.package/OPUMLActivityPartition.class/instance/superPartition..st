@@ -1,4 +1,8 @@
 accessing
 superPartition: anActivityPartition
 	"Other ActivityPartitions immediately containing this ActivityPartition (as its superGroups)."
-	superPartition := anActivityPartition
+	superPartition := OPUMLToOneLink
+		on: self
+		update: #subpartitions
+		from: superPartition
+		to: anActivityPartition

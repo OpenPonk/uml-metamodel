@@ -1,4 +1,4 @@
 accessing
 conformances
 	"Conformance between ProtocolStateMachine "
-	^ conformances ifNil: [ conformances := OrderedCollection new ]
+	^ conformances ifNil: [ conformances := OPUMLToManyLinks on: self opposite: #specificMachine: ]

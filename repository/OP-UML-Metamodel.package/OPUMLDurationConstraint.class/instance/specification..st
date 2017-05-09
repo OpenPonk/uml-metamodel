@@ -1,3 +1,4 @@
-accessing - IntervalConstraint
-specification: anInterval
-	(sharedGeneralizations at: #IntervalConstraint) specification: anInterval
+accessing
+specification: aDurationInterval
+	"The DurationInterval constraining the duration."
+	specification := aDurationInterval

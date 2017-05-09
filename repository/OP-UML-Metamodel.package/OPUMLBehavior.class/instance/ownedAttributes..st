@@ -1,3 +1,3 @@
-accessing - StructuredClassifier
+accessing - Class
 ownedAttributes: aProperty
-	(sharedGeneralizations at: #StructuredClassifier) ownedAttributes: aProperty
+	(sharedGeneralizations at: #Class) ownedAttributes: aProperty

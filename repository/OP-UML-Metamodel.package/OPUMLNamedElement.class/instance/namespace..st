@@ -1,4 +1,8 @@
 accessing
 namespace: aNamespace
 	"Specifies the Namespace that owns the NamedElement."
-	namespace := aNamespace
+	namespace := OPUMLToOneLink
+		on: self
+		update: #ownedMembers
+		from: namespace
+		to: aNamespace
