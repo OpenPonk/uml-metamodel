@@ -1,0 +1,16 @@
+{
+	"category" : "OP-UML-Meta-Models",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"owner",
+		"collection",
+		"oppositeSelector" ],
+	"name" : "OPUMLToManyLinks",
+	"pools" : [
+		 ],
+	"super" : "Collection",
+	"type" : "normal" }
