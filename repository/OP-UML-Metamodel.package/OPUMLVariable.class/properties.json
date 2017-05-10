@@ -1,15 +1,14 @@
 {
-	"category" : "OP-UML-Metamodel-Activities",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"activityScope",
-		"scope" ],
+		"scope"
+	],
 	"name" : "OPUMLVariable",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

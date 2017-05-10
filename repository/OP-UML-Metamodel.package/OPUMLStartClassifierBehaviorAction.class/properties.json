@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-Actions",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
-	"instvars" : [
-		"object" ],
-	"name" : "OPUMLStartClassifierBehaviorAction",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"object"
+	],
+	"name" : "OPUMLStartClassifierBehaviorAction",
+	"type" : "normal"
+}

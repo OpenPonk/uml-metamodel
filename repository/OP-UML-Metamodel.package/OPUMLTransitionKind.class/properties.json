@@ -1,14 +1,11 @@
 {
-	"category" : "OP-UML-Metamodel-StateMachines",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/26/2017 13:08",
-	"instvars" : [
-		 ],
-	"name" : "OPUMLTransitionKind",
-	"pools" : [
-		 ],
 	"super" : "OPUMLEnumeration",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUMLTransitionKind",
+	"type" : "normal"
+}

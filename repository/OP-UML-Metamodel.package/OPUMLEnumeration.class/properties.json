@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-SimpleClassifiers",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
-	"instvars" : [
-		"ownedLiterals" ],
-	"name" : "OPUMLEnumeration",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-SimpleClassifiers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ownedLiterals"
+	],
+	"name" : "OPUMLEnumeration",
+	"type" : "normal"
+}

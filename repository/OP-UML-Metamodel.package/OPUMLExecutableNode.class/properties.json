@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-Activities",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
-	"instvars" : [
-		"handlers" ],
-	"name" : "OPUMLExecutableNode",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"handlers"
+	],
+	"name" : "OPUMLExecutableNode",
+	"type" : "normal"
+}

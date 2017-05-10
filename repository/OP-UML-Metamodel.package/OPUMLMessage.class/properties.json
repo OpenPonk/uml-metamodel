@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-Interactions",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"receiveEvent",
 		"messageSort",
@@ -13,9 +13,8 @@
 		"arguments",
 		"sendEvent",
 		"signature",
-		"connector" ],
+		"connector"
+	],
 	"name" : "OPUMLMessage",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

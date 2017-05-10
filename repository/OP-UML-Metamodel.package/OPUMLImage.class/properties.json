@@ -1,16 +1,15 @@
 {
-	"category" : "OP-UML-Metamodel-Packages",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Packages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"content",
 		"location",
-		"format" ],
+		"format"
+	],
 	"name" : "OPUMLImage",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

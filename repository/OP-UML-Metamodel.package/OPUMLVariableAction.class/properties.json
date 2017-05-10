@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-Actions",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
-	"instvars" : [
-		"variable" ],
-	"name" : "OPUMLVariableAction",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"variable"
+	],
+	"name" : "OPUMLVariableAction",
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-CommonStructure",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
-	"instvars" : [
-		"visibility" ],
-	"name" : "OPUMLPackageableElement",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-CommonStructure",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"visibility"
+	],
+	"name" : "OPUMLPackageableElement",
+	"type" : "normal"
+}

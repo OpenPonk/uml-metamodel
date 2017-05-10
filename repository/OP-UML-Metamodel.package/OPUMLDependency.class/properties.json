@@ -1,15 +1,14 @@
 {
-	"category" : "OP-UML-Metamodel-CommonStructure",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-CommonStructure",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"clients",
-		"suppliers" ],
+		"suppliers"
+	],
 	"name" : "OPUMLDependency",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

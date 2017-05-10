@@ -1,16 +1,15 @@
 {
-	"category" : "OP-UML-Metamodel-StateMachines",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"exits",
 		"state",
-		"entries" ],
+		"entries"
+	],
 	"name" : "OPUMLConnectionPointReference",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

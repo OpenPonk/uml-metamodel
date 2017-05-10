@@ -1,14 +1,11 @@
 {
-	"category" : "OP-UML-Metamodel-CommonStructure",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/26/2017 13:08",
-	"instvars" : [
-		 ],
-	"name" : "OPUMLVisibilityKind",
-	"pools" : [
-		 ],
 	"super" : "OPUMLEnumeration",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-CommonStructure",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUMLVisibilityKind",
+	"type" : "normal"
+}

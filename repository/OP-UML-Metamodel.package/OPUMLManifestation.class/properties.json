@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-Deployments",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
-	"instvars" : [
-		"utilizedElement" ],
-	"name" : "OPUMLManifestation",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Deployments",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"utilizedElement"
+	],
+	"name" : "OPUMLManifestation",
+	"type" : "normal"
+}

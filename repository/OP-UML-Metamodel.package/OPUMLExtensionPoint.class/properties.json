@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-UseCases",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
-	"instvars" : [
-		"useCase" ],
-	"name" : "OPUMLExtensionPoint",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-UseCases",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"useCase"
+	],
+	"name" : "OPUMLExtensionPoint",
+	"type" : "normal"
+}

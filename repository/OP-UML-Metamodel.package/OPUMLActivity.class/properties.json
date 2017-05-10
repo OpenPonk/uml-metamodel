@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-Activities",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"isSingleExecution",
 		"groups",
@@ -13,9 +13,8 @@
 		"edges",
 		"variables",
 		"partitions",
-		"isReadOnly" ],
+		"isReadOnly"
+	],
 	"name" : "OPUMLActivity",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

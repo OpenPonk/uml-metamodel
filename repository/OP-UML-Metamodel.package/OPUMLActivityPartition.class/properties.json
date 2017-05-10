@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-Activities",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Activities",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"represents",
 		"nodes",
@@ -12,9 +12,8 @@
 		"subpartitions",
 		"edges",
 		"isExternal",
-		"superPartition" ],
+		"superPartition"
+	],
 	"name" : "OPUMLActivityPartition",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-StateMachines",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
-	"instvars" : [
-		"conformances" ],
-	"name" : "OPUMLProtocolStateMachine",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"conformances"
+	],
+	"name" : "OPUMLProtocolStateMachine",
+	"type" : "normal"
+}

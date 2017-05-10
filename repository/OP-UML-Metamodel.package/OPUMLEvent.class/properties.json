@@ -1,14 +1,11 @@
 {
-	"category" : "OP-UML-Metamodel-CommonBehavior",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
-	"instvars" : [
-		 ],
-	"name" : "OPUMLEvent",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-CommonBehavior",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUMLEvent",
+	"type" : "normal"
+}

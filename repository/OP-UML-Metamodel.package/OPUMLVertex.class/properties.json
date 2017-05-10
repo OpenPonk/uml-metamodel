@@ -1,16 +1,15 @@
 {
-	"category" : "OP-UML-Metamodel-StateMachines",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"incomings",
 		"container",
-		"outgoings" ],
+		"outgoings"
+	],
 	"name" : "OPUMLVertex",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

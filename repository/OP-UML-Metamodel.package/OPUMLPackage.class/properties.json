@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-Packages",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Packages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"packagedElements",
 		"ownedStereotypes",
@@ -13,9 +13,8 @@
 		"profileApplications",
 		"nestedPackages",
 		"nestingPackage",
-		"URI" ],
+		"URI"
+	],
 	"name" : "OPUMLPackage",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

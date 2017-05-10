@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-CommonBehavior",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-CommonBehavior",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"redefinedBehaviors",
 		"specification",
@@ -13,9 +13,8 @@
 		"context",
 		"ownedParameters",
 		"isReentrant",
-		"preconditions" ],
+		"preconditions"
+	],
 	"name" : "OPUMLBehavior",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

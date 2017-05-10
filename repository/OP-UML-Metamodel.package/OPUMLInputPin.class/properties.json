@@ -1,14 +1,11 @@
 {
-	"category" : "OP-UML-Metamodel-Actions",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
-	"instvars" : [
-		 ],
-	"name" : "OPUMLInputPin",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUMLInputPin",
+	"type" : "normal"
+}

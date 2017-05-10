@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-Classification",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"collaborationUses",
 		"inheritedMembers",
@@ -21,9 +21,8 @@
 		"useCases",
 		"isAbstract",
 		"generalizations",
-		"redefinedClassifiers" ],
+		"redefinedClassifiers"
+	],
 	"name" : "OPUMLClassifier",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

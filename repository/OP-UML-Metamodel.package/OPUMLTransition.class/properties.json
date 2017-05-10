@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-StateMachines",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StateMachines",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"redefinitionContext",
 		"source",
@@ -14,9 +14,8 @@
 		"target",
 		"kind",
 		"triggers",
-		"redefinedTransition" ],
+		"redefinedTransition"
+	],
 	"name" : "OPUMLTransition",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

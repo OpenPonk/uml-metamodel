@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-Classification",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
-	"instvars" : [
-		"instance" ],
-	"name" : "OPUMLInstanceValue",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Classification",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"instance"
+	],
+	"name" : "OPUMLInstanceValue",
+	"type" : "normal"
+}

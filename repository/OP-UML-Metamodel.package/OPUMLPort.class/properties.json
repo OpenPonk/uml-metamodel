@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-StructuredClassifiers",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-StructuredClassifiers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"isBehavior",
 		"requireds",
@@ -12,9 +12,8 @@
 		"isService",
 		"protocol",
 		"isConjugated",
-		"provideds" ],
+		"provideds"
+	],
 	"name" : "OPUMLPort",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,15 +1,14 @@
 {
-	"category" : "OP-UML-Metamodel-Actions",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:00",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Actions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"classifier",
-		"result" ],
+		"result"
+	],
 	"name" : "OPUMLReadExtentAction",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

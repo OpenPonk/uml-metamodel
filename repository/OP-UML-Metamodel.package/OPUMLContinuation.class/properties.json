@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-Interactions",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
-	"instvars" : [
-		"setting" ],
-	"name" : "OPUMLContinuation",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Interactions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"setting"
+	],
+	"name" : "OPUMLContinuation",
+	"type" : "normal"
+}

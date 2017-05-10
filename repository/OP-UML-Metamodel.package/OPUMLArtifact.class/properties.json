@@ -1,18 +1,17 @@
 {
-	"category" : "OP-UML-Metamodel-Deployments",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Deployments",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"nestedArtifacts",
 		"fileName",
 		"ownedAttributes",
 		"manifestations",
-		"ownedOperations" ],
+		"ownedOperations"
+	],
 	"name" : "OPUMLArtifact",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,10 +1,10 @@
 {
-	"category" : "OP-UML-Metamodel-InformationFlows",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-InformationFlows",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"realizingActivityEdges",
 		"realizations",
@@ -12,9 +12,8 @@
 		"realizingMessages",
 		"conveyeds",
 		"informationSources",
-		"realizingConnectors" ],
+		"realizingConnectors"
+	],
 	"name" : "OPUMLInformationFlow",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

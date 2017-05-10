@@ -1,15 +1,14 @@
 {
-	"category" : "OP-UML-Metamodel-Packages",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:03",
+	"super" : "OPUMLElement",
+	"category" : "OP-UML-Metamodel-Packages",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"type",
-		"lower" ],
+		"lower"
+	],
 	"name" : "OPUMLExtensionEnd",
-	"pools" : [
-		 ],
-	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"type" : "normal"
+}

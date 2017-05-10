@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Metamodel-Values",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 4/22/2017 13:01",
-	"instvars" : [
-		"value" ],
-	"name" : "OPUMLLiteralInteger",
-	"pools" : [
-		 ],
 	"super" : "OPUMLElement",
-	"type" : "normal" }
+	"category" : "OP-UML-Metamodel-Values",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value"
+	],
+	"name" : "OPUMLLiteralInteger",
+	"type" : "normal"
+}
