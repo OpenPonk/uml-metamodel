@@ -1,3 +1,3 @@
-accessing - MultiplicityElement
+operations - MultiplicityElement
 upper
 	^ (sharedGeneralizations at: #MultiplicityElement) upper

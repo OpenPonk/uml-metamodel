@@ -1,3 +1,3 @@
-accessing - ObjectNode
+operations - MultiplicityElement
 upperBound
-	^ (sharedGeneralizations at: #ObjectNode) upperBound
+	^ (sharedGeneralizations at: #MultiplicityElement) upperBound

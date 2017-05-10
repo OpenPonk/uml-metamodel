@@ -1,4 +1,7 @@
-accessing
+operations
 lower
-	"The lower bound of the multiplicity interval."
-	^ lower
+	"The derived lower attribute must equal the lowerBound."
+	
+	"{OCL} result = (lowerBound())"
+	
+	^ self lowerBound
