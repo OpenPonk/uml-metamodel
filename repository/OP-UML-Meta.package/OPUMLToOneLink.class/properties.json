@@ -1,14 +1,11 @@
 {
-	"category" : "OP-UML-Meta-Models",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "OPUMLToOneLink",
-	"pools" : [
-		 ],
 	"super" : "Collection",
-	"type" : "normal" }
+	"category" : "OP-UML-Meta-Models",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUMLToOneLink",
+	"type" : "normal"
+}

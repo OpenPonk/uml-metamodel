@@ -1,14 +1,13 @@
 {
-	"category" : "OP-UML-Meta-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"review" ],
-	"name" : "OPUMLTestScore",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "OP-UML-Meta-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"review"
+	],
+	"name" : "OPUMLTestScore",
+	"type" : "normal"
+}

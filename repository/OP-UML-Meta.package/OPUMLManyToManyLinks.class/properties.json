@@ -1,14 +1,11 @@
 {
-	"category" : "OP-UML-Meta-Models",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "OPUMLManyToManyLinks",
-	"pools" : [
-		 ],
 	"super" : "OPUMLToManyLinks",
-	"type" : "normal" }
+	"category" : "OP-UML-Meta-Models",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "OPUMLManyToManyLinks",
+	"type" : "normal"
+}
