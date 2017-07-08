@@ -6,3 +6,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #ActivityNode put: (OPUMLActivityNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ObjectNode put: (OPUMLObjectNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #CentralBufferNode put: (OPUMLCentralBufferNode newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #DataStoreNode put: self.

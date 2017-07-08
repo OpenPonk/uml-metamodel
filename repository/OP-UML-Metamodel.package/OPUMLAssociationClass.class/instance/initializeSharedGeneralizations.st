@@ -14,3 +14,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Relationship put: (OPUMLRelationship newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Class put: (OPUMLClass newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Association put: (OPUMLAssociation newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #AssociationClass put: self.

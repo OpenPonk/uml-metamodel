@@ -8,3 +8,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #LinkAction put: (OPUMLLinkAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #WriteLinkAction put: (OPUMLWriteLinkAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #CreateLinkAction put: (OPUMLCreateLinkAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #CreateLinkObjectAction put: self.

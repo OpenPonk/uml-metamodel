@@ -10,3 +10,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #DeploymentTarget put: (OPUMLDeploymentTarget newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #StructuralFeature put: (OPUMLStructuralFeature newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Property put: (OPUMLProperty newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #ExtensionEnd put: self.

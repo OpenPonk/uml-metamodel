@@ -5,7 +5,7 @@ templateParameter: aTemplateParameter
 	anOldTemplateParameter := templateParameter.
 	templateParameter := aTemplateParameter.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #templateParameter
 		otherSelector: #parameteredElement
 		from: anOldTemplateParameter

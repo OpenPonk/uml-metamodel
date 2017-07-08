@@ -14,3 +14,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Class put: (OPUMLClass newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Behavior put: (OPUMLBehavior newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #StateMachine put: (OPUMLStateMachine newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #ProtocolStateMachine put: self.

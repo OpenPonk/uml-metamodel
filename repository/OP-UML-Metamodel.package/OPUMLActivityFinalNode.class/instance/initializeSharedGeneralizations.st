@@ -5,3 +5,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #ActivityNode put: (OPUMLActivityNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ControlNode put: (OPUMLControlNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #FinalNode put: (OPUMLFinalNode newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #ActivityFinalNode put: self.

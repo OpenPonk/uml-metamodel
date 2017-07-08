@@ -7,3 +7,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Namespace put: (OPUMLNamespace newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ActivityGroup put: (OPUMLActivityGroup newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Action put: (OPUMLAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #StructuredActivityNode put: self.

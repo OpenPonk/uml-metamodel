@@ -6,3 +6,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #ExecutableNode put: (OPUMLExecutableNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Action put: (OPUMLAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #VariableAction put: (OPUMLVariableAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #ClearVariableAction put: self.

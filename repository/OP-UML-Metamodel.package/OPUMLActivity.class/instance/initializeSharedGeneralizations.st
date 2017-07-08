@@ -13,3 +13,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #EncapsulatedClassifier put: (OPUMLEncapsulatedClassifier newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Class put: (OPUMLClass newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Behavior put: (OPUMLBehavior newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #Activity put: self.

@@ -7,3 +7,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Action put: (OPUMLAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #VariableAction put: (OPUMLVariableAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #WriteVariableAction put: (OPUMLWriteVariableAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #RemoveVariableValueAction put: self.

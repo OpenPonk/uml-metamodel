@@ -7,3 +7,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Type put: (OPUMLType newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #TemplateableElement put: (OPUMLTemplateableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #RedefinableElement put: (OPUMLRedefinableElement newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #Classifier put: self.

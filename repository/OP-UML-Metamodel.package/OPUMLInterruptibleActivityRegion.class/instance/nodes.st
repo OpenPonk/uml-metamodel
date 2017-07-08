@@ -1,4 +1,4 @@
 accessing
 nodes
 	"ActivityNodes immediately contained in the InterruptibleActivityRegion."
-	^ nodes ifNil: [ nodes := OPUMLManyToManyLinks on: self opposite: #inInterruptibleRegions ]
+	^ nodes ifNil: [ nodes := OPUMLManyToManyLinks on: self identity opposite: #inInterruptibleRegions ]

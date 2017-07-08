@@ -7,3 +7,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #ValueSpecification put: (OPUMLValueSpecification newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #TemplateableElement put: (OPUMLTemplateableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Expression put: (OPUMLExpression newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #StringExpression put: self.

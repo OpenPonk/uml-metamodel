@@ -7,3 +7,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Action put: (OPUMLAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #LinkAction put: (OPUMLLinkAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #WriteLinkAction put: (OPUMLWriteLinkAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #DestroyLinkAction put: self.

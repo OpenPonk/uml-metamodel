@@ -5,7 +5,7 @@ classifier: aClassifier
 	anOldClassifier := classifier.
 	classifier := aClassifier.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #classifier
 		otherSelector: #ownedTemplateSignature
 		from: anOldClassifier

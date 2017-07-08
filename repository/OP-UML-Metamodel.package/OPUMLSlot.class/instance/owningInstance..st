@@ -2,7 +2,7 @@ accessing
 owningInstance: anInstanceSpecification
 	"The InstanceSpecification that owns this Slot."
 	owningInstance := OPUMLToOneLink
-		on: self
+		on: self identity
 		update: #slots
 		from: owningInstance
 		to: anInstanceSpecification

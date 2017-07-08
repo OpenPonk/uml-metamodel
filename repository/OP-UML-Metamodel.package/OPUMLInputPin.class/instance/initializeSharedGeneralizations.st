@@ -7,3 +7,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #ObjectNode put: (OPUMLObjectNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #MultiplicityElement put: (OPUMLMultiplicityElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Pin put: (OPUMLPin newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #InputPin put: self.

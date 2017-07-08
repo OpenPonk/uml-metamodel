@@ -6,3 +6,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #TemplateableElement put: (OPUMLTemplateableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Namespace put: (OPUMLNamespace newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Package put: (OPUMLPackage newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #Model put: self.

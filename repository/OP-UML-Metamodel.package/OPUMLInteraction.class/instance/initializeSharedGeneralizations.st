@@ -14,3 +14,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Class put: (OPUMLClass newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #InteractionFragment put: (OPUMLInteractionFragment newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Behavior put: (OPUMLBehavior newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #Interaction put: self.

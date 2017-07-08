@@ -6,3 +6,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #PackageableElement put: (OPUMLPackageableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ValueSpecification put: (OPUMLValueSpecification newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Interval put: (OPUMLInterval newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #DurationInterval put: self.

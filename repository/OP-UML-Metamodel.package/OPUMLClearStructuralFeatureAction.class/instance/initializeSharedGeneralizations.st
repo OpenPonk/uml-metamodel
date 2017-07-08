@@ -6,3 +6,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #ExecutableNode put: (OPUMLExecutableNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Action put: (OPUMLAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #StructuralFeatureAction put: (OPUMLStructuralFeatureAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #ClearStructuralFeatureAction put: self.

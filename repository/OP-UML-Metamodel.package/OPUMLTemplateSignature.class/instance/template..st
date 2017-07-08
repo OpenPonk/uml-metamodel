@@ -5,7 +5,7 @@ template: aTemplateableElement
 	anOldTemplate := template.
 	template := aTemplateableElement.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #template
 		otherSelector: #ownedTemplateSignature
 		from: anOldTemplate

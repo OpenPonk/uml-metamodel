@@ -5,3 +5,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #ActivityNode put: (OPUMLActivityNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ExecutableNode put: (OPUMLExecutableNode newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Action put: (OPUMLAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #TestIdentityAction put: self.

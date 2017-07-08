@@ -5,7 +5,7 @@ owningTemplateParameter: aTemplateParameter
 	anOldOwningTemplateParameter := owningTemplateParameter.
 	owningTemplateParameter := aTemplateParameter.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #owningTemplateParameter
 		otherSelector: #ownedParameteredElement
 		from: anOldOwningTemplateParameter

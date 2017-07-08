@@ -7,3 +7,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Action put: (OPUMLAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #StructuralFeatureAction put: (OPUMLStructuralFeatureAction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #WriteStructuralFeatureAction put: (OPUMLWriteStructuralFeatureAction newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #AddStructuralFeatureValueAction put: self.

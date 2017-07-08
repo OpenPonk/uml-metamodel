@@ -5,7 +5,7 @@ ownedTemplateSignature: aTemplateSignature
 	anOldOwnedTemplateSignature := ownedTemplateSignature.
 	ownedTemplateSignature := aTemplateSignature.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #ownedTemplateSignature
 		otherSelector: #template
 		from: anOldOwnedTemplateSignature

@@ -2,7 +2,7 @@ accessing
 signature: aTemplateSignature
 	"The TemplateSignature that owns this TemplateParameter."
 	signature := OPUMLToOneLink
-		on: self
+		on: self identity
 		update: #ownedParameters
 		from: signature
 		to: aTemplateSignature

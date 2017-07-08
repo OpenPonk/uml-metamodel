@@ -5,7 +5,7 @@ parameteredElement: aConnectableElement
 	anOldParameteredElement := parameteredElement.
 	parameteredElement := aConnectableElement.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #parameteredElement
 		otherSelector: #templateParameter
 		from: anOldParameteredElement

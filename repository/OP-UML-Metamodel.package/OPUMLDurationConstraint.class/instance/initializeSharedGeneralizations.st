@@ -5,3 +5,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #PackageableElement put: (OPUMLPackageableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Constraint put: (OPUMLConstraint newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #IntervalConstraint put: (OPUMLIntervalConstraint newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #DurationConstraint put: self.

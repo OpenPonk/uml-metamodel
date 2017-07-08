@@ -5,7 +5,7 @@ ownedTemplateSignature: aRedefinableTemplateSignature
 	anOldOwnedTemplateSignature := ownedTemplateSignature.
 	ownedTemplateSignature := aRedefinableTemplateSignature.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #ownedTemplateSignature
 		otherSelector: #classifier
 		from: anOldOwnedTemplateSignature

@@ -5,7 +5,7 @@ templateParameter: anOperationTemplateParameter
 	anOldTemplateParameter := templateParameter.
 	templateParameter := anOperationTemplateParameter.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #templateParameter
 		otherSelector: #parameteredElement
 		from: anOldTemplateParameter

@@ -10,3 +10,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Classifier put: (OPUMLClassifier newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #DeployedArtifact put: (OPUMLDeployedArtifact newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Artifact put: (OPUMLArtifact newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #DeploymentSpecification put: self.

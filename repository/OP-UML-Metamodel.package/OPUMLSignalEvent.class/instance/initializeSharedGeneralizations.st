@@ -5,3 +5,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #PackageableElement put: (OPUMLPackageableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Event put: (OPUMLEvent newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #MessageEvent put: (OPUMLMessageEvent newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #SignalEvent put: self.

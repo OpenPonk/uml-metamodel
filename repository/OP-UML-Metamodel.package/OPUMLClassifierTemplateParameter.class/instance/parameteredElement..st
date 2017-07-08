@@ -5,7 +5,7 @@ parameteredElement: aClassifier
 	anOldParameteredElement := parameteredElement.
 	parameteredElement := aClassifier.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #parameteredElement
 		otherSelector: #templateParameter
 		from: anOldParameteredElement

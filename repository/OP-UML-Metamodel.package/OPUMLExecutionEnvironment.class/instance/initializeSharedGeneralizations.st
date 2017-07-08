@@ -14,3 +14,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Class put: (OPUMLClass newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #DeploymentTarget put: (OPUMLDeploymentTarget newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Node put: (OPUMLNode newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #ExecutionEnvironment put: self.

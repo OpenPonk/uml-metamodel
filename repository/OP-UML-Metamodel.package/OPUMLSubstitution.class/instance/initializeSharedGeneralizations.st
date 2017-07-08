@@ -8,3 +8,4 @@ initializeSharedGeneralizations
 	sharedGeneralizations at: #Dependency put: (OPUMLDependency newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Abstraction put: (OPUMLAbstraction newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Realization put: (OPUMLRealization newOnShared: sharedGeneralizations).
+	sharedGeneralizations at: #Substitution put: self.

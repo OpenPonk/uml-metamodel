@@ -5,7 +5,7 @@ parameteredElement: anOperation
 	anOldParameteredElement := parameteredElement.
 	parameteredElement := anOperation.
 	OPUMLToOneLink
-		on: self
+		on: self identity
 		thisSelector: #parameteredElement
 		otherSelector: #templateParameter
 		from: anOldParameteredElement
