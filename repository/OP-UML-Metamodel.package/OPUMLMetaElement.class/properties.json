@@ -9,9 +9,10 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"announcer",
-		"uuid",
 		"directGeneralizations",
-		"sharedGeneralizations"
+		"sharedGeneralizations",
+		"tags",
+		"uuid"
 	],
 	"name" : "OPUMLMetaElement",
 	"type" : "normal"
