@@ -1,4 +1,7 @@
-accessing
+operations
 metaclass
-	"References the Class that is extended through an Extension. The property is derived from the type of the memberEnd that is not the ownedEnd."
-	^ metaclass
+	"The query metaclass() returns the metaclass that is being extended (as opposed to the extending stereotype)."
+	
+	"{OCL} result = (metaclassEnd().type.oclAsType(Class))"
+	
+	^ self metaclassEnd type

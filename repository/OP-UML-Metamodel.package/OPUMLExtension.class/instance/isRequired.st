@@ -1,4 +1,7 @@
-accessing
+operations
 isRequired
-	"Indicates whether an instance of the extending stereotype must be created when an instance of the extended class is created. The attribute value is derived from the value of the lower property of the ExtensionEnd referenced by Extension::ownedEnd; a lower value of 1 means that isRequired is true, but otherwise it is false. Since the default value of ExtensionEnd::lower is 0, the default value of isRequired is false."
-	^ isRequired
+	"The query isRequired() is true if the owned end has a multiplicity with the lower bound of 1."
+	
+	"{OCL} result = (ownedEnd.lowerBound() = 1)"
+	
+	^ self ownedEnd lowerBound = 1
