@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "OP-UML-Meta-Models",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Current",
+		"MetaClassMap",
+		"UmlMetaModel"
+	],
+	"instvars" : [
+		"storage"
+	],
+	"name" : "OPUMLSpecsStorage",
+	"type" : "normal"
+}

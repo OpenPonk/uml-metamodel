@@ -1,13 +1,13 @@
 {
-	"commentStamp" : "PeterUhnak 4/22/2017 13:02",
+	"commentStamp" : "PeterUhnak 8/10/2017 12:12",
 	"super" : "OPUMLElement",
 	"category" : "OP-UML-Metamodel-Packages",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"profile",
-		"icons"
+		"icons",
+		"profile"
 	],
 	"name" : "OPUMLStereotype",
 	"type" : "normal"
