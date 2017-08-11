@@ -1,3 +1,3 @@
 accessing
 terminate
-	^ #PseudostateKind::terminate
+	^ #terminate

@@ -1,3 +1,3 @@
 accessing
 initial
-	^ #PseudostateKind::initial
+	^ #initial

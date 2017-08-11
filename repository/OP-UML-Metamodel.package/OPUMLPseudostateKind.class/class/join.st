@@ -1,3 +1,3 @@
 accessing - enum
 join
-	^ #PseudostateKind::join
+	^ #join

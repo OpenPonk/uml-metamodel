@@ -1,3 +1,3 @@
 accessing - enum
 fork
-	^ #PseudostateKind::fork
+	^ #fork

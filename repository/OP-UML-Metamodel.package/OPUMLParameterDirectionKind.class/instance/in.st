@@ -1,4 +1,4 @@
 accessing
 in
 	"Indicates that Parameter values are passed in by the caller. "
-	^ #ParameterDirectionKind::in
+	^ #in

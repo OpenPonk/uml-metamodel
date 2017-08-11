@@ -4,4 +4,6 @@ upperBound
 	
 	"{OCL} result = (if (upperValue=null or upperValue.unlimitedValue()=null) then 1 else upperValue.unlimitedValue() endif)"
 	
-	^ (upperValue isNil or: [ upperValue unlimitedValue isNil ]) ifTrue: [ 1 ] ifFalse: [ upperValue unlimitedValue ]
+	^ (upperValue isNil or: [ upperValue unlimitedValue isNil ])
+		ifTrue: [ 1 ]
+		ifFalse: [ upperValue unlimitedValue ]

@@ -1,3 +1,3 @@
 accessing
 entryPoint
-	^ #PseudostateKind::entryPoint
+	^ #entryPoint

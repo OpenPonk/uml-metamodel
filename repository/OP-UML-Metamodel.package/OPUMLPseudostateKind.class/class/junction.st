@@ -1,3 +1,3 @@
 accessing - enum
 junction
-	^ #PseudostateKind::junction
+	^ #junction

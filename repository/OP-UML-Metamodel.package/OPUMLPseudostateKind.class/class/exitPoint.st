@@ -1,3 +1,3 @@
 accessing - enum
 exitPoint
-	^ #PseudostateKind::exitPoint
+	^ #exitPoint

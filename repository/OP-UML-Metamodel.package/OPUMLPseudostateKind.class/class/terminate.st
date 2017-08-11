@@ -1,3 +1,3 @@
 accessing - enum
 terminate
-	^ #PseudostateKind::terminate
+	^ #terminate

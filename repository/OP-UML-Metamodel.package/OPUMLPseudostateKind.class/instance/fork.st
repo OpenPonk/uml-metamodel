@@ -1,3 +1,3 @@
 accessing
 fork
-	^ #PseudostateKind::fork
+	^ #fork

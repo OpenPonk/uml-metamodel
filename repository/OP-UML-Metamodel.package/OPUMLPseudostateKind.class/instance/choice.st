@@ -1,3 +1,3 @@
 accessing
 choice
-	^ #PseudostateKind::choice
+	^ #choice

@@ -1,3 +1,3 @@
 accessing - enum
 deepHistory
-	^ #PseudostateKind::deepHistory
+	^ #deepHistory

@@ -1,3 +1,3 @@
 accessing
 join
-	^ #PseudostateKind::join
+	^ #join
