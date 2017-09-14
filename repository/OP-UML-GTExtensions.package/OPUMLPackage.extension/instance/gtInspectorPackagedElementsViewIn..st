@@ -1,5 +1,5 @@
 *OP-UML-GTExtensions
-gtInspectorStructureIn: aComposite
+gtInspectorPackagedElementsViewIn: aComposite
 	<gtInspectorPresentationOrder: 10>
 	aComposite roassal2
 		title: 'Structural View';
@@ -74,8 +74,8 @@ gtInspectorStructureIn: aComposite
 							(attrLbl := OPUmlLabel new)
 								owningElement: attrComp;
 								modelElement: attr;
-								text: [ :model | model name , ' : ' , model type name ] ].
+								text: [ :model | model name , ' : ' , (model type ifNil: [ 'nil' ] ifNotNil: #name) ] ].
 					el renderIn: view.
 					els add: el ].
 			els do: [ :each | each rtElement @ RTDraggable ].
-			RTRectanglePackLayout on: els ]
+			RTGridLayout on: els ]

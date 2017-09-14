@@ -1,36 +1,66 @@
 *OP-UML-GTExtensions
 gtInspectorPackageViewIn: aComposite
 	<gtInspectorPresentationOrder: 11>
-	| edges |
-	aComposite roassal2
+	^ aComposite roassal2
 		title: 'Package View';
-		painting: [ :view | 
-			| els packages |
-			OPUMLRTInteractiveViewContext setOnView: view.
-			view canvas theme: TRWhiteTheme new.
-			view @ RTZoomableView @ RTDraggableView.
-			els := RTGroup new.
-			edges := RTGroup new.
-			packages := ({self} , (self packageImports collect: #importedPackage)) asSet.
-			packages
-				do: [ :each | 
-					| el |
-					el := OPUmlPackageCompartmentableShape new.
-					el style
-						fillColor: Color white;
-						fontColor: Color black.
-					el modelElement: each.
-					el renderIn: view.
-					els add: el ].
+		painting: [ :v | 
+			| pkgs comp els line |
+			pkgs := Set new.
+			pkgs add: self.
+			pkgs addAll: (self packageMerges collect: #mergedPackage).
+			pkgs addAll: (self packageImports collect: #importedPackage).
+			pkgs addAll: (self profileApplications collect: #appliedProfile).
+			comp := RTCompositeShape new.
+			comp add: RTBox new.
+			comp
+				add:
+					(RTLabel new text: [ :el | '«' , el umlClassName , '»' , String cr , el name ]).
+			comp allOfSameSizeWithPadding.
+			els := comp elementsOn: pkgs.
+			els @ RTDraggable.
+			v addAll: els.
+			(line := RTStyledMultiLine new)
+				head: RTSimpleArrow asHead;
+				dashedLine.
 			self packageImports
 				do: [ :each | 
-					| from to edge |
-					from := els detect: [ :e | e modelElement = each importingNamespace ].
-					to := els detect: [ :e | e modelElement = each importedPackage ].
-					edge := OPUmlEdge new.
-					edge headDecorator: OPUmlEdgeMarkers simpleArrow.
-					edge source: from.
-					edge target: to.
-					edge renderIn: view.
-					edges add: edge ].
-			RTTreeLayout on: els edges: (edges collect: #rtEdge) ]
+					v
+						add:
+							((line
+								edgeFrom: (els elementFromModel: self)
+								to: (els elementFromModel: each importedPackage)) model: each) ].
+			self packageMerges
+				do: [ :each | 
+					v
+						add:
+							((line
+								edgeFrom: (els elementFromModel: self)
+								to: (els elementFromModel: each mergedPackage)) model: each) ].
+			self profileApplications
+				do: [ :each | 
+					v
+						add:
+							((line
+								edgeFrom: (els elementFromModel: self)
+								to: (els elementFromModel: each appliedProfile)) model: each) ].
+			v edges
+				@
+					(RTLabeled new
+						text: [ :m | 
+							String
+								streamContents: [ :stream | 
+									stream << '«'.
+									(m oclIsKindOf: #ProfileApplication)
+										ifTrue: [ stream << 'apply' ].
+									(m oclIsKindOf: #PackageMerge)
+										ifTrue: [ stream << 'merge' ].
+									(m oclIsKindOf: #PackageImport)
+										ifTrue: [ stream << 'import' ].
+									stream << '»' ] ]).
+			RTDominanceTreeLayout new
+				verticalGap: 100;
+				verticallyReverse;
+				on: v elements.
+			v elements do: [ :each | each translateBy: 0@0 ].
+			v @ RTDraggableView @ RTZoomableView.
+			v ]
