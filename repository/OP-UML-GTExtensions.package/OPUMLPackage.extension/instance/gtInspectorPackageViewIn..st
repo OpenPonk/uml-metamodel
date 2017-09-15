@@ -57,10 +57,10 @@ gtInspectorPackageViewIn: aComposite
 									(m oclIsKindOf: #PackageImport)
 										ifTrue: [ stream << 'import' ].
 									stream << '»' ] ]).
-			RTDominanceTreeLayout new
+"			RTDominanceTreeLayout new
 				verticalGap: 100;
 				verticallyReverse;
-				on: v elements.
-			v elements do: [ :each | each translateBy: 0@0 ].
+				on: els."
+			RTGridLayout new gapSize: 100; on: els.
 			v @ RTDraggableView @ RTZoomableView.
 			v ]
