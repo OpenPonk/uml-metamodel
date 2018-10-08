@@ -1,1 +1,0 @@
-A BehaviorExecutionSpecification is a kind of ExecutionSpecification representing the execution of a Behavior.

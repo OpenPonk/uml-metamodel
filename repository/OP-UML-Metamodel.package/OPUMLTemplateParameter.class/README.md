@@ -1,1 +1,0 @@
-A TemplateParameter exposes a ParameterableElement as a formal parameter of a template.

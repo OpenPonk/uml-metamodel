@@ -1,1 +1,0 @@
-CallConcurrencyKind is an Enumeration used to specify the semantics of concurrent calls to a BehavioralFeature.

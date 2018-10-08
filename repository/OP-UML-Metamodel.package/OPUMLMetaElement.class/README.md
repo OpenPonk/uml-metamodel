@@ -1,1 +1,0 @@
-I am a metaclass for UML classes implementing some behavior for managing the classes and other stuff (like an announcer).

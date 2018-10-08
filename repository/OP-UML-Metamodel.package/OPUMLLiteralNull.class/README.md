@@ -1,1 +1,0 @@
-A LiteralNull specifies the lack of a value.

@@ -1,1 +1,0 @@
-StructuralFeatureAction is an abstract class for all Actions that operate on StructuralFeatures.

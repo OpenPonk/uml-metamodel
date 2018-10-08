@@ -1,1 +1,0 @@
-A CentralBufferNode is an ObjectNode for managing flows from multiple sources and targets.

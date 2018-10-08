@@ -1,1 +1,0 @@
-A LiteralSpecification identifies a literal constant being modeled.

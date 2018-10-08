@@ -1,1 +1,0 @@
-ActivityGroup is an abstract class for defining sets of ActivityNodes and ActivityEdges in an Activity.

@@ -1,1 +1,0 @@
-A LoopNode is a StructuredActivityNode that represents an iterative loop with setup, test, and body sections.

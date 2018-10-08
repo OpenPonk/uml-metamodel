@@ -1,1 +1,0 @@
-Relationship is an abstract concept that specifies some kind of relationship between Elements.

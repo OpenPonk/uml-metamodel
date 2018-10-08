@@ -1,1 +1,0 @@
-A CreateObjectAction is an Action that creates an instance of the specified Classifier.

@@ -1,1 +1,0 @@
-A DataStoreNode is a CentralBufferNode for persistent data.

@@ -1,1 +1,0 @@
-A ClearVariableAction is a VariableAction that removes all values of a Variable.

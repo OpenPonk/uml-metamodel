@@ -1,1 +1,0 @@
-An EnumerationLiteral is a user-defined data value for an Enumeration.

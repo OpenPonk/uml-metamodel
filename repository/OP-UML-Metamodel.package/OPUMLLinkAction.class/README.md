@@ -1,1 +1,0 @@
-LinkAction is an abstract class for all Actions that identify the links to be acted on using LinkEndData.

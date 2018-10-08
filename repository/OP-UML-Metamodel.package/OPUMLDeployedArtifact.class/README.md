@@ -1,1 +1,0 @@
-A deployed artifact is an artifact or artifact instance that has been deployed to a deployment target.

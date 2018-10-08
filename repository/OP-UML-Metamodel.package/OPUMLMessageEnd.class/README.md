@@ -1,1 +1,0 @@
-MessageEnd is an abstract specialization of NamedElement that represents what can occur at the end of a Message.

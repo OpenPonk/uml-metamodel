@@ -1,1 +1,0 @@
-ExpansionKind is an enumeration type used to specify how an ExpansionRegion executes its contents.

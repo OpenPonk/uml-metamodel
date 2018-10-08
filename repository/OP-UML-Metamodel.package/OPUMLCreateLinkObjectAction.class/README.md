@@ -1,1 +1,0 @@
-A CreateLinkObjectAction is a CreateLinkAction for creating link objects (AssociationClasse instances).

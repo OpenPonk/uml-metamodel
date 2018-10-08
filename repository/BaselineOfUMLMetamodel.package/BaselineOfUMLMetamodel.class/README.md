@@ -1,1 +1,0 @@
-Baseline of https://github.com/OpenPonk/uml-metamodel

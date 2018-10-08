@@ -1,1 +1,0 @@
-A profile application is used to show which profiles have been applied to a package.

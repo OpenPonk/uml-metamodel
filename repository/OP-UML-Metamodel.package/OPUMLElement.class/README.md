@@ -1,1 +1,0 @@
-An Element is a constituent of a model. As such, it has the capability of owning other Elements.

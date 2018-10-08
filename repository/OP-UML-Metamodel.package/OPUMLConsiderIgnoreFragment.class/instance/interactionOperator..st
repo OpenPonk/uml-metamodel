@@ -1,3 +1,0 @@
-accessing - CombinedFragment
-interactionOperator: anInteractionOperatorKind
-	(sharedGeneralizations at: #CombinedFragment) interactionOperator: anInteractionOperatorKind

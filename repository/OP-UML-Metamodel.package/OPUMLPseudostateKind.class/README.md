@@ -1,1 +1,0 @@
-PseudostateKind is an Enumeration type that is used to differentiate various kinds of Pseudostates.

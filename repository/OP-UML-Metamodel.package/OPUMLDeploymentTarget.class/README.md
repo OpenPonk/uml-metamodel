@@ -1,1 +1,0 @@
-A deployment target is the location for a deployed artifact.

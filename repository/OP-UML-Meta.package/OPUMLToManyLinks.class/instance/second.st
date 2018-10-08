@@ -1,3 +1,0 @@
-copying
-second
-	^ collection second

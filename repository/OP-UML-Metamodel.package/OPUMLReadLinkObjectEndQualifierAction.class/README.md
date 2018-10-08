@@ -1,1 +1,0 @@
-A ReadLinkObjectEndQualifierAction is an Action that retrieves a qualifier end value from a link object.

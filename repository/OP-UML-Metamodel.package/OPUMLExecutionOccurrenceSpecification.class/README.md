@@ -1,1 +1,0 @@
-An ExecutionOccurrenceSpecification represents moments in time at which Actions or Behaviors start or finish.

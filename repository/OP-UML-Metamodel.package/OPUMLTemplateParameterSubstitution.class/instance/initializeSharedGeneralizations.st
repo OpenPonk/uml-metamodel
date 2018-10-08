@@ -1,3 +1,0 @@
-initialization
-initializeSharedGeneralizations
-	sharedGeneralizations at: #TemplateParameterSubstitution put: self.

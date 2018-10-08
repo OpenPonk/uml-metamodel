@@ -1,1 +1,0 @@
-A DestructionOccurenceSpecification models the destruction of an object.

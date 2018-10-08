@@ -1,1 +1,0 @@
-An ActivityPartition is a kind of ActivityGroup for identifying ActivityNodes that have some characteristic in common.

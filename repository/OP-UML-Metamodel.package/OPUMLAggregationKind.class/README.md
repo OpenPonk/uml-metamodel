@@ -1,1 +1,0 @@
-AggregationKind is an Enumeration for specifying the kind of aggregation of a Property.

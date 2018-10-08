@@ -1,1 +1,0 @@
-A RaiseExceptionAction is an Action that causes an exception to occur. The input value becomes the exception object.

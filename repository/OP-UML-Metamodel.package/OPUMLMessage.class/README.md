@@ -1,1 +1,0 @@
-A Message defines a particular communication between Lifelines of an Interaction.

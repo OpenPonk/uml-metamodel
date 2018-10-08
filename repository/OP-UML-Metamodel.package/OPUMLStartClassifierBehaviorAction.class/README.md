@@ -1,1 +1,0 @@
-A StartClassifierBehaviorAction is an Action that starts the classifierBehavior of the input object.

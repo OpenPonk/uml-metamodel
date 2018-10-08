@@ -1,1 +1,0 @@
-A ReadLinkAction is a LinkAction that navigates across an Association to retrieve the objects on one end.

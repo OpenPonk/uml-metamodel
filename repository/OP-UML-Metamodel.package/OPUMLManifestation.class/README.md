@@ -1,1 +1,0 @@
-A manifestation is the concrete physical rendering of one or more model elements by an artifact.

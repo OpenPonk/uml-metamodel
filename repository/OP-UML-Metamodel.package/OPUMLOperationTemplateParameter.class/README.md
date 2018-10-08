@@ -1,1 +1,0 @@
-An OperationTemplateParameter exposes an Operation as a formal parameter for a template.

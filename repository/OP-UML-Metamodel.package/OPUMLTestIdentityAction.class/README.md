@@ -1,1 +1,0 @@
-A TestIdentityAction is an Action that tests if two values are identical objects.

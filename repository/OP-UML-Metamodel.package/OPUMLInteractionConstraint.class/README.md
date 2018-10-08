@@ -1,1 +1,0 @@
-An InteractionConstraint is a Boolean expression that guards an operand in a CombinedFragment.

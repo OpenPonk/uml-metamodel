@@ -1,1 +1,0 @@
-An ActionInputPin is a kind of InputPin that executes an Action to determine the values to input to another Action.

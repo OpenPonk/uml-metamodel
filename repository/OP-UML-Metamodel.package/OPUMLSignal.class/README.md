@@ -1,1 +1,0 @@
-A Signal is a specification of a kind of communication between objects in which a reaction is asynchronously triggered in the receiver without a reply.

@@ -1,1 +1,0 @@
-An InputPin is a Pin that holds input values to be consumed by an Action.

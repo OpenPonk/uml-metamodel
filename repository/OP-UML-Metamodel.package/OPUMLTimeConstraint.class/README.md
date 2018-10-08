@@ -1,1 +1,0 @@
-A TimeConstraint is a Constraint that refers to a TimeInterval.

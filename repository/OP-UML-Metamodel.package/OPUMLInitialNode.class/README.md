@@ -1,1 +1,0 @@
-An InitialNode is a ControlNode that offers a single control token when initially enabled.

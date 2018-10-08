@@ -1,3 +1,0 @@
-accessing - ConnectableElement
-templateParameter: aConnectableElementTemplateParameter
-	(sharedGeneralizations at: #ConnectableElement) templateParameter: aConnectableElementTemplateParameter

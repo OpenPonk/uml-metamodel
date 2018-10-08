@@ -1,1 +1,0 @@
-A RemoveVariableValueAction is a WriteVariableAction that removes values from a Variables.

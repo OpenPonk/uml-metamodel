@@ -1,1 +1,0 @@
-A ReadLinkObjectEndAction is an Action that retrieves an end object from a link object.

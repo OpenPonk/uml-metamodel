@@ -1,1 +1,0 @@
-A GeneralizationSet is a PackageableElement whose instances represent sets of Generalization relationships.

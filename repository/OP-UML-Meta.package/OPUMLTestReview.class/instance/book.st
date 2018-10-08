@@ -1,3 +1,0 @@
-accessing
-book
-	^ book

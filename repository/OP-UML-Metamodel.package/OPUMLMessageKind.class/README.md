@@ -1,1 +1,0 @@
-This is an enumerated type that identifies the type of Message.

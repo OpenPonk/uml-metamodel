@@ -1,1 +1,0 @@
-A communication path is an association between two deployment targets, through which they are able to exchange signals and messages.

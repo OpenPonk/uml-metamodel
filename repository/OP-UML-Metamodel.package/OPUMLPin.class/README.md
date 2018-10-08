@@ -1,1 +1,0 @@
-A Pin is an ObjectNode and MultiplicityElement that provides input values to an Action or accepts output values from an Action.

@@ -1,1 +1,0 @@
-An ActionExecutionSpecification is a kind of ExecutionSpecification representing the execution of an Action.

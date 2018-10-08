@@ -1,1 +1,0 @@
-A SignalEvent represents the receipt of an asynchronous Signal instance.

@@ -1,3 +1,0 @@
-copying
-copyEmpty
-	^ collection copyEmpty 

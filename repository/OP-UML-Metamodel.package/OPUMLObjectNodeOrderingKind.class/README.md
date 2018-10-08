@@ -1,1 +1,0 @@
-ObjectNodeOrderingKind is an enumeration indicating queuing order for offering the tokens held by an ObjectNode.

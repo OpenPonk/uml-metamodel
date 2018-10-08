@@ -1,1 +1,0 @@
-A Vertex is an abstraction of a node in a StateMachine graph. It can be the source or destination of any number of Transitions.

@@ -1,1 +1,0 @@
-A CreateLinkAction is a WriteLinkAction for creating links.

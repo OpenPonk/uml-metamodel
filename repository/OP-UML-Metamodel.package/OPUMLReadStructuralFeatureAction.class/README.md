@@ -1,1 +1,0 @@
-A ReadStructuralFeatureAction is a StructuralFeatureAction that retrieves the values of a StructuralFeature.

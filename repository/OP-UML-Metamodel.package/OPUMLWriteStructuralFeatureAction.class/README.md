@@ -1,1 +1,0 @@
-WriteStructuralFeatureAction is an abstract class for StructuralFeatureActions that change StructuralFeature values.

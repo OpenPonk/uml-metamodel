@@ -1,1 +1,0 @@
-A CollaborationUse is used to specify the application of a pattern specified by a Collaboration to a specific situation.

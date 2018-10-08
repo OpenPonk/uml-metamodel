@@ -1,1 +1,0 @@
-An ActivityFinalNode is a FinalNode that terminates the execution of its owning Activity or StructuredActivityNode.

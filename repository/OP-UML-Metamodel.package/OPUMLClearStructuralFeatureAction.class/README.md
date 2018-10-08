@@ -1,1 +1,0 @@
-A ClearStructuralFeatureAction is a StructuralFeatureAction that removes all values of a StructuralFeature.

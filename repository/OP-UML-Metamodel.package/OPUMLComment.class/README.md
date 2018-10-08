@@ -1,1 +1,0 @@
-A Comment is a textual annotation that can be attached to a set of Elements.

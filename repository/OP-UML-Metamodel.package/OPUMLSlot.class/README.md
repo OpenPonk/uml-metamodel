@@ -1,1 +1,0 @@
-A Slot designates that an entity modeled by an InstanceSpecification has a value or values for a specific StructuralFeature.

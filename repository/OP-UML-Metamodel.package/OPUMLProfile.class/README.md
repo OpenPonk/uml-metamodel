@@ -1,1 +1,0 @@
-A profile defines limited extensions to a reference metamodel with the purpose of adapting the metamodel to a specific platform or domain.

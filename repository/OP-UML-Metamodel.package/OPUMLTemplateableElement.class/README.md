@@ -1,1 +1,0 @@
-A TemplateableElement is an Element that can optionally be defined as a template and bound to other templates.

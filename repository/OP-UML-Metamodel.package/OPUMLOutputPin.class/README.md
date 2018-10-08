@@ -1,1 +1,0 @@
-An OutputPin is a Pin that holds output values produced by an Action.

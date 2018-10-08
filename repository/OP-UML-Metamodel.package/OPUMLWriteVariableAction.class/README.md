@@ -1,1 +1,0 @@
-WriteVariableAction is an abstract class for VariableActions that change Variable values.

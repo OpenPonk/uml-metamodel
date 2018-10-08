@@ -1,1 +1,0 @@
-A Type constrains the values represented by a TypedElement.

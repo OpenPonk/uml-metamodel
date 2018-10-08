@@ -1,1 +1,0 @@
-A ClearAssociationAction is an Action that destroys all links of an Association in which a particular object participates.

@@ -1,1 +1,0 @@
-An EncapsulatedClassifier may own Ports to specify typed interaction points.
