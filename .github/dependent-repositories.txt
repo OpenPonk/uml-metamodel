@@ -1,0 +1,6 @@
+{
+	"include" : [
+		{ "repository" : "OpenPonk/uml-profiles" },
+		{ "repository" : "OpenPonk/uml-xmi" }
+	]
+}
