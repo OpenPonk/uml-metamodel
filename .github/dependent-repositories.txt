@@ -1,6 +1,6 @@
 {
 	"include" : [
-		{ "repository" : "OpenPonk/uml-profiles" },
-		{ "repository" : "OpenPonk/uml-xmi" }
+		{ "repository" : "OpenPonk/uml-profiles", "build-dependent" : true },
+		{ "repository" : "OpenPonk/uml-xmi", "build-dependent" : false }
 	]
 }
