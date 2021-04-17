@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'value'
 	],
-	#category : 'OP-UML-Metamodel-Values'
+	#category : #'OP-UML-Metamodel-Values'
 }
 
 { #category : #'operations - ValueSpecification' }
@@ -49,7 +49,7 @@ OPUMLLiteralInteger >> integerValue [
 	
 	"{OCL} result = (value)"
 	
-	^ value
+	^ self value
 
 ]
 
