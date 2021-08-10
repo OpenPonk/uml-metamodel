@@ -14,7 +14,7 @@ Class {
 	#classInstVars : [
 		'metaModels'
 	],
-	#category : 'OP-UML-Metamodel-Meta'
+	#category : #'OP-UML-Metamodel-Meta'
 }
 
 { #category : #'instance creation' }
@@ -166,6 +166,105 @@ OPUMLMetaElement >> initializeWithShared: aDictionary [
 	super initialize.
 	sharedGeneralizations := aDictionary.
 	self initializeDirectGeneralizations
+]
+
+{ #category : #'GTInspector - extensions' }
+OPUMLMetaElement >> inspectionAllProperties [
+
+	<inspectorPresentationOrder: 6 title: 'Properties (All)'>
+	^ SpTablePresenter new
+		  items: self inspectorProperties sorted;
+		  addColumn: (SpStringTableColumn new
+				   title: 'Name';
+				   evaluated: #key;
+				   yourself);
+		  addColumn: (SpStringTableColumn new
+				   title: 'Value';
+				   evaluated: #value;
+				   yourself);
+		  yourself
+]
+
+{ #category : #'GTInspector - extensions' }
+OPUMLMetaElement >> inspectionGeneralizations [
+
+	<inspectorPresentationOrder: 8 title: 'Generalizations'>
+	^ SpTablePresenter new
+		  items: sharedGeneralizations associations;
+		  addColumn: (SpStringTableColumn new
+				   title: 'Name';
+				   evaluated: #key;
+				   yourself);
+		  addColumn: (SpStringTableColumn new
+				   title: 'Value';
+				   evaluated: #value;
+				   yourself);
+		  yourself
+]
+
+{ #category : #'GTInspector - extensions' }
+OPUMLMetaElement >> inspectionProperties [
+
+	<inspectorPresentationOrder: 5 title: 'Properties'>
+	^ SpTablePresenter new
+		  items: self nonEmptyinspectorProperties sorted;
+		  addColumn: (SpStringTableColumn new
+				   title: 'Name';
+				   evaluated: #key;
+				   yourself);
+		  addColumn: (SpStringTableColumn new
+				   title: 'Value';
+				   evaluated: #value;
+				   yourself);
+		  yourself
+]
+
+{ #category : #'GTInspector - extensions' }
+OPUMLMetaElement >> inspectionStereotypeProperties [
+
+	<inspectorPresentationOrder: 7 title: 'Tagged Values'>
+	^ SpTablePresenter new
+		  items:
+			  (self stereotypeProperties sorted: [ :a :b | a first < b first ]);
+		  addColumn: (SpStringTableColumn new
+				   title: 'Name';
+				   evaluated: #first;
+				   yourself);
+		  addColumn: (SpStringTableColumn new
+				   title: 'Stereotype';
+				   evaluated: #second;
+				   yourself);
+		  addColumn: (SpStringTableColumn new
+				   title: 'Value';
+				   evaluated: #third;
+				   yourself);
+		  yourself
+]
+
+{ #category : #'GTInspector - extensions' }
+OPUMLMetaElement >> inspectionStereotypes [
+
+	<inspectorPresentationOrder: 7 title: 'Stereotypes'>
+	^ SpListPresenter new
+		  items: self appliedStereotypes sorted;
+		  yourself
+]
+
+{ #category : #'GTInspector - extensions' }
+OPUMLMetaElement >> inspectionTags [
+
+	<inspectorPresentationOrder: 7 title: 'Tags'>
+	^ SpTablePresenter new
+		  items: self tags associations;
+		  addColumn: (SpStringTableColumn new
+				   title: 'Name';
+				   evaluated: #key;
+				   yourself);
+		  addColumn: (SpStringTableColumn new
+				   title: 'Value';
+				   evaluated: #value;
+				   yourself);
+		  yourself
 ]
 
 { #category : #'GTInspector - extensions' }
