@@ -6,7 +6,7 @@ Class {
 		'collection',
 		'oppositeSelector'
 	],
-	#category : 'OP-UML-Meta-Models'
+	#category : #'OP-UML-Meta-Models'
 }
 
 { #category : #'instance creation' }
@@ -82,6 +82,13 @@ OPUMLToManyLinks >> remove: oldObject ifAbsent: anExceptionBlock [
 		ifFalse: [ ^ anExceptionBlock value ].
 	self removeOppositeFrom: oldObject.
 	collection remove: oldObject ifAbsent: [  ]
+]
+
+{ #category : #removing }
+OPUMLToManyLinks >> removeAll [
+
+	(OrderedCollection withAll: collection) do: [ :each | 
+		self remove: each ]
 ]
 
 { #category : #adding }

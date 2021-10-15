@@ -1,7 +1,7 @@
 Class {
 	#name : #OPUMLToManyLinksTest,
 	#superclass : #TestCase,
-	#category : 'OP-UML-Meta-Tests'
+	#category : #'OP-UML-Meta-Tests'
 }
 
 { #category : #tests }
@@ -45,6 +45,25 @@ OPUMLToManyLinksTest >> testRemove [
 	book reviews remove: review.
 	self assert: book reviews asArray equals: #().
 	self assert: review book equals: nil
+]
+
+{ #category : #tests }
+OPUMLToManyLinksTest >> testRemoveAll [
+
+	| book review1 review2 |
+	book := OPUMLTestBook new.
+	review1 := OPUMLTestReview new.
+	review2 := OPUMLTestReview new.
+	book reviews
+		add: review1;
+		add: review2.
+	self assert: book reviews asArray equals: { 
+			review1.
+			review2 }.
+	book reviews removeAll.
+	self assert: book reviews asArray equals: #(  ).
+	self assert: review1 book equals: nil.
+	self assert: review2 book equals: nil
 ]
 
 { #category : #tests }
