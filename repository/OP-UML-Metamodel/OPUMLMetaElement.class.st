@@ -51,12 +51,18 @@ OPUMLMetaElement >> appliedStereotypes [
 
 { #category : #'accessing - stereotypes' }
 OPUMLMetaElement >> applyStereotype: aStereotype [
+
 	| meta attribute |
-	self appliedStereotypes addIfNotPresent: aStereotype.
+	(self appliedStereotypes anySatisfy: [ :any | 
+		 any oclIsTypeOf: aStereotype umlClassName ]) ifTrue: [ ^ self ].
+	self appliedStereotypes add: aStereotype.
 	meta := aStereotype umlMetaClass.
-	attribute := (meta allAttributes select: [ :each | each name beginsWith: 'base_' ])
-		detect: [ :each | self oclIsKindOf: each type name ].
-	self perform: (attribute opposite name , ':') asSymbol with: aStereotype
+	attribute := (meta allAttributes select: [ :each | 
+		              each name beginsWith: 'base_' ]) detect: [ :each | 
+		             self oclIsKindOf: each type name ].
+	self
+		perform: (attribute opposite name , ':') asSymbol
+		with: aStereotype
 ]
 
 { #category : #'accessing - tags' }
@@ -173,7 +179,8 @@ OPUMLMetaElement >> inspectionStereotypes [
 
 	<inspectorPresentationOrder: 7 title: 'Stereotypes'>
 	^ SpListPresenter new
-		  items: self appliedStereotypes sorted;
+		  items: (self appliedStereotypes sorted: [ :a :b | 
+					   a umlClassName < b umlClassName ]);
 		  yourself
 ]
 
