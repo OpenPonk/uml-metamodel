@@ -106,6 +106,7 @@ OPUMLMetaElement >> inspectionAllProperties [
 
 	<inspectorPresentationOrder: 6 title: 'Properties (All)'>
 	^ SpTablePresenter new
+		  beResizable;
 		  items: self inspectorProperties sorted;
 		  addColumn: (SpStringTableColumn new
 				   title: 'Name';
@@ -123,6 +124,7 @@ OPUMLMetaElement >> inspectionGeneralizations [
 
 	<inspectorPresentationOrder: 8 title: 'Generalizations'>
 	^ SpTablePresenter new
+		  beResizable;
 		  items: sharedGeneralizations associations;
 		  addColumn: (SpStringTableColumn new
 				   title: 'Name';
@@ -140,6 +142,7 @@ OPUMLMetaElement >> inspectionProperties [
 
 	<inspectorPresentationOrder: 5 title: 'Properties'>
 	^ SpTablePresenter new
+		  beResizable;
 		  items: self nonEmptyinspectorProperties sorted;
 		  addColumn: (SpStringTableColumn new
 				   title: 'Name';
@@ -157,6 +160,7 @@ OPUMLMetaElement >> inspectionStereotypeProperties [
 
 	<inspectorPresentationOrder: 7 title: 'Tagged Values'>
 	^ SpTablePresenter new
+		  beResizable;
 		  items:
 			  (self stereotypeProperties sorted: [ :a :b | a first < b first ]);
 		  addColumn: (SpStringTableColumn new
@@ -189,6 +193,7 @@ OPUMLMetaElement >> inspectionTags [
 
 	<inspectorPresentationOrder: 7 title: 'Tags'>
 	^ SpTablePresenter new
+		  beResizable;
 		  items: self tags associations;
 		  addColumn: (SpStringTableColumn new
 				   title: 'Name';
