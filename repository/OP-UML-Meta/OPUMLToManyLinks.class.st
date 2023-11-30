@@ -10,6 +10,14 @@ Class {
 }
 
 { #category : #'instance creation' }
+OPUMLToManyLinks class >> fromSton: stonReader [
+
+	^ self new
+		  fromSton: stonReader;
+		  yourself
+]
+
+{ #category : #'instance creation' }
 OPUMLToManyLinks class >> on: anObject opposite: aSelector [
 	^ self new setOwner: anObject opposite: aSelector
 ]
@@ -115,6 +123,12 @@ OPUMLToManyLinks >> size [
 { #category : #private }
 OPUMLToManyLinks >> species [
 	^ OrderedCollection
+]
+
+{ #category : #'ston persistence' }
+OPUMLToManyLinks >> stonOn: stonWriter [
+
+	stonWriter writeObject: self
 ]
 
 { #category : #adding }
