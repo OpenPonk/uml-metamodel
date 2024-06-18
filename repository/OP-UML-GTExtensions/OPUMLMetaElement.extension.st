@@ -1,6 +1,6 @@
-Extension { #name : #OPUMLMetaElement }
+Extension { #name : 'OPUMLMetaElement' }
 
-{ #category : #'*OP-UML-GTExtensions' }
+{ #category : '*OP-UML-GTExtensions' }
 OPUMLMetaElement >> gtInspectorSharedGeneralizationsViewIn: aComposite [
 	<gtInspectorPresentationOrder: 9>
 	aComposite roassal2

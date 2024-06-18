@@ -2,8 +2,8 @@
 A multiplicity is a definition of an inclusive interval of non-negative integers beginning with a lower bound and ending with a (possibly infinite) upper bound. A MultiplicityElement embeds this information to specify the allowable cardinalities for an instantiation of the Element.
 "
 Class {
-	#name : #OPUMLMultiplicityElement,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLMultiplicityElement',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'upper',
 		'isOrdered',
@@ -12,10 +12,12 @@ Class {
 		'lowerValue',
 		'lower'
 	],
-	#category : 'OP-UML-Metamodel-CommonStructure'
+	#category : 'OP-UML-Metamodel-CommonStructure',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'CommonStructure'
 }
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> compatibleWithStub [
 	"The operation compatibleWith takes another multiplicity as input. It returns true if the other multiplicity is wider than, or the same as, self."
 	
@@ -25,7 +27,7 @@ OPUMLMultiplicityElement >> compatibleWithStub [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> includesMultiplicityStub [
 	"The query includesMultiplicity() checks whether this multiplicity includes all the cardinalities allowed by the specified multiplicity."
 	
@@ -36,18 +38,18 @@ OPUMLMultiplicityElement >> includesMultiplicityStub [
 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMultiplicityElement >> initializeDirectGeneralizations [
 	directGeneralizations := {
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMultiplicityElement >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #MultiplicityElement put: self.
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLMultiplicityElement >> isMultivalued [
 	"The query isMultivalued() checks whether this multiplicity has an upper bound greater than one."
 	
@@ -58,7 +60,7 @@ OPUMLMultiplicityElement >> isMultivalued [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> isMultivaluedStub [
 	"The query isMultivalued() checks whether this multiplicity has an upper bound greater than one."
 	
@@ -69,19 +71,19 @@ OPUMLMultiplicityElement >> isMultivaluedStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> isOrdered [
 	"For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this MultiplicityElement are sequentially ordered."
 	^ isOrdered ifNil: [ isOrdered := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> isOrdered: aBoolean [
 	"For a multivalued multiplicity, this attribute specifies whether the values in an instantiation of this MultiplicityElement are sequentially ordered."
 	isOrdered := aBoolean
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> isStub [
 	"The operation is determines if the upper and lower bound of the ranges are the ones given."
 	
@@ -91,19 +93,19 @@ OPUMLMultiplicityElement >> isStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> isUnique [
 	"For a multivalued multiplicity, this attributes specifies whether the values in an instantiation of this MultiplicityElement are unique."
 	^ isUnique ifNil: [ isUnique := true ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> isUnique: aBoolean [
 	"For a multivalued multiplicity, this attributes specifies whether the values in an instantiation of this MultiplicityElement are unique."
 	isUnique := aBoolean
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLMultiplicityElement >> lower [
 	"The derived lower attribute must equal the lowerBound."
 	
@@ -113,13 +115,13 @@ OPUMLMultiplicityElement >> lower [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> lower: anInteger [
 	"The lower bound of the multiplicity interval."
 	lower := anInteger
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLMultiplicityElement >> lowerBound [
 	"The query lowerBound() returns the lower bound of the multiplicity as an integer, which is the integerValue of lowerValue, if this is given, and 1 otherwise."
 	
@@ -131,7 +133,7 @@ OPUMLMultiplicityElement >> lowerBound [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> lowerBoundStub [
 	"The query lowerBound() returns the lower bound of the multiplicity as an integer, which is the integerValue of lowerValue, if this is given, and 1 otherwise."
 	
@@ -141,7 +143,7 @@ OPUMLMultiplicityElement >> lowerBoundStub [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> lowerStub [
 	"The derived lower attribute must equal the lowerBound."
 	
@@ -151,19 +153,19 @@ OPUMLMultiplicityElement >> lowerStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> lowerValue [
 	"The specification of the lower bound for this multiplicity."
 	^ lowerValue
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> lowerValue: aValueSpecification [
 	"The specification of the lower bound for this multiplicity."
 	lowerValue := aValueSpecification
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLMultiplicityElement >> upper [
 	"The derived upper attribute must equal the upperBound."
 	
@@ -173,13 +175,13 @@ OPUMLMultiplicityElement >> upper [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> upper: anUnlimitedNatural [
 	"The upper bound of the multiplicity interval."
 	upper := anUnlimitedNatural
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLMultiplicityElement >> upperBound [
 	"The query upperBound() returns the upper bound of the multiplicity for a bounded multiplicity as an unlimited natural, which is the unlimitedNaturalValue of upperValue, if given, and 1, otherwise."
 	
@@ -191,7 +193,7 @@ OPUMLMultiplicityElement >> upperBound [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> upperBoundStub [
 	"The query upperBound() returns the upper bound of the multiplicity for a bounded multiplicity as an unlimited natural, which is the unlimitedNaturalValue of upperValue, if given, and 1, otherwise."
 	
@@ -201,7 +203,7 @@ OPUMLMultiplicityElement >> upperBoundStub [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMultiplicityElement >> upperStub [
 	"The derived upper attribute must equal the upperBound."
 	
@@ -211,13 +213,13 @@ OPUMLMultiplicityElement >> upperStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> upperValue [
 	"The specification of the upper bound for this multiplicity."
 	^ upperValue
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMultiplicityElement >> upperValue: aValueSpecification [
 	"The specification of the upper bound for this multiplicity."
 	upperValue := aValueSpecification

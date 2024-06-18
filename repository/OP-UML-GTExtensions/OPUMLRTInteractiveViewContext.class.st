@@ -1,10 +1,11 @@
 Class {
-	#name : #OPUMLRTInteractiveViewContext,
-	#superclass : #RTAbstractViewContext,
-	#category : 'OP-UML-GTExtensions'
+	#name : 'OPUMLRTInteractiveViewContext',
+	#superclass : 'RTAbstractViewContext',
+	#category : 'OP-UML-GTExtensions',
+	#package : 'OP-UML-GTExtensions'
 }
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 OPUMLRTInteractiveViewContext >> interactionsToBeRegistered [
 	^ Array with: OPUMLRTSelectableElementsContextInteraction with: RTResizeableViewContextInteraction
 ]

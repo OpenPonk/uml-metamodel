@@ -2,8 +2,8 @@
 I am a metaclass for UML classes implementing some behavior for managing the classes and other stuff (like an announcer).
 "
 Class {
-	#name : #OPUMLMetaElement,
-	#superclass : #Object,
+	#name : 'OPUMLMetaElement',
+	#superclass : 'Object',
 	#instVars : [
 		'announcer',
 		'directGeneralizations',
@@ -14,42 +14,44 @@ Class {
 	#classInstVars : [
 		'metaModels'
 	],
-	#category : #'OP-UML-Metamodel-Meta'
+	#category : 'OP-UML-Metamodel-Meta',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Meta'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 OPUMLMetaElement class >> newOnShared: aDictionary [
 	^ self basicNew
 		initializeWithShared: aDictionary;
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> addTag: anAssociation [
 	tags add: anAssociation
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> addTagNamed: aKey value: aValue [
 	tags at: aKey put: aValue
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> announcer [
 	^ announcer ifNil: [ announcer := Announcer new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> announcer: anAnnouncer [
 	announcer := anAnnouncer
 ]
 
-{ #category : #'accessing - stereotypes' }
+{ #category : 'accessing - stereotypes' }
 OPUMLMetaElement >> appliedStereotypes [
 	^ self tags at: #appliedStereotypes ifAbsentPut: [ OrderedCollection new ]
 ]
 
-{ #category : #'accessing - stereotypes' }
+{ #category : 'accessing - stereotypes' }
 OPUMLMetaElement >> applyStereotype: aStereotype [
 
 	| meta attribute |
@@ -65,17 +67,17 @@ OPUMLMetaElement >> applyStereotype: aStereotype [
 		with: aStereotype
 ]
 
-{ #category : #'accessing - tags' }
+{ #category : 'accessing - tags' }
 OPUMLMetaElement >> hasTagAt: aKey [
 	^ tags includesKey: aKey
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> identity [
 	^ sharedGeneralizations values last
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMetaElement >> initialize [
 	super initialize.
 	sharedGeneralizations := OrderedDictionary new.
@@ -84,24 +86,24 @@ OPUMLMetaElement >> initialize [
 	self initializeDirectGeneralizations
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMetaElement >> initializeDirectGeneralizations [
 	^ self subclassResponsibility
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMetaElement >> initializeSharedGeneralizations [
 	^ self subclassResponsibility
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMetaElement >> initializeWithShared: aDictionary [
 	super initialize.
 	sharedGeneralizations := aDictionary.
 	self initializeDirectGeneralizations
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectionAllProperties [
 
 	<inspectorPresentationOrder: 6 title: 'Properties (All)'>
@@ -120,7 +122,7 @@ OPUMLMetaElement >> inspectionAllProperties [
 		  yourself
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectionGeneralizations [
 
 	<inspectorPresentationOrder: 8 title: 'Generalizations'>
@@ -139,7 +141,7 @@ OPUMLMetaElement >> inspectionGeneralizations [
 		  yourself
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectionProperties [
 
 	<inspectorPresentationOrder: 5 title: 'Properties'>
@@ -158,7 +160,7 @@ OPUMLMetaElement >> inspectionProperties [
 		  yourself
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectionStereotypeProperties [
 
 	<inspectorPresentationOrder: 7 title: 'Tagged Values'>
@@ -181,7 +183,7 @@ OPUMLMetaElement >> inspectionStereotypeProperties [
 		  yourself
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectionStereotypes [
 
 	<inspectorPresentationOrder: 7 title: 'Stereotypes'>
@@ -191,7 +193,7 @@ OPUMLMetaElement >> inspectionStereotypes [
 		  yourself
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectionTags [
 
 	<inspectorPresentationOrder: 7 title: 'Tags'>
@@ -210,12 +212,12 @@ OPUMLMetaElement >> inspectionTags [
 		  yourself
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectorProperties [
 	^ self inspectorPropertiesSelectors collect: [ :each | each -> (self perform: each) ]
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectorPropertiesSelectors [
 	| classes class |
 	classes := Set new.
@@ -227,18 +229,18 @@ OPUMLMetaElement >> inspectorPropertiesSelectors [
 		select: [ :each | each protocol beginsWith: 'accessing' ]) collect: #selector) sorted
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> nonEmptyinspectorProperties [
 	^ self inspectorProperties
 		reject: [ :pair | pair value isNil or: [ pair value isCollection and: [ pair value isEmpty ] ] ]
 ]
 
-{ #category : #'ocl-experimental' }
+{ #category : 'ocl-experimental' }
 OPUMLMetaElement >> oclAsType: aClassifier [
 	^ sharedGeneralizations at: (self oclClassifierNameFrom: aClassifier)
 ]
 
-{ #category : #'ocl-experimental' }
+{ #category : 'ocl-experimental' }
 OPUMLMetaElement >> oclClassifierNameFrom: anObject [
 	(anObject isKindOf: OPUMLMetaElement class)
 		ifTrue: [ ^ anObject name withoutPrefix: 'OPUML' ].
@@ -249,7 +251,7 @@ OPUMLMetaElement >> oclClassifierNameFrom: anObject [
 	self error: 'Unknown classifier ' , anObject asString
 ]
 
-{ #category : #'ocl-experimental' }
+{ #category : 'ocl-experimental' }
 OPUMLMetaElement >> oclIsKindOf: aClassifier [
 	"Element is not part of the shared generalization, so extra check is needed."
 	aClassifier = #Element
@@ -257,13 +259,13 @@ OPUMLMetaElement >> oclIsKindOf: aClassifier [
 	^ sharedGeneralizations includesKey: (self oclClassifierNameFrom: aClassifier)
 ]
 
-{ #category : #'ocl-experimental' }
+{ #category : 'ocl-experimental' }
 OPUMLMetaElement >> oclIsTypeOf: aClassifier [
 
 	^ sharedGeneralizations keys last = (self oclClassifierNameFrom: aClassifier)
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 OPUMLMetaElement >> printOn: aStream [
 	super printOn: aStream.
 	(self class selectors includes: #name)
@@ -273,17 +275,17 @@ OPUMLMetaElement >> printOn: aStream [
 				<< ')' ]
 ]
 
-{ #category : #'accessing - tags' }
+{ #category : 'accessing - tags' }
 OPUMLMetaElement >> removeTagAt: aKey [
 	tags removeKey: aKey
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> removeTagNamed: aKey [
 	tags removeKey: aKey
 ]
 
-{ #category : #'GTInspector - extensions' }
+{ #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> stereotypeProperties [
 	| props |
 	props := OrderedCollection new.
@@ -298,37 +300,37 @@ OPUMLMetaElement >> stereotypeProperties [
 					stereo perform: each name asSymbol} ] ]
 ]
 
-{ #category : #'accessing - tags' }
+{ #category : 'accessing - tags' }
 OPUMLMetaElement >> tagAt: aKey [
 	^ tags at: aKey
 ]
 
-{ #category : #'accessing - tags' }
+{ #category : 'accessing - tags' }
 OPUMLMetaElement >> tagAt: aKey ifAbsent: anAbsentBlock [
 	^ tags at: aKey ifAbsent: anAbsentBlock
 ]
 
-{ #category : #'accessing - tags' }
+{ #category : 'accessing - tags' }
 OPUMLMetaElement >> tagAt: aKey put: aValue [
 	tags at: aKey put: aValue
 ]
 
-{ #category : #'accessing - tags' }
+{ #category : 'accessing - tags' }
 OPUMLMetaElement >> tags [
 	^ tags
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> umlClassName [
 	^ self className withoutPrefix: 'OPUML'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> umlMetaClass [
 	^ OPUMLXMISpecsStorage metaClassFor: self
 ]
 
-{ #category : #'accessing - stereotypes' }
+{ #category : 'accessing - stereotypes' }
 OPUMLMetaElement >> unapplyStereotype: aStereotype [
 	| meta attribute |
 	self appliedStereotypes remove: aStereotype ifAbsent: [  ].
@@ -338,12 +340,12 @@ OPUMLMetaElement >> unapplyStereotype: aStereotype [
 	self perform: (attribute opposite name , ':') asSymbol with: nil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> uuid [
 	^ uuid ifNil: [ uuid := UUID new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMetaElement >> uuid: aUUID [
 	uuid := aUUID
 ]

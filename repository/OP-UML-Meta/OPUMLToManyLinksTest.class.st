@@ -1,10 +1,12 @@
 Class {
-	#name : #OPUMLToManyLinksTest,
-	#superclass : #TestCase,
-	#category : #'OP-UML-Meta-Tests'
+	#name : 'OPUMLToManyLinksTest',
+	#superclass : 'TestCase',
+	#category : 'OP-UML-Meta-Tests',
+	#package : 'OP-UML-Meta',
+	#tag : 'Tests'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyLinksTest >> testAdd [
 	| book review |
 	book := OPUMLTestBook new.
@@ -14,7 +16,7 @@ OPUMLToManyLinksTest >> testAdd [
 	self assert: review book equals: book
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyLinksTest >> testAddMove [
 	| book book2 review |
 	book := OPUMLTestBook new.
@@ -27,7 +29,7 @@ OPUMLToManyLinksTest >> testAddMove [
 	self assert: review book equals: book2
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyLinksTest >> testCreate [
 	| book |
 	book := OPUMLTestBook new.
@@ -35,7 +37,7 @@ OPUMLToManyLinksTest >> testCreate [
 	self assert: book reviews oppositeSelector equals: #book:
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyLinksTest >> testRemove [
 	| book review |
 	book := OPUMLTestBook new.
@@ -47,7 +49,7 @@ OPUMLToManyLinksTest >> testRemove [
 	self assert: review book equals: nil
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyLinksTest >> testRemoveAll [
 
 	| book review1 review2 |
@@ -66,7 +68,7 @@ OPUMLToManyLinksTest >> testRemoveAll [
 	self assert: review2 book equals: nil
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyLinksTest >> testReset [
 	| book review review2 |
 	book := OPUMLTestBook new.

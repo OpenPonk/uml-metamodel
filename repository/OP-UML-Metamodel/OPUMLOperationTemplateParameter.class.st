@@ -2,64 +2,66 @@
 An OperationTemplateParameter exposes an Operation as a formal parameter for a template.
 "
 Class {
-	#name : #OPUMLOperationTemplateParameter,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLOperationTemplateParameter',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'parameteredElement'
 	],
-	#category : 'OP-UML-Metamodel-Classification'
+	#category : 'OP-UML-Metamodel-Classification',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Classification'
 }
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> default [
 	^ (sharedGeneralizations at: #TemplateParameter) default
 ]
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> default: aParameterableElement [
 	(sharedGeneralizations at: #TemplateParameter) default: aParameterableElement
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLOperationTemplateParameter >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #TemplateParameter.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLOperationTemplateParameter >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #TemplateParameter put: (OPUMLTemplateParameter newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #OperationTemplateParameter put: self.
 ]
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> ownedDefault [
 	^ (sharedGeneralizations at: #TemplateParameter) ownedDefault
 ]
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> ownedDefault: aParameterableElement [
 	(sharedGeneralizations at: #TemplateParameter) ownedDefault: aParameterableElement
 ]
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> ownedParameteredElement [
 	^ (sharedGeneralizations at: #TemplateParameter) ownedParameteredElement
 ]
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> ownedParameteredElement: aParameterableElement [
 	(sharedGeneralizations at: #TemplateParameter) ownedParameteredElement: aParameterableElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLOperationTemplateParameter >> parameteredElement [
 	"The Operation exposed by this OperationTemplateParameter."
 	^ parameteredElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLOperationTemplateParameter >> parameteredElement: anOperation [
 	"The Operation exposed by this OperationTemplateParameter."
 	|anOldParameteredElement|
@@ -73,12 +75,12 @@ OPUMLOperationTemplateParameter >> parameteredElement: anOperation [
 		to: parameteredElement
 ]
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> signature [
 	^ (sharedGeneralizations at: #TemplateParameter) signature
 ]
 
-{ #category : #'accessing - TemplateParameter' }
+{ #category : 'accessing - TemplateParameter' }
 OPUMLOperationTemplateParameter >> signature: aTemplateSignature [
 	(sharedGeneralizations at: #TemplateParameter) signature: aTemplateSignature
 ]

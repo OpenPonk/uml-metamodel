@@ -2,8 +2,8 @@
 A TemplateParameter exposes a ParameterableElement as a formal parameter of a template.
 "
 Class {
-	#name : #OPUMLTemplateParameter,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLTemplateParameter',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'default',
 		'ownedParameteredElement',
@@ -11,51 +11,53 @@ Class {
 		'parameteredElement',
 		'signature'
 	],
-	#category : 'OP-UML-Metamodel-CommonStructure'
+	#category : 'OP-UML-Metamodel-CommonStructure',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'CommonStructure'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> default [
 	"The ParameterableElement that is the default for this formal TemplateParameter."
 	^ default
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> default: aParameterableElement [
 	"The ParameterableElement that is the default for this formal TemplateParameter."
 	default := aParameterableElement
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLTemplateParameter >> initializeDirectGeneralizations [
 	directGeneralizations := {
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLTemplateParameter >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #TemplateParameter put: self.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> ownedDefault [
 	"The ParameterableElement that is owned by this TemplateParameter for the purpose of providing a default."
 	^ ownedDefault
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> ownedDefault: aParameterableElement [
 	"The ParameterableElement that is owned by this TemplateParameter for the purpose of providing a default."
 	ownedDefault := aParameterableElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> ownedParameteredElement [
 	"The ParameterableElement that is owned by this TemplateParameter for the purpose of exposing it as the parameteredElement."
 	^ ownedParameteredElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> ownedParameteredElement: aParameterableElement [
 	"The ParameterableElement that is owned by this TemplateParameter for the purpose of exposing it as the parameteredElement."
 	|anOldOwnedParameteredElement|
@@ -69,13 +71,13 @@ OPUMLTemplateParameter >> ownedParameteredElement: aParameterableElement [
 		to: ownedParameteredElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> parameteredElement [
 	"The ParameterableElement exposed by this TemplateParameter."
 	^ parameteredElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> parameteredElement: aParameterableElement [
 	"The ParameterableElement exposed by this TemplateParameter."
 	|anOldParameteredElement|
@@ -89,13 +91,13 @@ OPUMLTemplateParameter >> parameteredElement: aParameterableElement [
 		to: parameteredElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> signature [
 	"The TemplateSignature that owns this TemplateParameter."
 	^ signature
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateParameter >> signature: aTemplateSignature [
 	"The TemplateSignature that owns this TemplateParameter."
 	signature := OPUMLToOneLink

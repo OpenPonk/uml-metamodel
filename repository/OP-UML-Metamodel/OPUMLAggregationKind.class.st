@@ -2,47 +2,49 @@
 AggregationKind is an Enumeration for specifying the kind of aggregation of a Property.
 "
 Class {
-	#name : #OPUMLAggregationKind,
-	#superclass : #OPUMLEnumeration,
-	#category : 'OP-UML-Metamodel-Classification'
+	#name : 'OPUMLAggregationKind',
+	#superclass : 'OPUMLEnumeration',
+	#category : 'OP-UML-Metamodel-Classification',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Classification'
 }
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLAggregationKind class >> composite [
 	"Indicates that the Property is aggregated compositely, i.e., the composite object has responsibility for the existence and storage of the composed objects (parts)."
 	^ #composite
 
 ]
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLAggregationKind class >> none [
 	"Indicates that the Property has no aggregation."
 	^ #none
 
 ]
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLAggregationKind class >> shared [
 	"Indicates that the Property has shared aggregation."
 	^ #shared
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLAggregationKind >> composite [
 	"Indicates that the Property is aggregated compositely, i.e., the composite object has responsibility for the existence and storage of the composed objects (parts)."
 	^ #composite
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLAggregationKind >> none [
 	"Indicates that the Property has no aggregation."
 	^ #none
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLAggregationKind >> shared [
 	"Indicates that the Property has shared aggregation."
 	^ #shared

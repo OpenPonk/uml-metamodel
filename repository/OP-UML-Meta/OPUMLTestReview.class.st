@@ -1,19 +1,21 @@
 Class {
-	#name : #OPUMLTestReview,
-	#superclass : #Object,
+	#name : 'OPUMLTestReview',
+	#superclass : 'Object',
 	#instVars : [
 		'book',
 		'score'
 	],
-	#category : 'OP-UML-Meta-Tests'
+	#category : 'OP-UML-Meta-Tests',
+	#package : 'OP-UML-Meta',
+	#tag : 'Tests'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTestReview >> book [
 	^ book
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTestReview >> book: aBook [
 	book := OPUMLToOneLink
 		on: self
@@ -22,12 +24,12 @@ OPUMLTestReview >> book: aBook [
 		to: aBook
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTestReview >> score [
 	^ score
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTestReview >> score: aNewScore [
 	| oldScore |
 	oldScore := score.

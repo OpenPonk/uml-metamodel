@@ -2,37 +2,39 @@
 A LiteralUnlimitedNatural is a specification of an UnlimitedNatural number.
 "
 Class {
-	#name : #OPUMLLiteralUnlimitedNatural,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLLiteralUnlimitedNatural',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'value'
 	],
-	#category : 'OP-UML-Metamodel-Values'
+	#category : 'OP-UML-Metamodel-Values',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Values'
 }
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralUnlimitedNatural >> booleanValue [
 	^ (sharedGeneralizations at: #ValueSpecification) booleanValue
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralUnlimitedNatural >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #LiteralSpecification.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralUnlimitedNatural >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ParameterableElement put: (OPUMLParameterableElement newOnShared: sharedGeneralizations).
@@ -43,12 +45,12 @@ OPUMLLiteralUnlimitedNatural >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #LiteralUnlimitedNatural put: self.
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralUnlimitedNatural >> integerValue [
 	^ (sharedGeneralizations at: #ValueSpecification) integerValue
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralUnlimitedNatural >> isComputable [
 	"The query isComputable() is redefined to be true."
 	
@@ -58,7 +60,7 @@ OPUMLLiteralUnlimitedNatural >> isComputable [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralUnlimitedNatural >> isComputableStub [
 	"The query isComputable() is redefined to be true."
 	
@@ -68,92 +70,92 @@ OPUMLLiteralUnlimitedNatural >> isComputableStub [
 
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralUnlimitedNatural >> isNull [
 	^ (sharedGeneralizations at: #ValueSpecification) isNull
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralUnlimitedNatural >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralUnlimitedNatural >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralUnlimitedNatural >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralUnlimitedNatural >> realValue [
 	^ (sharedGeneralizations at: #ValueSpecification) realValue
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralUnlimitedNatural >> stringValue [
 	^ (sharedGeneralizations at: #ValueSpecification) stringValue
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralUnlimitedNatural >> templateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralUnlimitedNatural >> templateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralUnlimitedNatural >> type [
 	^ (sharedGeneralizations at: #TypedElement) type
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralUnlimitedNatural >> type: aType [
 	(sharedGeneralizations at: #TypedElement) type: aType
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralUnlimitedNatural >> unlimitedValue [
 	"The query unlimitedValue() gives the value."
 	
@@ -163,7 +165,7 @@ OPUMLLiteralUnlimitedNatural >> unlimitedValue [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralUnlimitedNatural >> unlimitedValueStub [
 	"The query unlimitedValue() gives the value."
 	
@@ -173,24 +175,24 @@ OPUMLLiteralUnlimitedNatural >> unlimitedValueStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLLiteralUnlimitedNatural >> value [
 	"The specified UnlimitedNatural value."
 	^ value ifNil: [ value := 0 ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLLiteralUnlimitedNatural >> value: anUnlimitedNatural [
 	"The specified UnlimitedNatural value."
 	value := anUnlimitedNatural
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralUnlimitedNatural >> visibility [
 	^ (sharedGeneralizations at: #PackageableElement) visibility
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralUnlimitedNatural >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #PackageableElement) visibility: aVisibilityKind
 ]

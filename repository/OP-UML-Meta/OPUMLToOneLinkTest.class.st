@@ -1,10 +1,12 @@
 Class {
-	#name : #OPUMLToOneLinkTest,
-	#superclass : #TestCase,
-	#category : 'OP-UML-Meta-Tests'
+	#name : 'OPUMLToOneLinkTest',
+	#superclass : 'TestCase',
+	#category : 'OP-UML-Meta-Tests',
+	#package : 'OP-UML-Meta',
+	#tag : 'Tests'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToOneLinkTest >> testChange [
 	| book book2 review |
 	book := OPUMLTestBook new.
@@ -19,7 +21,7 @@ OPUMLToOneLinkTest >> testChange [
 	self assert: review book equals: book2
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToOneLinkTest >> testRemove [
 	| book review |
 	book := OPUMLTestBook new.
@@ -32,7 +34,7 @@ OPUMLToOneLinkTest >> testRemove [
 	self assert: review book equals: nil
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToOneLinkTest >> testSet [
 	| book review |
 	book := OPUMLTestBook new.

@@ -1,15 +1,17 @@
 Class {
-	#name : #OPUMLToManyLinks,
-	#superclass : #Collection,
+	#name : 'OPUMLToManyLinks',
+	#superclass : 'Collection',
 	#instVars : [
 		'owner',
 		'collection',
 		'oppositeSelector'
 	],
-	#category : #'OP-UML-Meta-Models'
+	#category : 'OP-UML-Meta-Models',
+	#package : 'OP-UML-Meta',
+	#tag : 'Models'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 OPUMLToManyLinks class >> fromSton: stonReader [
 
 	^ self new
@@ -17,12 +19,12 @@ OPUMLToManyLinks class >> fromSton: stonReader [
 		  yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 OPUMLToManyLinks class >> on: anObject opposite: aSelector [
 	^ self new setOwner: anObject opposite: aSelector
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 OPUMLToManyLinks >> add: aNewObject [
 	(self isUnique and: [ self includes: aNewObject ])
 		ifTrue: [ ^ aNewObject ].
@@ -31,59 +33,59 @@ OPUMLToManyLinks >> add: aNewObject [
 	^ aNewObject
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 OPUMLToManyLinks >> addOppositeTo: anObject [
 	anObject perform: oppositeSelector with: owner
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLToManyLinks >> at: anInteger [
 	^ collection at: anInteger
 ]
 
-{ #category : #copying }
+{ #category : 'copying' }
 OPUMLToManyLinks >> copyEmpty [
 	^ collection copyEmpty 
 ]
 
-{ #category : #enumerating }
+{ #category : 'enumerating' }
 OPUMLToManyLinks >> do: aBlock [
 	collection do: aBlock
 	
 ]
 
-{ #category : #copying }
+{ #category : 'copying' }
 OPUMLToManyLinks >> first [
 	^ collection first
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 OPUMLToManyLinks >> includes: anObject [
 	^ collection includes: anObject
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 OPUMLToManyLinks >> initialize [
 	super initialize.
 	collection := OrderedCollection new
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 OPUMLToManyLinks >> isUnique [
 	^ true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLToManyLinks >> oppositeSelector [
 	^ oppositeSelector
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLToManyLinks >> owner [
 	^ owner
 ]
 
-{ #category : #removing }
+{ #category : 'removing' }
 OPUMLToManyLinks >> remove: oldObject ifAbsent: anExceptionBlock [
 	oldObject ifNil: [ "there is some oddity when instantiating metamodel" ^ self ].
 	(collection includes: oldObject)
@@ -92,51 +94,51 @@ OPUMLToManyLinks >> remove: oldObject ifAbsent: anExceptionBlock [
 	collection remove: oldObject ifAbsent: [  ]
 ]
 
-{ #category : #removing }
+{ #category : 'removing' }
 OPUMLToManyLinks >> removeAll [
 
 	(OrderedCollection withAll: collection) do: [ :each | 
 		self remove: each ]
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 OPUMLToManyLinks >> removeOppositeFrom: anObject [
 	anObject perform: oppositeSelector with: nil
 ]
 
-{ #category : #copying }
+{ #category : 'copying' }
 OPUMLToManyLinks >> second [
 	^ collection second
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLToManyLinks >> setOwner: anObject opposite: aSelector [
 	owner := anObject.
 	oppositeSelector := aSelector
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLToManyLinks >> size [
 	^ collection size
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 OPUMLToManyLinks >> species [
 	^ OrderedCollection
 ]
 
-{ #category : #'ston persistence' }
+{ #category : 'ston persistence' }
 OPUMLToManyLinks >> stonOn: stonWriter [
 
 	stonWriter writeObject: self
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 OPUMLToManyLinks >> uncheckedAdd: anObject [
 	^ collection addIfNotPresent: anObject
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 OPUMLToManyLinks >> uncheckedRemove: anObject [
 	collection remove: anObject
 ]

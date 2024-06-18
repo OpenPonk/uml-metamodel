@@ -2,33 +2,35 @@
 ConnectorKind is an enumeration that defines whether a Connector is an assembly or a delegation.
 "
 Class {
-	#name : #OPUMLConnectorKind,
-	#superclass : #OPUMLEnumeration,
-	#category : 'OP-UML-Metamodel-StructuredClassifiers'
+	#name : 'OPUMLConnectorKind',
+	#superclass : 'OPUMLEnumeration',
+	#category : 'OP-UML-Metamodel-StructuredClassifiers',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'StructuredClassifiers'
 }
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLConnectorKind class >> assembly [
 	"Indicates that the Connector is an assembly Connector."
 	^ #assembly
 
 ]
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLConnectorKind class >> delegation [
 	"Indicates that the Connector is a delegation Connector."
 	^ #delegation
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLConnectorKind >> assembly [
 	"Indicates that the Connector is an assembly Connector."
 	^ #assembly
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLConnectorKind >> delegation [
 	"Indicates that the Connector is a delegation Connector."
 	^ #delegation

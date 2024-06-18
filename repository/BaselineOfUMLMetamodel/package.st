@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfUMLMetamodel }
+Package { #name : 'BaselineOfUMLMetamodel' }

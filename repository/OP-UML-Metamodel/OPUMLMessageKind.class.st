@@ -2,61 +2,63 @@
 This is an enumerated type that identifies the type of Message.
 "
 Class {
-	#name : #OPUMLMessageKind,
-	#superclass : #OPUMLEnumeration,
-	#category : 'OP-UML-Metamodel-Interactions'
+	#name : 'OPUMLMessageKind',
+	#superclass : 'OPUMLEnumeration',
+	#category : 'OP-UML-Metamodel-Interactions',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Interactions'
 }
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLMessageKind class >> complete [
 	"sendEvent and receiveEvent are present"
 	^ #complete
 
 ]
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLMessageKind class >> found [
 	"sendEvent absent and receiveEvent present"
 	^ #found
 
 ]
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLMessageKind class >> lost [
 	"sendEvent present and receiveEvent absent"
 	^ #lost
 
 ]
 
-{ #category : #'accessing - enum' }
+{ #category : 'accessing - enum' }
 OPUMLMessageKind class >> unknown [
 	"sendEvent and receiveEvent absent (should not appear)"
 	^ #unknown
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMessageKind >> complete [
 	"sendEvent and receiveEvent are present"
 	^ #complete
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMessageKind >> found [
 	"sendEvent absent and receiveEvent present"
 	^ #found
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMessageKind >> lost [
 	"sendEvent present and receiveEvent absent"
 	^ #lost
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMessageKind >> unknown [
 	"sendEvent and receiveEvent absent (should not appear)"
 	^ #unknown

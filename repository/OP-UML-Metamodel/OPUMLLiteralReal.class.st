@@ -2,37 +2,39 @@
 A LiteralReal is a specification of a Real value.
 "
 Class {
-	#name : #OPUMLLiteralReal,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLLiteralReal',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'value'
 	],
-	#category : 'OP-UML-Metamodel-Values'
+	#category : 'OP-UML-Metamodel-Values',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Values'
 }
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralReal >> booleanValue [
 	^ (sharedGeneralizations at: #ValueSpecification) booleanValue
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralReal >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #LiteralSpecification.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralReal >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ParameterableElement put: (OPUMLParameterableElement newOnShared: sharedGeneralizations).
@@ -43,12 +45,12 @@ OPUMLLiteralReal >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #LiteralReal put: self.
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralReal >> integerValue [
 	^ (sharedGeneralizations at: #ValueSpecification) integerValue
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralReal >> isComputable [
 	"The query isComputable() is redefined to be true."
 	
@@ -58,7 +60,7 @@ OPUMLLiteralReal >> isComputable [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralReal >> isComputableStub [
 	"The query isComputable() is redefined to be true."
 	
@@ -68,62 +70,62 @@ OPUMLLiteralReal >> isComputableStub [
 
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralReal >> isNull [
 	^ (sharedGeneralizations at: #ValueSpecification) isNull
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralReal >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralReal >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralReal >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralReal >> realValue [
 	"The query realValue() gives the value."
 	
@@ -133,7 +135,7 @@ OPUMLLiteralReal >> realValue [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralReal >> realValueStub [
 	"The query realValue() gives the value."
 	
@@ -143,54 +145,54 @@ OPUMLLiteralReal >> realValueStub [
 
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralReal >> stringValue [
 	^ (sharedGeneralizations at: #ValueSpecification) stringValue
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralReal >> templateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralReal >> templateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralReal >> type [
 	^ (sharedGeneralizations at: #TypedElement) type
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralReal >> type: aType [
 	(sharedGeneralizations at: #TypedElement) type: aType
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralReal >> unlimitedValue [
 	^ (sharedGeneralizations at: #ValueSpecification) unlimitedValue
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLLiteralReal >> value [
 	"The specified Real value."
 	^ value
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLLiteralReal >> value: aReal [
 	"The specified Real value."
 	value := aReal
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralReal >> visibility [
 	^ (sharedGeneralizations at: #PackageableElement) visibility
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralReal >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #PackageableElement) visibility: aVisibilityKind
 ]

@@ -2,12 +2,13 @@
 Baseline of https://github.com/OpenPonk/uml-metamodel
 "
 Class {
-	#name : #BaselineOfUMLMetamodel,
-	#superclass : #BaselineOf,
-	#category : 'BaselineOfUMLMetamodel'
+	#name : 'BaselineOfUMLMetamodel',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfUMLMetamodel',
+	#package : 'BaselineOfUMLMetamodel'
 }
 
-{ #category : #baselines }
+{ #category : 'baselines' }
 BaselineOfUMLMetamodel >> baseline: spec [
 	<baseline>
 	spec

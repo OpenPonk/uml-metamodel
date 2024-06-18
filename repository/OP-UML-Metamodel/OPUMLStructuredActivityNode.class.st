@@ -2,8 +2,8 @@
 A StructuredActivityNode is an Action that is also an ActivityGroup and whose behavior is specified by the ActivityNodes and ActivityEdges it so contains. Unlike other kinds of ActivityGroup, a StructuredActivityNode owns the ActivityNodes and ActivityEdges it contains, and so a node or edge can only be directly contained in one StructuredActivityNode, though StructuredActivityNodes may be nested.
 "
 Class {
-	#name : #OPUMLStructuredActivityNode,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLStructuredActivityNode',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'activity',
 		'mustIsolate',
@@ -13,16 +13,18 @@ Class {
 		'variables',
 		'structuredNodeOutputs'
 	],
-	#category : 'OP-UML-Metamodel-Actions'
+	#category : 'OP-UML-Metamodel-Actions',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Actions'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> activity [
 	"The Activity immediately containing the StructuredActivityNode, if it is not contained in another StructuredActivityNode."
 	^ activity
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> activity: anActivity [
 	"The Activity immediately containing the StructuredActivityNode, if it is not contained in another StructuredActivityNode."
 	activity := OPUMLToOneLink
@@ -32,7 +34,7 @@ OPUMLStructuredActivityNode >> activity: anActivity [
 		to: anActivity
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLStructuredActivityNode >> allActionsStub [
 	"Returns this StructuredActivityNode and all Actions contained in it."
 	
@@ -42,7 +44,7 @@ OPUMLStructuredActivityNode >> allActionsStub [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLStructuredActivityNode >> allOwnedNodesStub [
 	"Returns all the ActivityNodes contained directly or indirectly within this StructuredActivityNode, in addition to the Pins of the StructuredActivityNode."
 	
@@ -52,37 +54,37 @@ OPUMLStructuredActivityNode >> allOwnedNodesStub [
 
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> containedEdges [
 	^ (sharedGeneralizations at: #ActivityGroup) containedEdges
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> containedEdges: anActivityEdge [
 	(sharedGeneralizations at: #ActivityGroup) containedEdges: anActivityEdge
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> containedNodes [
 	^ (sharedGeneralizations at: #ActivityGroup) containedNodes
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> containedNodes: anActivityNode [
 	(sharedGeneralizations at: #ActivityGroup) containedNodes: anActivityNode
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLStructuredActivityNode >> containingActivityStub [
 	"The Activity that directly or indirectly contains this StructuredActivityNode (considered as an Action)."
 	
@@ -92,23 +94,23 @@ OPUMLStructuredActivityNode >> containingActivityStub [
 
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> context [
 	^ (sharedGeneralizations at: #Action) context
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> context: aClassifier [
 	(sharedGeneralizations at: #Action) context: aClassifier
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> edges [
 	"The ActivityEdges immediately contained in the StructuredActivityNode."
 	^ edges ifNil: [ edges := OPUMLToManyLinks on: self identity opposite: #inStructuredNode: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> edges: anActivityEdge [
 	"The ActivityEdges immediately contained in the StructuredActivityNode."
 	self edges
@@ -116,97 +118,97 @@ OPUMLStructuredActivityNode >> edges: anActivityEdge [
 		addAll: anActivityEdge
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> elementImports [
 	^ (sharedGeneralizations at: #Namespace) elementImports
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> elementImports: anElementImport [
 	(sharedGeneralizations at: #Namespace) elementImports: anElementImport
 ]
 
-{ #category : #'accessing - ExecutableNode' }
+{ #category : 'accessing - ExecutableNode' }
 OPUMLStructuredActivityNode >> handlers [
 	^ (sharedGeneralizations at: #ExecutableNode) handlers
 ]
 
-{ #category : #'accessing - ExecutableNode' }
+{ #category : 'accessing - ExecutableNode' }
 OPUMLStructuredActivityNode >> handlers: anExceptionHandler [
 	(sharedGeneralizations at: #ExecutableNode) handlers: anExceptionHandler
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> importedMembers [
 	^ (sharedGeneralizations at: #Namespace) importedMembers
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> importedMembers: aPackageableElement [
 	(sharedGeneralizations at: #Namespace) importedMembers: aPackageableElement
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> inActivity [
 	^ (sharedGeneralizations at: #ActivityGroup) inActivity
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> inActivity: anActivity [
 	(sharedGeneralizations at: #ActivityGroup) inActivity: anActivity
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inGroups [
 	^ (sharedGeneralizations at: #ActivityNode) inGroups
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inGroups: anActivityGroup [
 	(sharedGeneralizations at: #ActivityNode) inGroups: anActivityGroup
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inInterruptibleRegions [
 	^ (sharedGeneralizations at: #ActivityNode) inInterruptibleRegions
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inInterruptibleRegions: anInterruptibleActivityRegion [
 	(sharedGeneralizations at: #ActivityNode) inInterruptibleRegions: anInterruptibleActivityRegion
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inPartitions [
 	^ (sharedGeneralizations at: #ActivityNode) inPartitions
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inPartitions: anActivityPartition [
 	(sharedGeneralizations at: #ActivityNode) inPartitions: anActivityPartition
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inStructuredNode [
 	^ (sharedGeneralizations at: #ActivityNode) inStructuredNode
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> inStructuredNode: aStructuredActivityNode [
 	(sharedGeneralizations at: #ActivityNode) inStructuredNode: aStructuredActivityNode
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> incomings [
 	^ (sharedGeneralizations at: #ActivityNode) incomings
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> incomings: anActivityEdge [
 	(sharedGeneralizations at: #ActivityNode) incomings: anActivityEdge
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLStructuredActivityNode >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #Namespace.
@@ -215,7 +217,7 @@ OPUMLStructuredActivityNode >> initializeDirectGeneralizations [
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLStructuredActivityNode >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #RedefinableElement put: (OPUMLRedefinableElement newOnShared: sharedGeneralizations).
@@ -227,117 +229,117 @@ OPUMLStructuredActivityNode >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #StructuredActivityNode put: self.
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> inputs [
 	^ (sharedGeneralizations at: #Action) inputs
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> inputs: anInputPin [
 	(sharedGeneralizations at: #Action) inputs: anInputPin
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLStructuredActivityNode >> isLeaf [
 	^ (sharedGeneralizations at: #RedefinableElement) isLeaf
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLStructuredActivityNode >> isLeaf: aBoolean [
 	(sharedGeneralizations at: #RedefinableElement) isLeaf: aBoolean
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> isLocallyReentrant [
 	^ (sharedGeneralizations at: #Action) isLocallyReentrant
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> isLocallyReentrant: aBoolean [
 	(sharedGeneralizations at: #Action) isLocallyReentrant: aBoolean
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> localPostconditions [
 	^ (sharedGeneralizations at: #Action) localPostconditions
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> localPostconditions: aConstraint [
 	(sharedGeneralizations at: #Action) localPostconditions: aConstraint
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> localPreconditions [
 	^ (sharedGeneralizations at: #Action) localPreconditions
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> localPreconditions: aConstraint [
 	(sharedGeneralizations at: #Action) localPreconditions: aConstraint
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> members [
 	^ (sharedGeneralizations at: #Namespace) members
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> members: aNamedElement [
 	(sharedGeneralizations at: #Namespace) members: aNamedElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> mustIsolate [
 	"If true, then any object used by an Action within the StructuredActivityNode cannot be accessed by any Action outside the node until the StructuredActivityNode as a whole completes. Any concurrent Actions that would result in accessing such objects are required to have their execution deferred until the completion of the StructuredActivityNode.
 "
 	^ mustIsolate ifNil: [ mustIsolate := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> mustIsolate: aBoolean [
 	"If true, then any object used by an Action within the StructuredActivityNode cannot be accessed by any Action outside the node until the StructuredActivityNode as a whole completes. Any concurrent Actions that would result in accessing such objects are required to have their execution deferred until the completion of the StructuredActivityNode.
 "
 	mustIsolate := aBoolean
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> nodes [
 	"The ActivityNodes immediately contained in the StructuredActivityNode."
 	^ nodes ifNil: [ nodes := OPUMLToManyLinks on: self identity opposite: #inStructuredNode: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> nodes: anActivityNode [
 	"The ActivityNodes immediately contained in the StructuredActivityNode."
 	self nodes
@@ -345,97 +347,97 @@ OPUMLStructuredActivityNode >> nodes: anActivityNode [
 		addAll: anActivityNode
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> outgoings [
 	^ (sharedGeneralizations at: #ActivityNode) outgoings
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> outgoings: anActivityEdge [
 	(sharedGeneralizations at: #ActivityNode) outgoings: anActivityEdge
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> outputs [
 	^ (sharedGeneralizations at: #Action) outputs
 ]
 
-{ #category : #'accessing - Action' }
+{ #category : 'accessing - Action' }
 OPUMLStructuredActivityNode >> outputs: anOutputPin [
 	(sharedGeneralizations at: #Action) outputs: anOutputPin
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> ownedMembers [
 	^ (sharedGeneralizations at: #Namespace) ownedMembers
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> ownedMembers: aNamedElement [
 	(sharedGeneralizations at: #Namespace) ownedMembers: aNamedElement
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> ownedRules [
 	^ (sharedGeneralizations at: #Namespace) ownedRules
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> ownedRules: aConstraint [
 	(sharedGeneralizations at: #Namespace) ownedRules: aConstraint
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> packageImports [
 	^ (sharedGeneralizations at: #Namespace) packageImports
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLStructuredActivityNode >> packageImports: aPackageImport [
 	(sharedGeneralizations at: #Namespace) packageImports: aPackageImport
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLStructuredActivityNode >> redefinedElements [
 	^ (sharedGeneralizations at: #RedefinableElement) redefinedElements
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLStructuredActivityNode >> redefinedElements: aRedefinableElement [
 	(sharedGeneralizations at: #RedefinableElement) redefinedElements: aRedefinableElement
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> redefinedNodes [
 	^ (sharedGeneralizations at: #ActivityNode) redefinedNodes
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLStructuredActivityNode >> redefinedNodes: anActivityNode [
 	(sharedGeneralizations at: #ActivityNode) redefinedNodes: anActivityNode
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLStructuredActivityNode >> redefinitionContexts [
 	^ (sharedGeneralizations at: #RedefinableElement) redefinitionContexts
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLStructuredActivityNode >> redefinitionContexts: aClassifier [
 	(sharedGeneralizations at: #RedefinableElement) redefinitionContexts: aClassifier
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLStructuredActivityNode >> sourceNodesStub [
 	"Return those ActivityNodes contained immediately within the StructuredActivityNode that may act as sources of edges owned by the StructuredActivityNode."
 	
@@ -446,51 +448,51 @@ OPUMLStructuredActivityNode >> sourceNodesStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> structuredNodeInputs [
 	"The InputPins owned by the StructuredActivityNode."
 	^ structuredNodeInputs ifNil: [ structuredNodeInputs := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> structuredNodeInputs: anInputPin [
 	"The InputPins owned by the StructuredActivityNode."
 	structuredNodeInputs := anInputPin
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> structuredNodeOutputs [
 	"The OutputPins owned by the StructuredActivityNode."
 	^ structuredNodeOutputs ifNil: [ structuredNodeOutputs := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> structuredNodeOutputs: anOutputPin [
 	"The OutputPins owned by the StructuredActivityNode."
 	structuredNodeOutputs := anOutputPin
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> subgroups [
 	^ (sharedGeneralizations at: #ActivityGroup) subgroups
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> subgroups: anActivityGroup [
 	(sharedGeneralizations at: #ActivityGroup) subgroups: anActivityGroup
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> superGroup [
 	^ (sharedGeneralizations at: #ActivityGroup) superGroup
 ]
 
-{ #category : #'accessing - ActivityGroup' }
+{ #category : 'accessing - ActivityGroup' }
 OPUMLStructuredActivityNode >> superGroup: anActivityGroup [
 	(sharedGeneralizations at: #ActivityGroup) superGroup: anActivityGroup
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLStructuredActivityNode >> targetNodesStub [
 	"Return those ActivityNodes contained immediately within the StructuredActivityNode that may act as targets of edges owned by the StructuredActivityNode."
 	
@@ -501,13 +503,13 @@ OPUMLStructuredActivityNode >> targetNodesStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> variables [
 	"The Variables defined in the scope of the StructuredActivityNode."
 	^ variables ifNil: [ variables := OPUMLToManyLinks on: self identity opposite: #scope: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLStructuredActivityNode >> variables: aVariable [
 	"The Variables defined in the scope of the StructuredActivityNode."
 	self variables
@@ -515,12 +517,12 @@ OPUMLStructuredActivityNode >> variables: aVariable [
 		addAll: aVariable
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> visibility [
 	^ (sharedGeneralizations at: #NamedElement) visibility
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLStructuredActivityNode >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #NamedElement) visibility: aVisibilityKind
 ]

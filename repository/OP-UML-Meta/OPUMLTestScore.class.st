@@ -1,18 +1,20 @@
 Class {
-	#name : #OPUMLTestScore,
-	#superclass : #Object,
+	#name : 'OPUMLTestScore',
+	#superclass : 'Object',
 	#instVars : [
 		'review'
 	],
-	#category : 'OP-UML-Meta-Tests'
+	#category : 'OP-UML-Meta-Tests',
+	#package : 'OP-UML-Meta',
+	#tag : 'Tests'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTestScore >> review [
 	^ review
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTestScore >> review: aNewReview [
 	| anOldReview |
 	anOldReview := review.

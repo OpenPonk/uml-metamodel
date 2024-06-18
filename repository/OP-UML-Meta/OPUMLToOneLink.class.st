@@ -1,10 +1,12 @@
 Class {
-	#name : #OPUMLToOneLink,
-	#superclass : #Collection,
-	#category : 'OP-UML-Meta-Models'
+	#name : 'OPUMLToOneLink',
+	#superclass : 'Collection',
+	#category : 'OP-UML-Meta-Models',
+	#package : 'OP-UML-Meta',
+	#tag : 'Models'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 OPUMLToOneLink class >> on: anOwner thisSelector: aThisSelector otherSelector: anOtherSelector from: anOldObject to: aNewObject [
 	| thisSetter otherSetter |
 	anOldObject = aNewObject
@@ -21,7 +23,7 @@ OPUMLToOneLink class >> on: anOwner thisSelector: aThisSelector otherSelector: a
 	^ aNewObject
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 OPUMLToOneLink class >> on: anOwner thisSelector: aThisSelector otherSelector: anOtherSelector updateFrom: anOldObject to: aNewObject [
 	| thisSetter otherSetter |
 	anOldObject = aNewObject
@@ -38,7 +40,7 @@ OPUMLToOneLink class >> on: anOwner thisSelector: aThisSelector otherSelector: a
 	^ aNewObject
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 OPUMLToOneLink class >> on: anOwner update: anOppositeSelector from: anOldObject to: aNewObject [
 	anOldObject = aNewObject
 		ifTrue: [ ^ aNewObject ].

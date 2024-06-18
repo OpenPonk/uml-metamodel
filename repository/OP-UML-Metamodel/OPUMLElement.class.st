@@ -2,17 +2,19 @@
 An Element is a constituent of a model. As such, it has the capability of owning other Elements.
 "
 Class {
-	#name : #OPUMLElement,
-	#superclass : #OPUMLMetaElement,
+	#name : 'OPUMLElement',
+	#superclass : 'OPUMLMetaElement',
 	#instVars : [
 		'ownedElements',
 		'owner',
 		'ownedComments'
 	],
-	#category : 'OP-UML-Metamodel-CommonStructure'
+	#category : 'OP-UML-Metamodel-CommonStructure',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'CommonStructure'
 }
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLElement >> allOwnedElementsStub [
 	"The query allOwnedElements() gives all of the direct and indirect ownedElements of an Element."
 	
@@ -22,18 +24,18 @@ OPUMLElement >> allOwnedElementsStub [
 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLElement >> initializeDirectGeneralizations [
 	directGeneralizations := {
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLElement >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #Element put: self.
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLElement >> mustBeOwnedStub [
 	"The query mustBeOwned() indicates whether Elements of this type must have an owner. Subclasses of Element that do not require an owner must override this operation."
 	
@@ -43,25 +45,25 @@ OPUMLElement >> mustBeOwnedStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLElement >> ownedComments [
 	"The Comments owned by this Element."
 	^ ownedComments ifNil: [ ownedComments := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLElement >> ownedComments: aComment [
 	"The Comments owned by this Element."
 	ownedComments := aComment
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLElement >> ownedElements [
 	"The Elements owned by this Element."
 	^ ownedElements ifNil: [ ownedElements := OPUMLToManyLinks on: self identity opposite: #owner: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLElement >> ownedElements: anElement [
 	"The Elements owned by this Element."
 	self ownedElements
@@ -69,13 +71,13 @@ OPUMLElement >> ownedElements: anElement [
 		addAll: anElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLElement >> owner [
 	"The Element that owns this Element."
 	^ owner
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLElement >> owner: anElement [
 	"The Element that owns this Element."
 	owner := OPUMLToOneLink

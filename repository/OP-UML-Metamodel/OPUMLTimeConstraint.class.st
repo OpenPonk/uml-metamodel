@@ -2,65 +2,67 @@
 A TimeConstraint is a Constraint that refers to a TimeInterval.
 "
 Class {
-	#name : #OPUMLTimeConstraint,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLTimeConstraint',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'firstEvent',
 		'specification'
 	],
-	#category : 'OP-UML-Metamodel-Values'
+	#category : 'OP-UML-Metamodel-Values',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Values'
 }
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #'accessing - Constraint' }
+{ #category : 'accessing - Constraint' }
 OPUMLTimeConstraint >> constrainedElements [
 	^ (sharedGeneralizations at: #Constraint) constrainedElements
 ]
 
-{ #category : #'accessing - Constraint' }
+{ #category : 'accessing - Constraint' }
 OPUMLTimeConstraint >> constrainedElements: anElement [
 	(sharedGeneralizations at: #Constraint) constrainedElements: anElement
 ]
 
-{ #category : #'accessing - Constraint' }
+{ #category : 'accessing - Constraint' }
 OPUMLTimeConstraint >> context [
 	^ (sharedGeneralizations at: #Constraint) context
 ]
 
-{ #category : #'accessing - Constraint' }
+{ #category : 'accessing - Constraint' }
 OPUMLTimeConstraint >> context: aNamespace [
 	(sharedGeneralizations at: #Constraint) context: aNamespace
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTimeConstraint >> firstEvent [
 	"The value of firstEvent is related to the constrainedElement. If firstEvent is true, then the corresponding observation event is the first time instant the execution enters the constrainedElement. If firstEvent is false, then the corresponding observation event is the last time instant the execution is within the constrainedElement."
 	^ firstEvent ifNil: [ firstEvent := true ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTimeConstraint >> firstEvent: aBoolean [
 	"The value of firstEvent is related to the constrainedElement. If firstEvent is true, then the corresponding observation event is the first time instant the execution enters the constrainedElement. If firstEvent is false, then the corresponding observation event is the last time instant the execution is within the constrainedElement."
 	firstEvent := aBoolean
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLTimeConstraint >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #IntervalConstraint.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLTimeConstraint >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #ParameterableElement put: (OPUMLParameterableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
@@ -70,84 +72,84 @@ OPUMLTimeConstraint >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #TimeConstraint put: self.
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLTimeConstraint >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLTimeConstraint >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLTimeConstraint >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTimeConstraint >> specification [
 	"TheTimeInterval constraining the duration."
 	^ specification
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTimeConstraint >> specification: aTimeInterval [
 	"TheTimeInterval constraining the duration."
 	specification := aTimeInterval
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLTimeConstraint >> templateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLTimeConstraint >> templateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLTimeConstraint >> visibility [
 	^ (sharedGeneralizations at: #PackageableElement) visibility
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLTimeConstraint >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #PackageableElement) visibility: aVisibilityKind
 ]

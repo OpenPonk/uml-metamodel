@@ -2,33 +2,35 @@
 A Vertex is an abstraction of a node in a StateMachine graph. It can be the source or destination of any number of Transitions.
 "
 Class {
-	#name : #OPUMLVertex,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLVertex',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'incomings',
 		'container',
 		'outgoings'
 	],
-	#category : 'OP-UML-Metamodel-StateMachines'
+	#category : 'OP-UML-Metamodel-StateMachines',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'StateMachines'
 }
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVertex >> container [
 	"The Region that contains this Vertex."
 	^ container
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVertex >> container: aRegion [
 	"The Region that contains this Vertex."
 	container := OPUMLToOneLink
@@ -38,7 +40,7 @@ OPUMLVertex >> container: aRegion [
 		to: aRegion
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLVertex >> containingStateMachineStub [
 	"The operation containingStateMachine() returns the StateMachine in which this Vertex is defined."
 	
@@ -64,7 +66,7 @@ endif
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLVertex >> incomingStub [
 	"Derivation for Vertex::/incoming."
 	
@@ -74,13 +76,13 @@ OPUMLVertex >> incomingStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVertex >> incomings [
 	"Specifies the Transitions entering this Vertex."
 	^ incomings ifNil: [ incomings := OPUMLToManyLinks on: self identity opposite: #target: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVertex >> incomings: aTransition [
 	"Specifies the Transitions entering this Vertex."
 	self incomings
@@ -88,20 +90,20 @@ OPUMLVertex >> incomings: aTransition [
 		addAll: aTransition
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLVertex >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #NamedElement.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLVertex >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #Vertex put: self.
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLVertex >> isContainedInRegionStub [
 	"This utility query returns true if the Vertex is contained in the Region r (input argument)."
 	
@@ -119,7 +121,7 @@ endif)"
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLVertex >> isContainedInStateStub [
 	"This utility operation returns true if the Vertex is contained in the State s (input argument)."
 	
@@ -137,37 +139,37 @@ endif)"
 
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLVertex >> outgoingStub [
 	"Derivation for Vertex::/outgoing"
 	
@@ -177,13 +179,13 @@ OPUMLVertex >> outgoingStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVertex >> outgoings [
 	"Specifies the Transitions departing from this Vertex."
 	^ outgoings ifNil: [ outgoings := OPUMLToManyLinks on: self identity opposite: #source: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVertex >> outgoings: aTransition [
 	"Specifies the Transitions departing from this Vertex."
 	self outgoings
@@ -191,22 +193,22 @@ OPUMLVertex >> outgoings: aTransition [
 		addAll: aTransition
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> visibility [
 	^ (sharedGeneralizations at: #NamedElement) visibility
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVertex >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #NamedElement) visibility: aVisibilityKind
 ]

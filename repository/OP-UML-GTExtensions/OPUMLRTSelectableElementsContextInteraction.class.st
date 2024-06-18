@@ -1,10 +1,11 @@
 Class {
-	#name : #OPUMLRTSelectableElementsContextInteraction,
-	#superclass : #RTAbstractContextInteraction,
-	#category : 'OP-UML-GTExtensions'
+	#name : 'OPUMLRTSelectableElementsContextInteraction',
+	#superclass : 'RTAbstractContextInteraction',
+	#category : 'OP-UML-GTExtensions',
+	#package : 'OP-UML-GTExtensions'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLRTSelectableElementsContextInteraction >> initializeElement: aView [
 	self
 		assert: [ self presentation notNil ]
@@ -12,13 +13,13 @@ OPUMLRTSelectableElementsContextInteraction >> initializeElement: aView [
 	self initializeSetOfElements: aView elements
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLRTSelectableElementsContextInteraction >> initializeSetOfElements: elements [
  	elements do:
 		[ :each | self initializeSingleElement: each ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLRTSelectableElementsContextInteraction >> initializeSingleElement: each [
 	^ each
 		when: TRMouseLeftClick

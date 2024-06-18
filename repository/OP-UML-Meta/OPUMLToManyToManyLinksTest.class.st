@@ -1,10 +1,12 @@
 Class {
-	#name : #OPUMLToManyToManyLinksTest,
-	#superclass : #TestCase,
-	#category : 'OP-UML-Meta-Tests'
+	#name : 'OPUMLToManyToManyLinksTest',
+	#superclass : 'TestCase',
+	#category : 'OP-UML-Meta-Tests',
+	#package : 'OP-UML-Meta',
+	#tag : 'Tests'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyToManyLinksTest >> testAdd [
 	| author book |
 	author := OPUMLTestAuthor new.
@@ -14,7 +16,7 @@ OPUMLToManyToManyLinksTest >> testAdd [
 	self assert: book authors asArray equals: {author}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyToManyLinksTest >> testAddToMore [
 	| author book book2 |
 	author := OPUMLTestAuthor new.
@@ -28,7 +30,7 @@ OPUMLToManyToManyLinksTest >> testAddToMore [
 	self assert: book2 authors asArray equals: {author}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyToManyLinksTest >> testRemove [
 	| author book book2 |
 	author := OPUMLTestAuthor new.
@@ -42,7 +44,7 @@ OPUMLToManyToManyLinksTest >> testRemove [
 	self assert: book authors asArray equals: #()
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyToManyLinksTest >> testSet [
 	| author book book2 |
 	author := OPUMLTestAuthor new.
@@ -57,7 +59,7 @@ OPUMLToManyToManyLinksTest >> testSet [
 	self assert: book2 authors asArray equals: {author}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyToManyLinksTest >> testSet2 [
 	| author book author2 |
 	author := OPUMLTestAuthor new.
@@ -72,7 +74,7 @@ OPUMLToManyToManyLinksTest >> testSet2 [
 	self assert: book authors asArray equals: {author2}
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToManyToManyLinksTest >> testSetMultiple [
 	| author book book2 |
 	author := OPUMLTestAuthor new.

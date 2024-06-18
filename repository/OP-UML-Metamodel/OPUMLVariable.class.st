@@ -2,22 +2,24 @@
 A Variable is a ConnectableElement that may store values during the execution of an Activity. Reading and writing the values of a Variable provides an alternative means for passing data than the use of ObjectFlows. A Variable may be owned directly by an Activity, in which case it is accessible from anywhere within that activity, or it may be owned by a StructuredActivityNode, in which case it is only accessible within that node.
 "
 Class {
-	#name : #OPUMLVariable,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLVariable',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'activityScope',
 		'scope'
 	],
-	#category : 'OP-UML-Metamodel-Activities'
+	#category : 'OP-UML-Metamodel-Activities',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Activities'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVariable >> activityScope [
 	"An Activity that owns the Variable."
 	^ activityScope
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVariable >> activityScope: anActivity [
 	"An Activity that owns the Variable."
 	activityScope := OPUMLToOneLink
@@ -27,27 +29,27 @@ OPUMLVariable >> activityScope: anActivity [
 		to: anActivity
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLVariable >> ends [
 	^ (sharedGeneralizations at: #ConnectableElement) ends
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLVariable >> ends: aConnectorEnd [
 	(sharedGeneralizations at: #ConnectableElement) ends: aConnectorEnd
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLVariable >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #ConnectableElement.
@@ -55,7 +57,7 @@ OPUMLVariable >> initializeDirectGeneralizations [
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLVariable >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #TypedElement put: (OPUMLTypedElement newOnShared: sharedGeneralizations).
@@ -65,7 +67,7 @@ OPUMLVariable >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #Variable put: self.
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLVariable >> isAccessibleByStub [
 	"A Variable is accessible by Actions within its scope (the Activity or StructuredActivityNode that owns it)."
 	
@@ -77,113 +79,113 @@ endif)"
 
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLVariable >> isMultivalued [
 	^ (sharedGeneralizations at: #MultiplicityElement) isMultivalued
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> isOrdered [
 	^ (sharedGeneralizations at: #MultiplicityElement) isOrdered
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> isOrdered: aBoolean [
 	(sharedGeneralizations at: #MultiplicityElement) isOrdered: aBoolean
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> isUnique [
 	^ (sharedGeneralizations at: #MultiplicityElement) isUnique
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> isUnique: aBoolean [
 	(sharedGeneralizations at: #MultiplicityElement) isUnique: aBoolean
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLVariable >> lower [
 	^ (sharedGeneralizations at: #MultiplicityElement) lower
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> lower: anInteger [
 	(sharedGeneralizations at: #MultiplicityElement) lower: anInteger
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLVariable >> lowerBound [
 	^ (sharedGeneralizations at: #MultiplicityElement) lowerBound
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> lowerValue [
 	^ (sharedGeneralizations at: #MultiplicityElement) lowerValue
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> lowerValue: aValueSpecification [
 	(sharedGeneralizations at: #MultiplicityElement) lowerValue: aValueSpecification
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLVariable >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLVariable >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVariable >> scope [
 	"A StructuredActivityNode that owns the Variable."
 	^ scope
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLVariable >> scope: aStructuredActivityNode [
 	"A StructuredActivityNode that owns the Variable."
 	scope := OPUMLToOneLink
@@ -193,57 +195,57 @@ OPUMLVariable >> scope: aStructuredActivityNode [
 		to: aStructuredActivityNode
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLVariable >> templateParameter [
 	^ (sharedGeneralizations at: #ConnectableElement) templateParameter
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLVariable >> templateParameter: aConnectableElementTemplateParameter [
 	(sharedGeneralizations at: #ConnectableElement) templateParameter: aConnectableElementTemplateParameter
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLVariable >> type [
 	^ (sharedGeneralizations at: #TypedElement) type
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLVariable >> type: aType [
 	(sharedGeneralizations at: #TypedElement) type: aType
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLVariable >> upper [
 	^ (sharedGeneralizations at: #MultiplicityElement) upper
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> upper: anUnlimitedNatural [
 	(sharedGeneralizations at: #MultiplicityElement) upper: anUnlimitedNatural
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLVariable >> upperBound [
 	^ (sharedGeneralizations at: #MultiplicityElement) upperBound
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> upperValue [
 	^ (sharedGeneralizations at: #MultiplicityElement) upperValue
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLVariable >> upperValue: aValueSpecification [
 	(sharedGeneralizations at: #MultiplicityElement) upperValue: aValueSpecification
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> visibility [
 	^ (sharedGeneralizations at: #NamedElement) visibility
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLVariable >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #NamedElement) visibility: aVisibilityKind
 ]

@@ -1,10 +1,12 @@
 Class {
-	#name : #OPUMLToOneToOneLinkTest,
-	#superclass : #TestCase,
-	#category : 'OP-UML-Meta-Tests'
+	#name : 'OPUMLToOneToOneLinkTest',
+	#superclass : 'TestCase',
+	#category : 'OP-UML-Meta-Tests',
+	#package : 'OP-UML-Meta',
+	#tag : 'Tests'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToOneToOneLinkTest >> testChange [
 	| review1 score1 review2 score2 |
 	review1 := OPUMLTestReview new.
@@ -24,7 +26,7 @@ OPUMLToOneToOneLinkTest >> testChange [
 	self assert: review1 score equals: nil
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToOneToOneLinkTest >> testSet [
 	| review score |
 	review := OPUMLTestReview new.
@@ -34,7 +36,7 @@ OPUMLToOneToOneLinkTest >> testSet [
 	self assert: score review equals: review
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 OPUMLToOneToOneLinkTest >> testSetOther [
 	| review score |
 	review := OPUMLTestReview new.

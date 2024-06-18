@@ -2,34 +2,36 @@
 A Template Signature bundles the set of formal TemplateParameters for a template.
 "
 Class {
-	#name : #OPUMLTemplateSignature,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLTemplateSignature',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'parameters',
 		'template',
 		'ownedParameters'
 	],
-	#category : 'OP-UML-Metamodel-CommonStructure'
+	#category : 'OP-UML-Metamodel-CommonStructure',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'CommonStructure'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLTemplateSignature >> initializeDirectGeneralizations [
 	directGeneralizations := {
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLTemplateSignature >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #TemplateSignature put: self.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateSignature >> ownedParameters [
 	"The formal parameters that are owned by this TemplateSignature."
 	^ ownedParameters ifNil: [ ownedParameters := OPUMLToManyLinks on: self identity opposite: #signature: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateSignature >> ownedParameters: aTemplateParameter [
 	"The formal parameters that are owned by this TemplateSignature."
 	self ownedParameters
@@ -37,25 +39,25 @@ OPUMLTemplateSignature >> ownedParameters: aTemplateParameter [
 		addAll: aTemplateParameter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateSignature >> parameters [
 	"The ordered set of all formal TemplateParameters for this TemplateSignature."
 	^ parameters ifNil: [ parameters := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateSignature >> parameters: aTemplateParameter [
 	"The ordered set of all formal TemplateParameters for this TemplateSignature."
 	parameters := aTemplateParameter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateSignature >> template [
 	"The TemplateableElement that owns this TemplateSignature."
 	^ template
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLTemplateSignature >> template: aTemplateableElement [
 	"The TemplateableElement that owns this TemplateSignature."
 	|anOldTemplate|

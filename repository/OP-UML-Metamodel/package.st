@@ -1,1 +1,1 @@
-Package { #name : #'OP-UML-Metamodel' }
+Package { #name : 'OP-UML-Metamodel' }

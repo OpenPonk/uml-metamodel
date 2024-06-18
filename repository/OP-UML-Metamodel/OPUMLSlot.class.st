@@ -2,46 +2,48 @@
 A Slot designates that an entity modeled by an InstanceSpecification has a value or values for a specific StructuralFeature.
 "
 Class {
-	#name : #OPUMLSlot,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLSlot',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'values',
 		'owningInstance',
 		'definingFeature'
 	],
-	#category : 'OP-UML-Metamodel-Classification'
+	#category : 'OP-UML-Metamodel-Classification',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Classification'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLSlot >> definingFeature [
 	"The StructuralFeature that specifies the values that may be held by the Slot."
 	^ definingFeature
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLSlot >> definingFeature: aStructuralFeature [
 	"The StructuralFeature that specifies the values that may be held by the Slot."
 	definingFeature := aStructuralFeature
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLSlot >> initializeDirectGeneralizations [
 	directGeneralizations := {
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLSlot >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #Slot put: self.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLSlot >> owningInstance [
 	"The InstanceSpecification that owns this Slot."
 	^ owningInstance
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLSlot >> owningInstance: anInstanceSpecification [
 	"The InstanceSpecification that owns this Slot."
 	owningInstance := OPUMLToOneLink
@@ -51,13 +53,13 @@ OPUMLSlot >> owningInstance: anInstanceSpecification [
 		to: anInstanceSpecification
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLSlot >> values [
 	"The value or values held by the Slot."
 	^ values ifNil: [ values := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLSlot >> values: aValueSpecification [
 	"The value or values held by the Slot."
 	values := aValueSpecification

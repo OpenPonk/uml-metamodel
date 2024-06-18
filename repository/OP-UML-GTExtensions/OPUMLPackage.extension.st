@@ -1,6 +1,6 @@
-Extension { #name : #OPUMLPackage }
+Extension { #name : 'OPUMLPackage' }
 
-{ #category : #'*OP-UML-GTExtensions' }
+{ #category : '*OP-UML-GTExtensions' }
 OPUMLPackage >> gtInspectorPackageViewIn: aComposite [
 	<gtInspectorPresentationOrder: 11>
 	^ aComposite roassal2
@@ -68,7 +68,7 @@ OPUMLPackage >> gtInspectorPackageViewIn: aComposite [
 			v ]
 ]
 
-{ #category : #'*OP-UML-GTExtensions' }
+{ #category : '*OP-UML-GTExtensions' }
 OPUMLPackage >> gtInspectorPackagedElementsViewIn: aComposite [
 	<gtInspectorPresentationOrder: 10>
 	aComposite roassal2

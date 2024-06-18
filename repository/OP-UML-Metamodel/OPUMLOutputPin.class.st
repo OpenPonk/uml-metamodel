@@ -2,99 +2,101 @@
 An OutputPin is a Pin that holds output values produced by an Action.
 "
 Class {
-	#name : #OPUMLOutputPin,
-	#superclass : #OPUMLElement,
-	#category : 'OP-UML-Metamodel-Actions'
+	#name : 'OPUMLOutputPin',
+	#superclass : 'OPUMLElement',
+	#category : 'OP-UML-Metamodel-Actions',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Actions'
 }
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> activity [
 	^ (sharedGeneralizations at: #ActivityNode) activity
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> activity: anActivity [
 	(sharedGeneralizations at: #ActivityNode) activity: anActivity
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inGroups [
 	^ (sharedGeneralizations at: #ActivityNode) inGroups
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inGroups: anActivityGroup [
 	(sharedGeneralizations at: #ActivityNode) inGroups: anActivityGroup
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inInterruptibleRegions [
 	^ (sharedGeneralizations at: #ActivityNode) inInterruptibleRegions
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inInterruptibleRegions: anInterruptibleActivityRegion [
 	(sharedGeneralizations at: #ActivityNode) inInterruptibleRegions: anInterruptibleActivityRegion
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inPartitions [
 	^ (sharedGeneralizations at: #ActivityNode) inPartitions
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inPartitions: anActivityPartition [
 	(sharedGeneralizations at: #ActivityNode) inPartitions: anActivityPartition
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> inStates [
 	^ (sharedGeneralizations at: #ObjectNode) inStates
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> inStates: aState [
 	(sharedGeneralizations at: #ObjectNode) inStates: aState
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inStructuredNode [
 	^ (sharedGeneralizations at: #ActivityNode) inStructuredNode
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> inStructuredNode: aStructuredActivityNode [
 	(sharedGeneralizations at: #ActivityNode) inStructuredNode: aStructuredActivityNode
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> incomings [
 	^ (sharedGeneralizations at: #ActivityNode) incomings
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> incomings: anActivityEdge [
 	(sharedGeneralizations at: #ActivityNode) incomings: anActivityEdge
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLOutputPin >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #Pin.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLOutputPin >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #RedefinableElement put: (OPUMLRedefinableElement newOnShared: sharedGeneralizations).
@@ -106,232 +108,232 @@ OPUMLOutputPin >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #OutputPin put: self.
 ]
 
-{ #category : #'accessing - Pin' }
+{ #category : 'accessing - Pin' }
 OPUMLOutputPin >> isControl [
 	^ (sharedGeneralizations at: #Pin) isControl
 ]
 
-{ #category : #'accessing - Pin' }
+{ #category : 'accessing - Pin' }
 OPUMLOutputPin >> isControl: aBoolean [
 	(sharedGeneralizations at: #Pin) isControl: aBoolean
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> isControlType [
 	^ (sharedGeneralizations at: #ObjectNode) isControlType
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> isControlType: aBoolean [
 	(sharedGeneralizations at: #ObjectNode) isControlType: aBoolean
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLOutputPin >> isLeaf [
 	^ (sharedGeneralizations at: #RedefinableElement) isLeaf
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLOutputPin >> isLeaf: aBoolean [
 	(sharedGeneralizations at: #RedefinableElement) isLeaf: aBoolean
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLOutputPin >> isMultivalued [
 	^ (sharedGeneralizations at: #MultiplicityElement) isMultivalued
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> isOrdered [
 	^ (sharedGeneralizations at: #MultiplicityElement) isOrdered
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> isOrdered: aBoolean [
 	(sharedGeneralizations at: #MultiplicityElement) isOrdered: aBoolean
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> isUnique [
 	^ (sharedGeneralizations at: #MultiplicityElement) isUnique
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> isUnique: aBoolean [
 	(sharedGeneralizations at: #MultiplicityElement) isUnique: aBoolean
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLOutputPin >> lower [
 	^ (sharedGeneralizations at: #MultiplicityElement) lower
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> lower: anInteger [
 	(sharedGeneralizations at: #MultiplicityElement) lower: anInteger
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLOutputPin >> lowerBound [
 	^ (sharedGeneralizations at: #MultiplicityElement) lowerBound
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> lowerValue [
 	^ (sharedGeneralizations at: #MultiplicityElement) lowerValue
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> lowerValue: aValueSpecification [
 	(sharedGeneralizations at: #MultiplicityElement) lowerValue: aValueSpecification
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> ordering [
 	^ (sharedGeneralizations at: #ObjectNode) ordering
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> ordering: anObjectNodeOrderingKind [
 	(sharedGeneralizations at: #ObjectNode) ordering: anObjectNodeOrderingKind
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> outgoings [
 	^ (sharedGeneralizations at: #ActivityNode) outgoings
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> outgoings: anActivityEdge [
 	(sharedGeneralizations at: #ActivityNode) outgoings: anActivityEdge
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLOutputPin >> redefinedElements [
 	^ (sharedGeneralizations at: #RedefinableElement) redefinedElements
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLOutputPin >> redefinedElements: aRedefinableElement [
 	(sharedGeneralizations at: #RedefinableElement) redefinedElements: aRedefinableElement
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> redefinedNodes [
 	^ (sharedGeneralizations at: #ActivityNode) redefinedNodes
 ]
 
-{ #category : #'accessing - ActivityNode' }
+{ #category : 'accessing - ActivityNode' }
 OPUMLOutputPin >> redefinedNodes: anActivityNode [
 	(sharedGeneralizations at: #ActivityNode) redefinedNodes: anActivityNode
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLOutputPin >> redefinitionContexts [
 	^ (sharedGeneralizations at: #RedefinableElement) redefinitionContexts
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLOutputPin >> redefinitionContexts: aClassifier [
 	(sharedGeneralizations at: #RedefinableElement) redefinitionContexts: aClassifier
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> selection [
 	^ (sharedGeneralizations at: #ObjectNode) selection
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> selection: aBehavior [
 	(sharedGeneralizations at: #ObjectNode) selection: aBehavior
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLOutputPin >> type [
 	^ (sharedGeneralizations at: #TypedElement) type
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLOutputPin >> type: aType [
 	(sharedGeneralizations at: #TypedElement) type: aType
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLOutputPin >> upper [
 	^ (sharedGeneralizations at: #MultiplicityElement) upper
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> upper: anUnlimitedNatural [
 	(sharedGeneralizations at: #MultiplicityElement) upper: anUnlimitedNatural
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLOutputPin >> upperBound [
 	^ (sharedGeneralizations at: #MultiplicityElement) upperBound
 ]
 
-{ #category : #'accessing - ObjectNode' }
+{ #category : 'accessing - ObjectNode' }
 OPUMLOutputPin >> upperBound: aValueSpecification [
 	(sharedGeneralizations at: #ObjectNode) upperBound: aValueSpecification
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> upperValue [
 	^ (sharedGeneralizations at: #MultiplicityElement) upperValue
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLOutputPin >> upperValue: aValueSpecification [
 	(sharedGeneralizations at: #MultiplicityElement) upperValue: aValueSpecification
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> visibility [
 	^ (sharedGeneralizations at: #NamedElement) visibility
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLOutputPin >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #NamedElement) visibility: aVisibilityKind
 ]

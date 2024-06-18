@@ -2,8 +2,8 @@
 A Parameter is a specification of an argument used to pass information into or out of an invocation of a BehavioralFeature.  Parameters can be treated as ConnectableElements within Collaborations.
 "
 Class {
-	#name : #OPUMLParameter,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLParameter',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'isStream',
 		'defaultValue',
@@ -14,32 +14,34 @@ Class {
 		'operation',
 		'parameterSets'
 	],
-	#category : 'OP-UML-Metamodel-Classification'
+	#category : 'OP-UML-Metamodel-Classification',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Classification'
 }
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> default [
 	"A String that represents a value to be used when no argument is supplied for the Parameter."
 	^ default
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> default: aString [
 	"A String that represents a value to be used when no argument is supplied for the Parameter."
 	default := aString
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLParameter >> defaultStub [
 	"Derivation for Parameter::/default"
 	
@@ -49,53 +51,53 @@ OPUMLParameter >> defaultStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> defaultValue [
 	"Specifies a ValueSpecification that represents a value to be used when no argument is supplied for the Parameter."
 	^ defaultValue
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> defaultValue: aValueSpecification [
 	"Specifies a ValueSpecification that represents a value to be used when no argument is supplied for the Parameter."
 	defaultValue := aValueSpecification
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> direction [
 	"Indicates whether a parameter is being sent into or out of a behavioral element."
 	^ direction ifNil: [ direction := OPUMLParameterDirectionKind new in ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> direction: aParameterDirectionKind [
 	"Indicates whether a parameter is being sent into or out of a behavioral element."
 	direction := aParameterDirectionKind
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> effect [
 	"Specifies the effect that executions of the owner of the Parameter have on objects passed in or out of the parameter."
 	^ effect
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> effect: aParameterEffectKind [
 	"Specifies the effect that executions of the owner of the Parameter have on objects passed in or out of the parameter."
 	effect := aParameterEffectKind
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLParameter >> ends [
 	^ (sharedGeneralizations at: #ConnectableElement) ends
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLParameter >> ends: aConnectorEnd [
 	(sharedGeneralizations at: #ConnectableElement) ends: aConnectorEnd
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLParameter >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #MultiplicityElement.
@@ -103,7 +105,7 @@ OPUMLParameter >> initializeDirectGeneralizations [
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLParameter >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #TypedElement put: (OPUMLTypedElement newOnShared: sharedGeneralizations).
@@ -113,117 +115,117 @@ OPUMLParameter >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #Parameter put: self.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> isException [
 	"Tells whether an output parameter may emit a value to the exclusion of the other outputs."
 	^ isException ifNil: [ isException := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> isException: aBoolean [
 	"Tells whether an output parameter may emit a value to the exclusion of the other outputs."
 	isException := aBoolean
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLParameter >> isMultivalued [
 	^ (sharedGeneralizations at: #MultiplicityElement) isMultivalued
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> isOrdered [
 	^ (sharedGeneralizations at: #MultiplicityElement) isOrdered
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> isOrdered: aBoolean [
 	(sharedGeneralizations at: #MultiplicityElement) isOrdered: aBoolean
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> isStream [
 	"Tells whether an input parameter may accept values while its behavior is executing, or whether an output parameter may post values while the behavior is executing."
 	^ isStream ifNil: [ isStream := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> isStream: aBoolean [
 	"Tells whether an input parameter may accept values while its behavior is executing, or whether an output parameter may post values while the behavior is executing."
 	isStream := aBoolean
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> isUnique [
 	^ (sharedGeneralizations at: #MultiplicityElement) isUnique
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> isUnique: aBoolean [
 	(sharedGeneralizations at: #MultiplicityElement) isUnique: aBoolean
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLParameter >> lower [
 	^ (sharedGeneralizations at: #MultiplicityElement) lower
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> lower: anInteger [
 	(sharedGeneralizations at: #MultiplicityElement) lower: anInteger
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLParameter >> lowerBound [
 	^ (sharedGeneralizations at: #MultiplicityElement) lowerBound
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> lowerValue [
 	^ (sharedGeneralizations at: #MultiplicityElement) lowerValue
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> lowerValue: aValueSpecification [
 	(sharedGeneralizations at: #MultiplicityElement) lowerValue: aValueSpecification
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> operation [
 	"The Operation owning this parameter."
 	^ operation
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> operation: anOperation [
 	"The Operation owning this parameter."
 	operation := OPUMLToOneLink
@@ -233,23 +235,23 @@ OPUMLParameter >> operation: anOperation [
 		to: anOperation
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLParameter >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLParameter >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> parameterSets [
 	"The ParameterSets containing the parameter. See ParameterSet."
 	^ parameterSets ifNil: [ parameterSets := OPUMLManyToManyLinks on: self identity opposite: #parameters ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameter >> parameterSets: aParameterSet [
 	"The ParameterSets containing the parameter. See ParameterSet."
 	self parameterSets
@@ -257,67 +259,67 @@ OPUMLParameter >> parameterSets: aParameterSet [
 		addAll: aParameterSet
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLParameter >> templateParameter [
 	^ (sharedGeneralizations at: #ConnectableElement) templateParameter
 ]
 
-{ #category : #'accessing - ConnectableElement' }
+{ #category : 'accessing - ConnectableElement' }
 OPUMLParameter >> templateParameter: aConnectableElementTemplateParameter [
 	(sharedGeneralizations at: #ConnectableElement) templateParameter: aConnectableElementTemplateParameter
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLParameter >> type [
 	^ (sharedGeneralizations at: #TypedElement) type
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLParameter >> type: aType [
 	(sharedGeneralizations at: #TypedElement) type: aType
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLParameter >> upper [
 	^ (sharedGeneralizations at: #MultiplicityElement) upper
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> upper: anUnlimitedNatural [
 	(sharedGeneralizations at: #MultiplicityElement) upper: anUnlimitedNatural
 ]
 
-{ #category : #'operations - MultiplicityElement' }
+{ #category : 'operations - MultiplicityElement' }
 OPUMLParameter >> upperBound [
 	^ (sharedGeneralizations at: #MultiplicityElement) upperBound
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> upperValue [
 	^ (sharedGeneralizations at: #MultiplicityElement) upperValue
 ]
 
-{ #category : #'accessing - MultiplicityElement' }
+{ #category : 'accessing - MultiplicityElement' }
 OPUMLParameter >> upperValue: aValueSpecification [
 	(sharedGeneralizations at: #MultiplicityElement) upperValue: aValueSpecification
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> visibility [
 	^ (sharedGeneralizations at: #NamedElement) visibility
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLParameter >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #NamedElement) visibility: aVisibilityKind
 ]

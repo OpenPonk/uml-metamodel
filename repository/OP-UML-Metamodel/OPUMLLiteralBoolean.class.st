@@ -2,15 +2,17 @@
 A LiteralBoolean is a specification of a Boolean value.
 "
 Class {
-	#name : #OPUMLLiteralBoolean,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLLiteralBoolean',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'value'
 	],
-	#category : 'OP-UML-Metamodel-Values'
+	#category : 'OP-UML-Metamodel-Values',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Values'
 }
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralBoolean >> booleanValue [
 	"The query booleanValue() gives the value."
 	
@@ -20,7 +22,7 @@ OPUMLLiteralBoolean >> booleanValue [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralBoolean >> booleanValueStub [
 	"The query booleanValue() gives the value."
 	
@@ -30,24 +32,24 @@ OPUMLLiteralBoolean >> booleanValueStub [
 
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralBoolean >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #LiteralSpecification.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralBoolean >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ParameterableElement put: (OPUMLParameterableElement newOnShared: sharedGeneralizations).
@@ -58,12 +60,12 @@ OPUMLLiteralBoolean >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #LiteralBoolean put: self.
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralBoolean >> integerValue [
 	^ (sharedGeneralizations at: #ValueSpecification) integerValue
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralBoolean >> isComputable [
 	"The query isComputable() is redefined to be true."
 	
@@ -73,7 +75,7 @@ OPUMLLiteralBoolean >> isComputable [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralBoolean >> isComputableStub [
 	"The query isComputable() is redefined to be true."
 	
@@ -83,114 +85,114 @@ OPUMLLiteralBoolean >> isComputableStub [
 
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralBoolean >> isNull [
 	^ (sharedGeneralizations at: #ValueSpecification) isNull
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralBoolean >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralBoolean >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralBoolean >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralBoolean >> realValue [
 	^ (sharedGeneralizations at: #ValueSpecification) realValue
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralBoolean >> stringValue [
 	^ (sharedGeneralizations at: #ValueSpecification) stringValue
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralBoolean >> templateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralBoolean >> templateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralBoolean >> type [
 	^ (sharedGeneralizations at: #TypedElement) type
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralBoolean >> type: aType [
 	(sharedGeneralizations at: #TypedElement) type: aType
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralBoolean >> unlimitedValue [
 	^ (sharedGeneralizations at: #ValueSpecification) unlimitedValue
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLLiteralBoolean >> value [
 	"The specified Boolean value."
 	^ value ifNil: [ value := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLLiteralBoolean >> value: aBoolean [
 	"The specified Boolean value."
 	value := aBoolean
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralBoolean >> visibility [
 	^ (sharedGeneralizations at: #PackageableElement) visibility
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralBoolean >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #PackageableElement) visibility: aVisibilityKind
 ]

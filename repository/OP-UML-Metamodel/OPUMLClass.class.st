@@ -3,8 +3,8 @@ A Class classifies a set of objects and specifies the features that characterize
 
 "
 Class {
-	#name : #OPUMLClass,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLClass',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'isActive',
 		'extensions',
@@ -15,70 +15,72 @@ Class {
 		'ownedOperations',
 		'ownedReceptions'
 	],
-	#category : 'OP-UML-Metamodel-StructuredClassifiers'
+	#category : 'OP-UML-Metamodel-StructuredClassifiers',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'StructuredClassifiers'
 }
 
-{ #category : #'operations - Classifier' }
+{ #category : 'operations - Classifier' }
 OPUMLClass >> allAttributes [
 	^ (sharedGeneralizations at: #Classifier) allAttributes
 ]
 
-{ #category : #'operations - Classifier' }
+{ #category : 'operations - Classifier' }
 OPUMLClass >> allParents [
 	^ (sharedGeneralizations at: #Classifier) allParents
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> attributes [
 	^ (sharedGeneralizations at: #Classifier) attributes
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> attributes: aProperty [
 	(sharedGeneralizations at: #Classifier) attributes: aProperty
 ]
 
-{ #category : #'accessing - BehavioredClassifier' }
+{ #category : 'accessing - BehavioredClassifier' }
 OPUMLClass >> classifierBehavior [
 	^ (sharedGeneralizations at: #BehavioredClassifier) classifierBehavior
 ]
 
-{ #category : #'accessing - BehavioredClassifier' }
+{ #category : 'accessing - BehavioredClassifier' }
 OPUMLClass >> classifierBehavior: aBehavior [
 	(sharedGeneralizations at: #BehavioredClassifier) classifierBehavior: aBehavior
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> collaborationUses [
 	^ (sharedGeneralizations at: #Classifier) collaborationUses
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> collaborationUses: aCollaborationUse [
 	(sharedGeneralizations at: #Classifier) collaborationUses: aCollaborationUse
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> elementImports [
 	^ (sharedGeneralizations at: #Namespace) elementImports
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> elementImports: anElementImport [
 	(sharedGeneralizations at: #Namespace) elementImports: anElementImport
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLClass >> extensionStub [
 	"Derivation for Class::/extension : Extension"
 	
@@ -90,13 +92,13 @@ OPUMLClass >> extensionStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> extensions [
 	"This property is used when the Class is acting as a metaclass. It references the Extensions that specify additional properties of the metaclass. The property is derived from the Extensions whose memberEnds are typed by the Class."
 	^ extensions ifNil: [ extensions := OPUMLToManyLinks on: self identity opposite: #metaclass: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> extensions: anExtension [
 	"This property is used when the Class is acting as a metaclass. It references the Extensions that specify additional properties of the metaclass. The property is derived from the Extensions whose memberEnds are typed by the Class."
 	self extensions
@@ -104,62 +106,62 @@ OPUMLClass >> extensions: anExtension [
 		addAll: anExtension
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> features [
 	^ (sharedGeneralizations at: #Classifier) features
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> features: aFeature [
 	(sharedGeneralizations at: #Classifier) features: aFeature
 ]
 
-{ #category : #'operations - Classifier' }
+{ #category : 'operations - Classifier' }
 OPUMLClass >> general [
 	^ (sharedGeneralizations at: #Classifier) general
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> generalizations [
 	^ (sharedGeneralizations at: #Classifier) generalizations
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> generalizations: aGeneralization [
 	(sharedGeneralizations at: #Classifier) generalizations: aGeneralization
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> generals [
 	^ (sharedGeneralizations at: #Classifier) generals
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> generals: aClassifier [
 	(sharedGeneralizations at: #Classifier) generals: aClassifier
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> importedMembers [
 	^ (sharedGeneralizations at: #Namespace) importedMembers
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> importedMembers: aPackageableElement [
 	(sharedGeneralizations at: #Namespace) importedMembers: aPackageableElement
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> inheritedMembers [
 	^ (sharedGeneralizations at: #Classifier) inheritedMembers
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> inheritedMembers: aNamedElement [
 	(sharedGeneralizations at: #Classifier) inheritedMembers: aNamedElement
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLClass >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #BehavioredClassifier.
@@ -167,7 +169,7 @@ OPUMLClass >> initializeDirectGeneralizations [
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLClass >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #ParameterableElement put: (OPUMLParameterableElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
@@ -183,119 +185,119 @@ OPUMLClass >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #Class put: self.
 ]
 
-{ #category : #'accessing - BehavioredClassifier' }
+{ #category : 'accessing - BehavioredClassifier' }
 OPUMLClass >> interfaceRealizations [
 	^ (sharedGeneralizations at: #BehavioredClassifier) interfaceRealizations
 ]
 
-{ #category : #'accessing - BehavioredClassifier' }
+{ #category : 'accessing - BehavioredClassifier' }
 OPUMLClass >> interfaceRealizations: anInterfaceRealization [
 	(sharedGeneralizations at: #BehavioredClassifier) interfaceRealizations: anInterfaceRealization
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> isAbstract [
 	"If true, the Class does not provide a complete declaration and cannot be instantiated. An abstract Class is typically used as a target of Associations or Generalizations."
 	^ isAbstract ifNil: [ isAbstract := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> isAbstract: aBoolean [
 	"If true, the Class does not provide a complete declaration and cannot be instantiated. An abstract Class is typically used as a target of Associations or Generalizations."
 	isAbstract := aBoolean
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> isActive [
 	"Determines whether an object specified by this Class is active or not. If true, then the owning Class is referred to as an active Class. If false, then such a Class is referred to as a passive Class."
 	^ isActive ifNil: [ isActive := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> isActive: aBoolean [
 	"Determines whether an object specified by this Class is active or not. If true, then the owning Class is referred to as an active Class. If false, then such a Class is referred to as a passive Class."
 	isActive := aBoolean
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> isFinalSpecialization [
 	^ (sharedGeneralizations at: #Classifier) isFinalSpecialization
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> isFinalSpecialization: aBoolean [
 	(sharedGeneralizations at: #Classifier) isFinalSpecialization: aBoolean
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLClass >> isLeaf [
 	^ (sharedGeneralizations at: #RedefinableElement) isLeaf
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLClass >> isLeaf: aBoolean [
 	(sharedGeneralizations at: #RedefinableElement) isLeaf: aBoolean
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> members [
 	^ (sharedGeneralizations at: #Namespace) members
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> members: aNamedElement [
 	(sharedGeneralizations at: #Namespace) members: aNamedElement
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> nestedClassifiers [
 	"The Classifiers owned by the Class that are not ownedBehaviors."
 	^ nestedClassifiers ifNil: [ nestedClassifiers := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> nestedClassifiers: aClassifier [
 	"The Classifiers owned by the Class that are not ownedBehaviors."
 	nestedClassifiers := aClassifier
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> ownedAttributes [
 	"The attributes (i.e., the Properties) owned by the Class."
 	^ ownedAttributes ifNil: [ ownedAttributes := OPUMLToManyLinks on: self identity opposite: #owningClass: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> ownedAttributes: aProperty [
 	"The attributes (i.e., the Properties) owned by the Class."
 	self ownedAttributes
@@ -303,43 +305,43 @@ OPUMLClass >> ownedAttributes: aProperty [
 		addAll: aProperty
 ]
 
-{ #category : #'accessing - BehavioredClassifier' }
+{ #category : 'accessing - BehavioredClassifier' }
 OPUMLClass >> ownedBehaviors [
 	^ (sharedGeneralizations at: #BehavioredClassifier) ownedBehaviors
 ]
 
-{ #category : #'accessing - BehavioredClassifier' }
+{ #category : 'accessing - BehavioredClassifier' }
 OPUMLClass >> ownedBehaviors: aBehavior [
 	(sharedGeneralizations at: #BehavioredClassifier) ownedBehaviors: aBehavior
 ]
 
-{ #category : #'accessing - StructuredClassifier' }
+{ #category : 'accessing - StructuredClassifier' }
 OPUMLClass >> ownedConnectors [
 	^ (sharedGeneralizations at: #StructuredClassifier) ownedConnectors
 ]
 
-{ #category : #'accessing - StructuredClassifier' }
+{ #category : 'accessing - StructuredClassifier' }
 OPUMLClass >> ownedConnectors: aConnector [
 	(sharedGeneralizations at: #StructuredClassifier) ownedConnectors: aConnector
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> ownedMembers [
 	^ (sharedGeneralizations at: #Namespace) ownedMembers
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> ownedMembers: aNamedElement [
 	(sharedGeneralizations at: #Namespace) ownedMembers: aNamedElement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> ownedOperations [
 	"The Operations owned by the Class."
 	^ ownedOperations ifNil: [ ownedOperations := OPUMLToManyLinks on: self identity opposite: #owningClass: ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> ownedOperations: anOperation [
 	"The Operations owned by the Class."
 	self ownedOperations
@@ -347,184 +349,184 @@ OPUMLClass >> ownedOperations: anOperation [
 		addAll: anOperation
 ]
 
-{ #category : #'accessing - EncapsulatedClassifier' }
+{ #category : 'accessing - EncapsulatedClassifier' }
 OPUMLClass >> ownedPorts [
 	^ (sharedGeneralizations at: #EncapsulatedClassifier) ownedPorts
 ]
 
-{ #category : #'accessing - EncapsulatedClassifier' }
+{ #category : 'accessing - EncapsulatedClassifier' }
 OPUMLClass >> ownedPorts: aPort [
 	(sharedGeneralizations at: #EncapsulatedClassifier) ownedPorts: aPort
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> ownedReceptions [
 	"The Receptions owned by the Class."
 	^ ownedReceptions ifNil: [ ownedReceptions := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> ownedReceptions: aReception [
 	"The Receptions owned by the Class."
 	ownedReceptions := aReception
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> ownedRules [
 	^ (sharedGeneralizations at: #Namespace) ownedRules
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> ownedRules: aConstraint [
 	(sharedGeneralizations at: #Namespace) ownedRules: aConstraint
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> ownedTemplateSignature [
 	^ (sharedGeneralizations at: #Classifier) ownedTemplateSignature
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> ownedTemplateSignature: aRedefinableTemplateSignature [
 	(sharedGeneralizations at: #Classifier) ownedTemplateSignature: aRedefinableTemplateSignature
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> ownedUseCases [
 	^ (sharedGeneralizations at: #Classifier) ownedUseCases
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> ownedUseCases: anUseCase [
 	(sharedGeneralizations at: #Classifier) ownedUseCases: anUseCase
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLClass >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLClass >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - Type' }
+{ #category : 'accessing - Type' }
 OPUMLClass >> package [
 	^ (sharedGeneralizations at: #Type) package
 ]
 
-{ #category : #'accessing - Type' }
+{ #category : 'accessing - Type' }
 OPUMLClass >> package: aPackage [
 	(sharedGeneralizations at: #Type) package: aPackage
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> packageImports [
 	^ (sharedGeneralizations at: #Namespace) packageImports
 ]
 
-{ #category : #'accessing - Namespace' }
+{ #category : 'accessing - Namespace' }
 OPUMLClass >> packageImports: aPackageImport [
 	(sharedGeneralizations at: #Namespace) packageImports: aPackageImport
 ]
 
-{ #category : #'operations - Classifier' }
+{ #category : 'operations - Classifier' }
 OPUMLClass >> parents [
 	^ (sharedGeneralizations at: #Classifier) parents
 ]
 
-{ #category : #'accessing - StructuredClassifier' }
+{ #category : 'accessing - StructuredClassifier' }
 OPUMLClass >> parts [
 	^ (sharedGeneralizations at: #StructuredClassifier) parts
 ]
 
-{ #category : #'accessing - StructuredClassifier' }
+{ #category : 'accessing - StructuredClassifier' }
 OPUMLClass >> parts: aProperty [
 	(sharedGeneralizations at: #StructuredClassifier) parts: aProperty
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> powertypeExtents [
 	^ (sharedGeneralizations at: #Classifier) powertypeExtents
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> powertypeExtents: aGeneralizationSet [
 	(sharedGeneralizations at: #Classifier) powertypeExtents: aGeneralizationSet
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLClass >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> redefinedClassifiers [
 	^ (sharedGeneralizations at: #Classifier) redefinedClassifiers
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> redefinedClassifiers: aClassifier [
 	(sharedGeneralizations at: #Classifier) redefinedClassifiers: aClassifier
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLClass >> redefinedElements [
 	^ (sharedGeneralizations at: #RedefinableElement) redefinedElements
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLClass >> redefinedElements: aRedefinableElement [
 	(sharedGeneralizations at: #RedefinableElement) redefinedElements: aRedefinableElement
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLClass >> redefinitionContexts [
 	^ (sharedGeneralizations at: #RedefinableElement) redefinitionContexts
 ]
 
-{ #category : #'accessing - RedefinableElement' }
+{ #category : 'accessing - RedefinableElement' }
 OPUMLClass >> redefinitionContexts: aClassifier [
 	(sharedGeneralizations at: #RedefinableElement) redefinitionContexts: aClassifier
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> representation [
 	^ (sharedGeneralizations at: #Classifier) representation
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> representation: aCollaborationUse [
 	(sharedGeneralizations at: #Classifier) representation: aCollaborationUse
 ]
 
-{ #category : #'accessing - StructuredClassifier' }
+{ #category : 'accessing - StructuredClassifier' }
 OPUMLClass >> roles [
 	^ (sharedGeneralizations at: #StructuredClassifier) roles
 ]
 
-{ #category : #'accessing - StructuredClassifier' }
+{ #category : 'accessing - StructuredClassifier' }
 OPUMLClass >> roles: aConnectableElement [
 	(sharedGeneralizations at: #StructuredClassifier) roles: aConnectableElement
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> substitutions [
 	^ (sharedGeneralizations at: #Classifier) substitutions
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> substitutions: aSubstitution [
 	(sharedGeneralizations at: #Classifier) substitutions: aSubstitution
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLClass >> superClassStub [
 	"Derivation for Class::/superClass : Class"
 	
@@ -534,54 +536,54 @@ OPUMLClass >> superClassStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> superClasses [
 	"The superclasses of a Class, derived from its Generalizations."
 	^ superClasses ifNil: [ superClasses := OrderedCollection new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLClass >> superClasses: aClass [
 	"The superclasses of a Class, derived from its Generalizations."
 	superClasses := aClass
 ]
 
-{ #category : #'accessing - TemplateableElement' }
+{ #category : 'accessing - TemplateableElement' }
 OPUMLClass >> templateBindings [
 	^ (sharedGeneralizations at: #TemplateableElement) templateBindings
 ]
 
-{ #category : #'accessing - TemplateableElement' }
+{ #category : 'accessing - TemplateableElement' }
 OPUMLClass >> templateBindings: aTemplateBinding [
 	(sharedGeneralizations at: #TemplateableElement) templateBindings: aTemplateBinding
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> templateParameter [
 	^ (sharedGeneralizations at: #Classifier) templateParameter
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> templateParameter: aClassifierTemplateParameter [
 	(sharedGeneralizations at: #Classifier) templateParameter: aClassifierTemplateParameter
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> useCases [
 	^ (sharedGeneralizations at: #Classifier) useCases
 ]
 
-{ #category : #'accessing - Classifier' }
+{ #category : 'accessing - Classifier' }
 OPUMLClass >> useCases: anUseCase [
 	(sharedGeneralizations at: #Classifier) useCases: anUseCase
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLClass >> visibility [
 	^ (sharedGeneralizations at: #PackageableElement) visibility
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLClass >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #PackageableElement) visibility: aVisibilityKind
 ]

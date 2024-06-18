@@ -1,1 +1,1 @@
-Package { #name : #'OP-UML-GTExtensions' }
+Package { #name : 'OP-UML-GTExtensions' }

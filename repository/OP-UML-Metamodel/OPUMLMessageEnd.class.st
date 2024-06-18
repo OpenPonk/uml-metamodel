@@ -2,25 +2,27 @@
 MessageEnd is an abstract specialization of NamedElement that represents what can occur at the end of a Message.
 "
 Class {
-	#name : #OPUMLMessageEnd,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLMessageEnd',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'message'
 	],
-	#category : 'OP-UML-Metamodel-Interactions'
+	#category : 'OP-UML-Metamodel-Interactions',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Interactions'
 }
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMessageEnd >> enclosingFragmentStub [
 	"This query returns a set including the enclosing InteractionFragment this MessageEnd is enclosed within."
 	
@@ -58,20 +60,20 @@ endif)"
 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMessageEnd >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #NamedElement.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLMessageEnd >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #MessageEnd put: self.
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMessageEnd >> isReceiveStub [
 	"This query returns value true if this MessageEnd is a receiveEvent."
 	
@@ -83,7 +85,7 @@ OPUMLMessageEnd >> isReceiveStub [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMessageEnd >> isSendStub [
 	"This query returns value true if this MessageEnd is a sendEvent."
 	
@@ -95,49 +97,49 @@ OPUMLMessageEnd >> isSendStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMessageEnd >> message [
 	"References a Message."
 	^ message
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLMessageEnd >> message: aMessage [
 	"References a Message."
 	message := aMessage
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLMessageEnd >> oppositeEndStub [
 	"This query returns a set including the MessageEnd (if exists) at the opposite end of the Message for this MessageEnd."
 	
@@ -149,22 +151,22 @@ OPUMLMessageEnd >> oppositeEndStub [
 
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> visibility [
 	^ (sharedGeneralizations at: #NamedElement) visibility
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLMessageEnd >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #NamedElement) visibility: aVisibilityKind
 ]

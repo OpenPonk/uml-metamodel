@@ -2,27 +2,29 @@
 A ParameterableElement is an Element that can be exposed as a formal TemplateParameter for a template, or specified as an actual parameter in a binding of a template.
 "
 Class {
-	#name : #OPUMLParameterableElement,
-	#superclass : #OPUMLElement,
+	#name : 'OPUMLParameterableElement',
+	#superclass : 'OPUMLElement',
 	#instVars : [
 		'owningTemplateParameter',
 		'templateParameter'
 	],
-	#category : 'OP-UML-Metamodel-CommonStructure'
+	#category : 'OP-UML-Metamodel-CommonStructure',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'CommonStructure'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLParameterableElement >> initializeDirectGeneralizations [
 	directGeneralizations := {
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLParameterableElement >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #ParameterableElement put: self.
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLParameterableElement >> isCompatibleWithStub [
 	"The query isCompatibleWith() determines if this ParameterableElement is compatible with the specified ParameterableElement. By default, this ParameterableElement is compatible with another ParameterableElement p if the kind of this ParameterableElement is the same as or a subtype of the kind of p. Subclasses of ParameterableElement should override this operation to specify different compatibility constraints."
 	
@@ -32,7 +34,7 @@ OPUMLParameterableElement >> isCompatibleWithStub [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLParameterableElement >> isTemplateParameterStub [
 	"The query isTemplateParameter() determines if this ParameterableElement is exposed as a formal TemplateParameter."
 	
@@ -42,13 +44,13 @@ OPUMLParameterableElement >> isTemplateParameterStub [
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameterableElement >> owningTemplateParameter [
 	"The formal TemplateParameter that owns this ParameterableElement."
 	^ owningTemplateParameter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameterableElement >> owningTemplateParameter: aTemplateParameter [
 	"The formal TemplateParameter that owns this ParameterableElement."
 	|anOldOwningTemplateParameter|
@@ -62,13 +64,13 @@ OPUMLParameterableElement >> owningTemplateParameter: aTemplateParameter [
 		to: owningTemplateParameter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameterableElement >> templateParameter [
 	"The TemplateParameter that exposes this ParameterableElement as a formal parameter."
 	^ templateParameter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 OPUMLParameterableElement >> templateParameter: aTemplateParameter [
 	"The TemplateParameter that exposes this ParameterableElement as a formal parameter."
 	|anOldTemplateParameter|

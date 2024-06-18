@@ -2,34 +2,36 @@
 A LiteralNull specifies the lack of a value.
 "
 Class {
-	#name : #OPUMLLiteralNull,
-	#superclass : #OPUMLElement,
-	#category : 'OP-UML-Metamodel-Values'
+	#name : 'OPUMLLiteralNull',
+	#superclass : 'OPUMLElement',
+	#category : 'OP-UML-Metamodel-Values',
+	#package : 'OP-UML-Metamodel',
+	#tag : 'Values'
 }
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralNull >> booleanValue [
 	^ (sharedGeneralizations at: #ValueSpecification) booleanValue
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> clientDependencies [
 	^ (sharedGeneralizations at: #NamedElement) clientDependencies
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> clientDependencies: aDependency [
 	(sharedGeneralizations at: #NamedElement) clientDependencies: aDependency
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralNull >> initializeDirectGeneralizations [
 	directGeneralizations := {
 		sharedGeneralizations at: #LiteralSpecification.
 	}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 OPUMLLiteralNull >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #NamedElement put: (OPUMLNamedElement newOnShared: sharedGeneralizations).
 	sharedGeneralizations at: #ParameterableElement put: (OPUMLParameterableElement newOnShared: sharedGeneralizations).
@@ -40,12 +42,12 @@ OPUMLLiteralNull >> initializeSharedGeneralizations [
 	sharedGeneralizations at: #LiteralNull put: self.
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralNull >> integerValue [
 	^ (sharedGeneralizations at: #ValueSpecification) integerValue
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralNull >> isComputable [
 	"The query isComputable() is redefined to be true."
 	
@@ -55,7 +57,7 @@ OPUMLLiteralNull >> isComputable [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralNull >> isComputableStub [
 	"The query isComputable() is redefined to be true."
 	
@@ -65,7 +67,7 @@ OPUMLLiteralNull >> isComputableStub [
 
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 OPUMLLiteralNull >> isNull [
 	"The query isNull() returns true."
 	
@@ -75,7 +77,7 @@ OPUMLLiteralNull >> isNull [
 
 ]
 
-{ #category : #'operations - stubs' }
+{ #category : 'operations - stubs' }
 OPUMLLiteralNull >> isNullStub [
 	"The query isNull() returns true."
 	
@@ -85,97 +87,97 @@ OPUMLLiteralNull >> isNullStub [
 
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> name [
 	^ (sharedGeneralizations at: #NamedElement) name
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> name: aString [
 	(sharedGeneralizations at: #NamedElement) name: aString
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> nameExpression [
 	^ (sharedGeneralizations at: #NamedElement) nameExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> nameExpression: aStringExpression [
 	(sharedGeneralizations at: #NamedElement) nameExpression: aStringExpression
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> namespace [
 	^ (sharedGeneralizations at: #NamedElement) namespace
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> namespace: aNamespace [
 	(sharedGeneralizations at: #NamedElement) namespace: aNamespace
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralNull >> owningTemplateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) owningTemplateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralNull >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
 ]
 
-{ #category : #'accessing - NamedElement' }
+{ #category : 'accessing - NamedElement' }
 OPUMLLiteralNull >> qualifiedName: aString [
 	(sharedGeneralizations at: #NamedElement) qualifiedName: aString
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralNull >> realValue [
 	^ (sharedGeneralizations at: #ValueSpecification) realValue
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralNull >> stringValue [
 	^ (sharedGeneralizations at: #ValueSpecification) stringValue
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralNull >> templateParameter [
 	^ (sharedGeneralizations at: #ParameterableElement) templateParameter
 ]
 
-{ #category : #'accessing - ParameterableElement' }
+{ #category : 'accessing - ParameterableElement' }
 OPUMLLiteralNull >> templateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) templateParameter: aTemplateParameter
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralNull >> type [
 	^ (sharedGeneralizations at: #TypedElement) type
 ]
 
-{ #category : #'accessing - TypedElement' }
+{ #category : 'accessing - TypedElement' }
 OPUMLLiteralNull >> type: aType [
 	(sharedGeneralizations at: #TypedElement) type: aType
 ]
 
-{ #category : #'operations - ValueSpecification' }
+{ #category : 'operations - ValueSpecification' }
 OPUMLLiteralNull >> unlimitedValue [
 	^ (sharedGeneralizations at: #ValueSpecification) unlimitedValue
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralNull >> visibility [
 	^ (sharedGeneralizations at: #PackageableElement) visibility
 ]
 
-{ #category : #'accessing - PackageableElement' }
+{ #category : 'accessing - PackageableElement' }
 OPUMLLiteralNull >> visibility: aVisibilityKind [
 	(sharedGeneralizations at: #PackageableElement) visibility: aVisibilityKind
 ]
