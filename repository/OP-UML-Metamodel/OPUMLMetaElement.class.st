@@ -219,14 +219,17 @@ OPUMLMetaElement >> inspectorProperties [
 
 { #category : 'GTInspector - extensions' }
 OPUMLMetaElement >> inspectorPropertiesSelectors [
+
 	| classes class |
 	classes := Set new.
 	class := self class.
-	[ class superclass name = 'Object' ]
-		whileFalse: [ classes add: class.
-			class := class superclass ].
-	^ ((((classes flatCollect: #methods) select: [ :each | each numArgs = 0 ])
-		select: [ :each | each protocol beginsWith: 'accessing' ]) collect: #selector) sorted
+	[ class superclass name = 'Object' ] whileFalse: [
+		classes add: class.
+		class := class superclass ].
+	^ ((((classes flatCollect: #methods) select: [ :each |
+		     each numArgs = 0 ]) select: [ :each |
+		    each protocolName beginsWith: 'accessing' ]) collect: #selector)
+		  sorted
 ]
 
 { #category : 'GTInspector - extensions' }
