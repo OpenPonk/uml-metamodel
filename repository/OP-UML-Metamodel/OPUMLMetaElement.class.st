@@ -344,6 +344,12 @@ OPUMLMetaElement >> unapplyStereotype: aStereotype [
 	self perform: (attribute opposite name , ':') asSymbol with: nil
 ]
 
+{ #category : 'announcer' }
+OPUMLMetaElement >> unsubscribe: aReceiver [
+
+	^ self announcer unsubscribe: aReceiver
+]
+
 { #category : 'accessing' }
 OPUMLMetaElement >> uuid [
 	^ uuid ifNil: [ uuid := UUID new ]
@@ -352,4 +358,13 @@ OPUMLMetaElement >> uuid [
 { #category : 'accessing' }
 OPUMLMetaElement >> uuid: aUUID [
 	uuid := aUUID
+]
+
+{ #category : 'announcer' }
+OPUMLMetaElement >> when: anAnnouncementClass send: aSelector to: aReceiver [
+
+	^ self announcer
+		  when: anAnnouncementClass
+		  send: aSelector
+		  to: aReceiver
 ]
