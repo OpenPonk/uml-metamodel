@@ -41,11 +41,6 @@ OPUMLMetaElement >> announcer [
 	^ announcer ifNil: [ announcer := Announcer new ]
 ]
 
-{ #category : 'accessing' }
-OPUMLMetaElement >> announcer: anAnnouncer [
-	announcer := anAnnouncer
-]
-
 { #category : 'accessing - stereotypes' }
 OPUMLMetaElement >> appliedStereotypes [
 	^ self tags at: #appliedStereotypes ifAbsentPut: [ OrderedCollection new ]
