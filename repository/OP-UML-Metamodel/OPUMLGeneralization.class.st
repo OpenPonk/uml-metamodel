@@ -67,6 +67,21 @@ OPUMLGeneralization >> isSubstitutable: aBoolean [
 	isSubstitutable := aBoolean
 ]
 
+{ #category : 'printing' }
+OPUMLGeneralization >> printOn: aStream [
+
+	super printOn: aStream.
+	aStream << '('.
+	self specific
+		ifNil: [ aStream << 'nil' ]
+		ifNotNil: [ :element | element printAsClassifierNameOn: aStream ].
+	aStream << ' -> '.
+	self general
+		ifNil: [ aStream << 'nil' ]
+		ifNotNil: [ :element | element printAsClassifierNameOn: aStream ].
+	aStream << ')'
+]
+
 { #category : 'accessing - Relationship' }
 OPUMLGeneralization >> relatedElements [
 	^ (sharedGeneralizations at: #Relationship) relatedElements

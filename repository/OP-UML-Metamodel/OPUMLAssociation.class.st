@@ -373,6 +373,29 @@ OPUMLAssociation >> powertypeExtents: aGeneralizationSet [
 	(sharedGeneralizations at: #Classifier) powertypeExtents: aGeneralizationSet
 ]
 
+{ #category : 'printing' }
+OPUMLAssociation >> printOn: aStream [
+
+	| ends |
+	aStream << 'an ' << self class name << '('.
+	self name ifNotNil: [ :existingName |
+		existingName ifNotEmpty: [
+			existingName printOn: aStream.
+			aStream << ': ' ] ].
+	ends := self memberEnds asOrderedCollection.
+	ends addAll: self ownedEnds.
+	ends
+		ifEmpty: [ aStream << 'nil -> nil' ]
+		ifNotEmpty: [ :properties |
+			properties
+				do: [ :each |
+					each type
+						ifNil: [ aStream << 'nil' ]
+						ifNotNil: [ :type | type printAsClassifierNameOn: aStream ] ]
+				separatedBy: [ aStream << ' -> ' ] ].
+	aStream << ')'
+]
+
 { #category : 'accessing - NamedElement' }
 OPUMLAssociation >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName

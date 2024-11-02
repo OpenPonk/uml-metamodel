@@ -265,6 +265,17 @@ OPUMLMetaElement >> oclIsTypeOf: aClassifier [
 ]
 
 { #category : 'printing' }
+OPUMLMetaElement >> printAsClassifierNameOn: aStream [
+
+	aStream << (self oclClassifierNameFrom: self class).
+	(self class selectors includes: #name) ifTrue: [
+		aStream
+			<< '(';
+			<< self name printString;
+			<< ')' ]
+]
+
+{ #category : 'printing' }
 OPUMLMetaElement >> printOn: aStream [
 	super printOn: aStream.
 	(self class selectors includes: #name)

@@ -496,6 +496,18 @@ OPUMLProperty >> owningTemplateParameter: aTemplateParameter [
 	(sharedGeneralizations at: #ParameterableElement) owningTemplateParameter: aTemplateParameter
 ]
 
+{ #category : 'printing' }
+OPUMLProperty >> printOn: aStream [
+
+	aStream << 'an ' << self class name << '('.
+	self name ifNotNil: [ :existingName |
+		existingName ifNotEmpty: [
+			aStream << existingName.
+			self type ifNotNil: [ aStream << ': ' ] ] ].
+	self type ifNotNil: [ :type | type printAsClassifierNameOn: aStream ].
+	aStream << ')'
+]
+
 { #category : 'accessing - NamedElement' }
 OPUMLProperty >> qualifiedName [
 	^ (sharedGeneralizations at: #NamedElement) qualifiedName
