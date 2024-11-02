@@ -383,7 +383,7 @@ OPUMLAssociation >> printOn: aStream [
 			existingName printOn: aStream.
 			aStream << ': ' ] ].
 	ends := self memberEnds asOrderedCollection.
-	ends addAll: self ownedEnds.
+	self ownedEnds do: [ :each | ends addIfNotPresent: each ].
 	ends
 		ifEmpty: [ aStream << 'nil -> nil' ]
 		ifNotEmpty: [ :properties |
