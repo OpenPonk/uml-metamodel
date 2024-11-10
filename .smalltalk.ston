@@ -1,12 +1,15 @@
 SmalltalkCISpec {
 	#loading : [
 		SCIMetacelloLoadSpec {
-			#baseline : 'UMLMetamodel',
+			#baseline : 'OpenPonkUMLMetamodel',
 			#directory : 'repository',
 			#platforms : [ #pharo ]
 		}
 	],
 	#testing : {
-		#packages : [ 'OP-UML-Meta*' ]
+		#packages : [ 'OpenPonk*' ],
+		#coverage : {
+			#packages : [ 'OpenPonk-UML-Meta*' ]
+		}
 	}
 }
