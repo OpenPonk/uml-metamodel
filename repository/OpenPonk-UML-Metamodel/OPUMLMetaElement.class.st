@@ -98,11 +98,11 @@ OPUMLMetaElement >> initializeWithShared: aDictionary [
 	self initializeDirectGeneralizations
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionAllProperties [
+{ #category : 'as yet unclassified' }
+OPUMLMetaElement >> inspectionAllProperties: aBuilder [
 
 	<inspectorPresentationOrder: 6 title: 'Properties (All)'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (self inspectorProperties sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
@@ -117,11 +117,11 @@ OPUMLMetaElement >> inspectionAllProperties [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionGeneralizations [
+{ #category : 'as yet unclassified' }
+OPUMLMetaElement >> inspectionGeneralizations: aBuilder [
 
 	<inspectorPresentationOrder: 8 title: 'Generalizations'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (sharedGeneralizations associations sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
@@ -136,11 +136,11 @@ OPUMLMetaElement >> inspectionGeneralizations [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionProperties [
+{ #category : 'as yet unclassified' }
+OPUMLMetaElement >> inspectionProperties: aBuilder [
 
 	<inspectorPresentationOrder: 5 title: 'Properties'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (self nonEmptyinspectorProperties sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
@@ -155,11 +155,11 @@ OPUMLMetaElement >> inspectionProperties [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionStereotypeProperties [
+{ #category : 'as yet unclassified' }
+OPUMLMetaElement >> inspectionStereotypeProperties: aBuilder [
 
 	<inspectorPresentationOrder: 7 title: 'Tagged Values'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items:
 			  (self stereotypeProperties sorted: [ :a :b | a first < b first ]);
@@ -178,21 +178,21 @@ OPUMLMetaElement >> inspectionStereotypeProperties [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionStereotypes [
+{ #category : 'as yet unclassified' }
+OPUMLMetaElement >> inspectionStereotypes: aBuilder [
 
 	<inspectorPresentationOrder: 7 title: 'Stereotypes'>
-	^ SpListPresenter new
+	^ aBuilder newList
 		  items: (self appliedStereotypes sorted: [ :a :b | 
 					   a umlClassName < b umlClassName ]);
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionTags [
+{ #category : 'as yet unclassified' }
+OPUMLMetaElement >> inspectionTags: aBuilder [
 
 	<inspectorPresentationOrder: 7 title: 'Tags'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (self tags associations sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
