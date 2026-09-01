@@ -36,7 +36,7 @@ OPUMLQualifierValue >> qualifier: aProperty [
 	qualifier := aProperty
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLQualifierValue >> value [
 	"The InputPin from which the specified value for the qualifier is taken."
 	^ value

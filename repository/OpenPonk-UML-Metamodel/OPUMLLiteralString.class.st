@@ -175,7 +175,7 @@ OPUMLLiteralString >> unlimitedValue [
 	^ (sharedGeneralizations at: #ValueSpecification) unlimitedValue
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLLiteralString >> value [
 	"The specified String value."
 	^ value

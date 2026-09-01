@@ -260,7 +260,7 @@ OPUMLWriteVariableAction >> redefinitionContexts: aClassifier [
 	(sharedGeneralizations at: #RedefinableElement) redefinitionContexts: aClassifier
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLWriteVariableAction >> value [
 	"The InputPin that gives the value to be added or removed from the Variable."
 	^ value

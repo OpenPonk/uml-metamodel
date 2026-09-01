@@ -1,3 +1,6 @@
+"
+I am a mock domain model representing a score. I am used exclusively for testing UML bidirectional one-to-one links with OPUMLTestReview.
+"
 Class {
 	#name : 'OPUMLTestScore',
 	#superclass : 'Object',

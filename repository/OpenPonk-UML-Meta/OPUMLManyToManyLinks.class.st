@@ -1,3 +1,6 @@
+"
+I am a specialized collection extending OPUMLToManyLinks to explicitly manage synchronized bidirectional many-to-many relationships between UML objects.
+"
 Class {
 	#name : 'OPUMLManyToManyLinks',
 	#superclass : 'OPUMLToManyLinks',
@@ -11,7 +14,7 @@ OPUMLManyToManyLinks >> addOppositeTo: anObject [
 	(anObject perform: oppositeSelector) add: owner
 ]
 
-{ #category : 'removing' }
+{ #category : 'adding' }
 OPUMLManyToManyLinks >> removeOppositeFrom: anObject [
 	| opposite |
 	opposite := anObject perform: oppositeSelector.

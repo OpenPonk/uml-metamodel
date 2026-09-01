@@ -1,3 +1,6 @@
+"
+I am a mock domain model representing a review. I am used exclusively for testing UML bidirectional links, maintaining relationships with OPUMLTestBook and OPUMLTestScore.
+"
 Class {
 	#name : 'OPUMLTestReview',
 	#superclass : 'Object',

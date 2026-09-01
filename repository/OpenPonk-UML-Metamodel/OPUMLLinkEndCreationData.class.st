@@ -80,7 +80,7 @@ OPUMLLinkEndCreationData >> qualifiers: aQualifierValue [
 	(sharedGeneralizations at: #LinkEndData) qualifiers: aQualifierValue
 ]
 
-{ #category : 'accessing - LinkEndData' }
+{ #category : 'evaluating' }
 OPUMLLinkEndCreationData >> value [
 	^ (sharedGeneralizations at: #LinkEndData) value
 ]

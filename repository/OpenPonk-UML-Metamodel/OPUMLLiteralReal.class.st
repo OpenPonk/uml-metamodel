@@ -175,7 +175,7 @@ OPUMLLiteralReal >> unlimitedValue [
 	^ (sharedGeneralizations at: #ValueSpecification) unlimitedValue
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLLiteralReal >> value [
 	"The specified Real value."
 	^ value

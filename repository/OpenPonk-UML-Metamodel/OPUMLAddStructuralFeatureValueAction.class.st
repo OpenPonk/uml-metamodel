@@ -316,7 +316,7 @@ OPUMLAddStructuralFeatureValueAction >> structuralFeature: aStructuralFeature [
 	(sharedGeneralizations at: #StructuralFeatureAction) structuralFeature: aStructuralFeature
 ]
 
-{ #category : 'accessing - WriteStructuralFeatureAction' }
+{ #category : 'evaluating' }
 OPUMLAddStructuralFeatureValueAction >> value [
 	^ (sharedGeneralizations at: #WriteStructuralFeatureAction) value
 ]

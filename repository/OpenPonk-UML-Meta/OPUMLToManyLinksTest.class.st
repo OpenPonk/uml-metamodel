@@ -1,3 +1,6 @@
+"
+I am a unit test class verifying the automatic synchronization behavior of OPUMLToManyLinks within a one-to-many relationship context.
+"
 Class {
 	#name : 'OPUMLToManyLinksTest',
 	#superclass : 'TestCase',

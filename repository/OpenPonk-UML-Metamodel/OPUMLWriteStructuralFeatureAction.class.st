@@ -293,7 +293,7 @@ OPUMLWriteStructuralFeatureAction >> structuralFeature: aStructuralFeature [
 	(sharedGeneralizations at: #StructuralFeatureAction) structuralFeature: aStructuralFeature
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLWriteStructuralFeatureAction >> value [
 	"The InputPin that provides the value to be added or removed from the StructuralFeature."
 	^ value
