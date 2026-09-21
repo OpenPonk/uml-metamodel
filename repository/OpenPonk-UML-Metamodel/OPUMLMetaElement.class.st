@@ -229,14 +229,11 @@ OPUMLMetaElement >> oclAsType: aClassifier [
 	^ sharedGeneralizations at: (self oclClassifierNameFrom: aClassifier)
 ]
 
-{ #category : 'ocl-experimental' }
+{ #category : 'evaluating' }
 OPUMLMetaElement >> oclClassifierNameFrom: anObject [
-
-	| metaElementClass |
-	metaElementClass := Smalltalk globals at: #OPUMLMetaElement.
-	(anObject isKindOf: metaElementClass class) ifTrue: [
+	(anObject isKindOf: OPUMLMetaElement class) ifTrue: [
 		^ anObject name withoutPrefix: 'OPUML' ].
-	(anObject isKindOf: metaElementClass) ifTrue: [ ^ anObject name ].
+	(anObject isKindOf: OPUMLMetaElement) ifTrue: [ ^ anObject name ].
 	anObject isString ifTrue: [ ^ anObject ].
 	self error: 'Unknown classifier ' , anObject asString
 ]

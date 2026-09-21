@@ -33,6 +33,18 @@ OPUMLToManyLinksTest >> testAddMove [
 ]
 
 { #category : 'tests' }
+OPUMLToManyLinksTest >> testCopyDoesNotShareInternalCollection [
+	| book links linksCopy |
+	book := OPUMLTestBook new.
+	links := book reviews.
+	links add: OPUMLTestReview new.
+	linksCopy := links copy.
+
+	self deny: (links instVarNamed: #collection) == (linksCopy instVarNamed: #collection)
+		description: 'Copied OPUMLToManyLinks must not share its internal collection instance'
+]
+
+{ #category : 'tests' }
 OPUMLToManyLinksTest >> testCreate [
 	| book |
 	book := OPUMLTestBook new.

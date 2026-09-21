@@ -88,6 +88,12 @@ OPUMLToManyLinks >> owner [
 	^ owner
 ]
 
+{ #category : 'copying' }
+OPUMLToManyLinks >> postCopy [
+	super postCopy.
+	collection := collection copy
+]
+
 { #category : 'removing' }
 OPUMLToManyLinks >> remove: oldObject ifAbsent: anExceptionBlock [
 	oldObject ifNil: [ "there is some oddity when instantiating metamodel" ^ self ].
