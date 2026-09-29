@@ -272,7 +272,7 @@ OPUMLValueSpecificationAction >> result: anOutputPin [
 	result := anOutputPin
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLValueSpecificationAction >> value [
 	"The ValueSpecification to be evaluated."
 	^ value

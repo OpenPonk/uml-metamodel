@@ -286,7 +286,7 @@ OPUMLAddVariableValueAction >> redefinitionContexts: aClassifier [
 	(sharedGeneralizations at: #RedefinableElement) redefinitionContexts: aClassifier
 ]
 
-{ #category : 'accessing - WriteVariableAction' }
+{ #category : 'evaluating' }
 OPUMLAddVariableValueAction >> value [
 	^ (sharedGeneralizations at: #WriteVariableAction) value
 ]

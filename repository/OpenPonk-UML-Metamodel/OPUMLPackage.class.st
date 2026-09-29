@@ -370,12 +370,15 @@ OPUMLPackage >> packageMerges: aPackageMerge [
 { #category : 'accessing' }
 OPUMLPackage >> packagedElements [
 	"Specifies the packageable elements that are owned by this Package."
-	^ packagedElements ifNil: [ packagedElements := OrderedCollection new ]
+
+	^ packagedElements ifNil: [
+		  packagedElements := OrderedCollection new ]
 ]
 
 { #category : 'accessing' }
 OPUMLPackage >> packagedElements: aPackageableElement [
 	"Specifies the packageable elements that are owned by this Package."
+
 	packagedElements := aPackageableElement
 ]
 

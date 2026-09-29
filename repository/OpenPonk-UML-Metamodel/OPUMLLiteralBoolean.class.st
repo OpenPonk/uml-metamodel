@@ -175,7 +175,7 @@ OPUMLLiteralBoolean >> unlimitedValue [
 	^ (sharedGeneralizations at: #ValueSpecification) unlimitedValue
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLLiteralBoolean >> value [
 	"The specified Boolean value."
 	^ value ifNil: [ value := false ]

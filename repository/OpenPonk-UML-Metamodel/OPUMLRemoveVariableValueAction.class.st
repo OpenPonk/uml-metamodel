@@ -286,7 +286,7 @@ OPUMLRemoveVariableValueAction >> removeAt: anInputPin [
 	removeAt := anInputPin
 ]
 
-{ #category : 'accessing - WriteVariableAction' }
+{ #category : 'evaluating' }
 OPUMLRemoveVariableValueAction >> value [
 	^ (sharedGeneralizations at: #WriteVariableAction) value
 ]

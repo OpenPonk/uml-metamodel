@@ -1,3 +1,6 @@
+"
+I provide utility methods to manage a synchronized bidirectional reference to a single UML object. I automatically attach or detach the opposite side of a relationship when the primary reference is updated.
+"
 Class {
 	#name : 'OPUMLToOneLink',
 	#superclass : 'Collection',

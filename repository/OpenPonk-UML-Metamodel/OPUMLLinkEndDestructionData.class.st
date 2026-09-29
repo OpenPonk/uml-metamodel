@@ -80,7 +80,7 @@ OPUMLLinkEndDestructionData >> qualifiers: aQualifierValue [
 	(sharedGeneralizations at: #LinkEndData) qualifiers: aQualifierValue
 ]
 
-{ #category : 'accessing - LinkEndData' }
+{ #category : 'evaluating' }
 OPUMLLinkEndDestructionData >> value [
 	^ (sharedGeneralizations at: #LinkEndData) value
 ]

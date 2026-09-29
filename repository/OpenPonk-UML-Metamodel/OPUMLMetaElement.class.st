@@ -5,14 +5,10 @@ Class {
 	#name : 'OPUMLMetaElement',
 	#superclass : 'Object',
 	#instVars : [
-		'announcer',
 		'directGeneralizations',
 		'sharedGeneralizations',
 		'tags',
 		'uuid'
-	],
-	#classInstVars : [
-		'metaModels'
 	],
 	#category : 'OpenPonk-UML-Metamodel-Meta',
 	#package : 'OpenPonk-UML-Metamodel',
@@ -34,11 +30,6 @@ OPUMLMetaElement >> addTag: anAssociation [
 { #category : 'accessing' }
 OPUMLMetaElement >> addTagNamed: aKey value: aValue [
 	tags at: aKey put: aValue
-]
-
-{ #category : 'accessing' }
-OPUMLMetaElement >> announcer [
-	^ announcer ifNil: [ announcer := Announcer new ]
 ]
 
 { #category : 'accessing - stereotypes' }
@@ -98,11 +89,11 @@ OPUMLMetaElement >> initializeWithShared: aDictionary [
 	self initializeDirectGeneralizations
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionAllProperties [
+{ #category : 'inspecting' }
+OPUMLMetaElement >> inspectionAllProperties: aBuilder [
 
 	<inspectorPresentationOrder: 6 title: 'Properties (All)'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (self inspectorProperties sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
@@ -117,11 +108,11 @@ OPUMLMetaElement >> inspectionAllProperties [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionGeneralizations [
+{ #category : 'inspecting' }
+OPUMLMetaElement >> inspectionGeneralizations: aBuilder [
 
 	<inspectorPresentationOrder: 8 title: 'Generalizations'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (sharedGeneralizations associations sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
@@ -136,11 +127,11 @@ OPUMLMetaElement >> inspectionGeneralizations [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionProperties [
+{ #category : 'inspecting' }
+OPUMLMetaElement >> inspectionProperties: aBuilder [
 
 	<inspectorPresentationOrder: 5 title: 'Properties'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (self nonEmptyinspectorProperties sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
@@ -155,11 +146,11 @@ OPUMLMetaElement >> inspectionProperties [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionStereotypeProperties [
+{ #category : 'inspecting' }
+OPUMLMetaElement >> inspectionStereotypeProperties: aBuilder [
 
 	<inspectorPresentationOrder: 7 title: 'Tagged Values'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items:
 			  (self stereotypeProperties sorted: [ :a :b | a first < b first ]);
@@ -178,21 +169,21 @@ OPUMLMetaElement >> inspectionStereotypeProperties [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionStereotypes [
+{ #category : 'inspecting' }
+OPUMLMetaElement >> inspectionStereotypes: aBuilder [
 
 	<inspectorPresentationOrder: 7 title: 'Stereotypes'>
-	^ SpListPresenter new
+	^ aBuilder newList
 		  items: (self appliedStereotypes sorted: [ :a :b | 
 					   a umlClassName < b umlClassName ]);
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
-OPUMLMetaElement >> inspectionTags [
+{ #category : 'inspecting' }
+OPUMLMetaElement >> inspectionTags: aBuilder [
 
 	<inspectorPresentationOrder: 7 title: 'Tags'>
-	^ SpTablePresenter new
+	^ aBuilder newTable
 		  beResizable;
 		  items: (self tags associations sorted collect: [ :e |
 					   StInspectorAssociationNode hostObject: e ]);
@@ -207,27 +198,27 @@ OPUMLMetaElement >> inspectionTags [
 		  yourself
 ]
 
-{ #category : 'GTInspector - extensions' }
+{ #category : 'inspecting' }
 OPUMLMetaElement >> inspectorProperties [
 	^ self inspectorPropertiesSelectors collect: [ :each | each -> (self perform: each) ]
 ]
 
-{ #category : 'GTInspector - extensions' }
+{ #category : 'inspecting' }
 OPUMLMetaElement >> inspectorPropertiesSelectors [
 
 	| classes class |
 	classes := Set new.
 	class := self class.
 	[ class superclass name = 'Object' ] whileFalse: [
-		classes add: class.
-		class := class superclass ].
+			classes add: class.
+			class := class superclass ].
 	^ ((((classes flatCollect: #methods) select: [ :each |
 		     each numArgs = 0 ]) select: [ :each |
 		    each protocolName beginsWith: 'accessing' ]) collect: #selector)
 		  sorted
 ]
 
-{ #category : 'GTInspector - extensions' }
+{ #category : 'inspecting' }
 OPUMLMetaElement >> nonEmptyinspectorProperties [
 	^ self inspectorProperties
 		reject: [ :pair | pair value isNil or: [ pair value isCollection and: [ pair value isEmpty ] ] ]
@@ -238,14 +229,11 @@ OPUMLMetaElement >> oclAsType: aClassifier [
 	^ sharedGeneralizations at: (self oclClassifierNameFrom: aClassifier)
 ]
 
-{ #category : 'ocl-experimental' }
+{ #category : 'evaluating' }
 OPUMLMetaElement >> oclClassifierNameFrom: anObject [
-
-	| metaElementClass |
-	metaElementClass := Smalltalk globals at: #OPUMLMetaElement.
-	(anObject isKindOf: metaElementClass class) ifTrue: [
+	(anObject isKindOf: OPUMLMetaElement class) ifTrue: [
 		^ anObject name withoutPrefix: 'OPUML' ].
-	(anObject isKindOf: metaElementClass) ifTrue: [ ^ anObject name ].
+	(anObject isKindOf: OPUMLMetaElement) ifTrue: [ ^ anObject name ].
 	anObject isString ifTrue: [ ^ anObject ].
 	self error: 'Unknown classifier ' , anObject asString
 ]
@@ -268,18 +256,19 @@ OPUMLMetaElement >> oclIsTypeOf: aClassifier [
 OPUMLMetaElement >> printAsClassifierNameOn: aStream [
 
 	aStream << (self oclClassifierNameFrom: self class).
-	(self class selectors includes: #name) ifTrue: [
-		aStream
-			<< '(';
-			<< self name printString;
-			<< ')' ]
+	(self respondsTo: #name) ifTrue: [
+			aStream
+				<< '(';
+				<< self name printString;
+				<< ')' ]
 ]
 
 { #category : 'printing' }
 OPUMLMetaElement >> printOn: aStream [
+
 	super printOn: aStream.
-	(self class selectors includes: #name)
-		ifTrue: [ aStream
+	(self respondsTo: #name) ifTrue: [
+			aStream
 				<< '(';
 				<< self name printString;
 				<< ')' ]
@@ -295,19 +284,20 @@ OPUMLMetaElement >> removeTagNamed: aKey [
 	tags removeKey: aKey
 ]
 
-{ #category : 'GTInspector - extensions' }
+{ #category : 'inspecting' }
 OPUMLMetaElement >> stereotypeProperties [
+
 	| props |
 	props := OrderedCollection new.
-	^ self appliedStereotypes
-		flatCollect: [ :stereo | 
-			| meta |
-			meta := stereo umlMetaClass.
-			(meta ownedAttributes reject: [ :each | each name beginsWith: 'base_' ])
-				collect: [ :each | 
-					{each name.
-					meta name.
-					stereo perform: each name asSymbol} ] ]
+	^ self appliedStereotypes flatCollect: [ :stereo |
+			  | meta |
+			  meta := stereo umlMetaClass.
+			  (meta ownedAttributes reject: [ :each |
+				   each name beginsWith: 'base_' ]) collect: [ :each |
+					  {
+						  each name.
+						  meta name.
+						  (stereo perform: each name asSymbol) } ] ]
 ]
 
 { #category : 'accessing - tags' }

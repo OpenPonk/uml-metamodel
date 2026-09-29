@@ -1,3 +1,6 @@
+"
+I am a unit test class verifying the automatic synchronization behavior of OPUMLToManyLinks within a one-to-many relationship context.
+"
 Class {
 	#name : 'OPUMLToManyLinksTest',
 	#superclass : 'TestCase',
@@ -27,6 +30,18 @@ OPUMLToManyLinksTest >> testAddMove [
 	self assert: book reviews asArray equals: #().
 	self assert: book2 reviews asArray equals: {review}.
 	self assert: review book equals: book2
+]
+
+{ #category : 'tests' }
+OPUMLToManyLinksTest >> testCopyDoesNotShareInternalCollection [
+	| book links linksCopy |
+	book := OPUMLTestBook new.
+	links := book reviews.
+	links add: OPUMLTestReview new.
+	linksCopy := links copy.
+
+	self deny: (links instVarNamed: #collection) == (linksCopy instVarNamed: #collection)
+		description: 'Copied OPUMLToManyLinks must not share its internal collection instance'
 ]
 
 { #category : 'tests' }

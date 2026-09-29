@@ -1,3 +1,6 @@
+"
+I am a specialized collection that manages a synchronized bidirectional relationship to multiple UML objects. I automatically reflect additions or removals in the opposite reference slot on the target object.
+"
 Class {
 	#name : 'OPUMLToManyLinks',
 	#superclass : 'Collection',
@@ -64,7 +67,7 @@ OPUMLToManyLinks >> includes: anObject [
 	^ collection includes: anObject
 ]
 
-{ #category : 'adding' }
+{ #category : 'initialization' }
 OPUMLToManyLinks >> initialize [
 	super initialize.
 	collection := OrderedCollection new
@@ -83,6 +86,12 @@ OPUMLToManyLinks >> oppositeSelector [
 { #category : 'accessing' }
 OPUMLToManyLinks >> owner [
 	^ owner
+]
+
+{ #category : 'copying' }
+OPUMLToManyLinks >> postCopy [
+	super postCopy.
+	collection := collection copy
 ]
 
 { #category : 'removing' }

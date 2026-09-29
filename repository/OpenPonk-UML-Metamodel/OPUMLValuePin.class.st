@@ -332,7 +332,7 @@ OPUMLValuePin >> upperValue: aValueSpecification [
 	(sharedGeneralizations at: #MultiplicityElement) upperValue: aValueSpecification
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLValuePin >> value [
 	"The ValueSpecification that is evaluated to obtain the value that the ValuePin will provide."
 	^ value

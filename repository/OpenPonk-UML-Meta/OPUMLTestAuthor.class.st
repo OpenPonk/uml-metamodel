@@ -1,3 +1,6 @@
+"
+I am a mock domain model representing an author. I am used exclusively for testing UML bidirectional links with OPUMLTestBook.
+"
 Class {
 	#name : 'OPUMLTestAuthor',
 	#superclass : 'Object',

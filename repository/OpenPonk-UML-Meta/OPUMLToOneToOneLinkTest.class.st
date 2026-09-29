@@ -1,3 +1,6 @@
+"
+I am a unit test class verifying the automatic synchronization behavior managed by OPUMLToOneLink for a bidirectional one-to-one relationship.
+"
 Class {
 	#name : 'OPUMLToOneToOneLinkTest',
 	#superclass : 'TestCase',

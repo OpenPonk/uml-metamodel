@@ -316,7 +316,7 @@ OPUMLRemoveStructuralFeatureValueAction >> structuralFeature: aStructuralFeature
 	(sharedGeneralizations at: #StructuralFeatureAction) structuralFeature: aStructuralFeature
 ]
 
-{ #category : 'accessing - WriteStructuralFeatureAction' }
+{ #category : 'evaluating' }
 OPUMLRemoveStructuralFeatureValueAction >> value [
 	^ (sharedGeneralizations at: #WriteStructuralFeatureAction) value
 ]

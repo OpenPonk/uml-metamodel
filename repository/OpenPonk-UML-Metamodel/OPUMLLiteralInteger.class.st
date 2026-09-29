@@ -175,7 +175,7 @@ OPUMLLiteralInteger >> unlimitedValue [
 	^ (sharedGeneralizations at: #ValueSpecification) unlimitedValue
 ]
 
-{ #category : 'accessing' }
+{ #category : 'evaluating' }
 OPUMLLiteralInteger >> value [
 	"The specified Integer value."
 	^ value ifNil: [ value := 0 ]
