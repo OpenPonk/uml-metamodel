@@ -4,9 +4,9 @@ I am a unit test class verifying the automatic synchronization behavior of OPUML
 Class {
 	#name : 'OPUMLToManyToManyLinksTest',
 	#superclass : 'TestCase',
-	#category : 'OpenPonk-UML-Meta-Tests',
-	#package : 'OpenPonk-UML-Meta',
-	#tag : 'Tests'
+	#category : 'OpenPonk-UML-Meta-Tests-Models',
+	#package : 'OpenPonk-UML-Meta-Tests',
+	#tag : 'Models'
 }
 
 { #category : 'tests' }

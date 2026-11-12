@@ -15,7 +15,10 @@ BaselineOfOpenPonkUMLMetamodel >> baseline: spec [
 	spec for: #common do: [
 		spec package: 'OpenPonk-UML-Meta'.
 		spec
+			package: 'OpenPonk-UML-Meta-Tests'
+			with: [ spec requires: #( 'OpenPonk-UML-Meta' ) ].
+		spec
 			package: 'OpenPonk-UML-Metamodel'
 			with: [ spec requires: #( 'OpenPonk-UML-Meta' ) ].
-		spec group: 'default' with: #( 'OpenPonk-UML-Metamodel' ) ]
+		spec group: 'default' with: #( 'OpenPonk-UML-Metamodel' 'OpenPonk-UML-Meta-Tests' ) ]
 ]

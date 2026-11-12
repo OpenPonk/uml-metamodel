@@ -7,9 +7,9 @@ Class {
 	#instVars : [
 		'review'
 	],
-	#category : 'OpenPonk-UML-Meta-Tests',
-	#package : 'OpenPonk-UML-Meta',
-	#tag : 'Tests'
+	#category : 'OpenPonk-UML-Meta-Tests-Models',
+	#package : 'OpenPonk-UML-Meta-Tests',
+	#tag : 'Models'
 }
 
 { #category : 'accessing' }
