@@ -46,3 +46,17 @@ OPUMLToOneLinkTest >> testSet [
 	self assert: book reviews asArray equals: {review}.
 	self assert: review book equals: book
 ]
+
+{ #category : 'tests' }
+OPUMLToOneLinkTest >> testSetSameObjectIsIdempotent [
+
+	| book review |
+	book := OPUMLTestBook new.
+	review := OPUMLTestReview new.
+	review book: nil.
+	self assert: review book equals: nil.
+	review book: book.
+	review book: book.
+	self assert: review book identicalTo: book.
+	self assert: book reviews asArray equals: { review }
+]

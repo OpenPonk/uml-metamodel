@@ -30,7 +30,7 @@ OPUMLRedefinableTemplateSignature >> classifier: aClassifier [
 		on: self identity
 		thisSelector: #classifier
 		otherSelector: #ownedTemplateSignature
-		from: anOldClassifier
+		updateFrom: anOldClassifier
 		to: classifier
 ]
 

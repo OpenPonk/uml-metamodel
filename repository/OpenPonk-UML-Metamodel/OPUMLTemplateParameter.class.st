@@ -67,7 +67,7 @@ OPUMLTemplateParameter >> ownedParameteredElement: aParameterableElement [
 		on: self identity
 		thisSelector: #ownedParameteredElement
 		otherSelector: #owningTemplateParameter
-		from: anOldOwnedParameteredElement
+		updateFrom: anOldOwnedParameteredElement
 		to: ownedParameteredElement
 ]
 
@@ -87,7 +87,7 @@ OPUMLTemplateParameter >> parameteredElement: aParameterableElement [
 		on: self identity
 		thisSelector: #parameteredElement
 		otherSelector: #templateParameter
-		from: anOldParameteredElement
+		updateFrom: anOldParameteredElement
 		to: parameteredElement
 ]
 

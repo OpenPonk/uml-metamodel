@@ -50,7 +50,7 @@ OPUMLTemplateableElement >> ownedTemplateSignature: aTemplateSignature [
 		on: self identity
 		thisSelector: #ownedTemplateSignature
 		otherSelector: #template
-		from: anOldOwnedTemplateSignature
+		updateFrom: anOldOwnedTemplateSignature
 		to: ownedTemplateSignature
 ]
 

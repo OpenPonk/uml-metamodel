@@ -96,11 +96,12 @@ OPUMLToManyLinks >> postCopy [
 
 { #category : 'removing' }
 OPUMLToManyLinks >> remove: oldObject ifAbsent: anExceptionBlock [
+
 	oldObject ifNil: [ "there is some oddity when instantiating metamodel" ^ self ].
-	(collection includes: oldObject)
-		ifFalse: [ ^ anExceptionBlock value ].
+	(collection includes: oldObject) ifFalse: [ ^ anExceptionBlock value ].
 	self removeOppositeFrom: oldObject.
-	collection remove: oldObject ifAbsent: [  ]
+	collection remove: oldObject ifAbsent: [ ].
+	^ oldObject
 ]
 
 { #category : 'removing' }

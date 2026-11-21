@@ -540,7 +540,7 @@ OPUMLOperation >> templateParameter: anOperationTemplateParameter [
 		on: self identity
 		thisSelector: #templateParameter
 		otherSelector: #parameteredElement
-		from: anOldTemplateParameter
+		updateFrom: anOldTemplateParameter
 		to: templateParameter
 ]
 

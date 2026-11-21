@@ -490,7 +490,7 @@ OPUMLClassifier >> ownedTemplateSignature: aRedefinableTemplateSignature [
 		on: self identity
 		thisSelector: #ownedTemplateSignature
 		otherSelector: #classifier
-		from: anOldOwnedTemplateSignature
+		updateFrom: anOldOwnedTemplateSignature
 		to: ownedTemplateSignature
 ]
 
@@ -664,7 +664,7 @@ OPUMLClassifier >> templateParameter: aClassifierTemplateParameter [
 		on: self identity
 		thisSelector: #templateParameter
 		otherSelector: #parameteredElement
-		from: anOldTemplateParameter
+		updateFrom: anOldTemplateParameter
 		to: templateParameter
 ]
 

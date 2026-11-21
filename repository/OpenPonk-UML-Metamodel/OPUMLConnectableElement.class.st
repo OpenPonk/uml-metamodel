@@ -129,7 +129,7 @@ OPUMLConnectableElement >> templateParameter: aConnectableElementTemplateParamet
 		on: self identity
 		thisSelector: #templateParameter
 		otherSelector: #parameteredElement
-		from: anOldTemplateParameter
+		updateFrom: anOldTemplateParameter
 		to: templateParameter
 ]
 

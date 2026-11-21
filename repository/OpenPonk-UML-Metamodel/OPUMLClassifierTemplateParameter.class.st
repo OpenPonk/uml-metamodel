@@ -97,7 +97,7 @@ OPUMLClassifierTemplateParameter >> parameteredElement: aClassifier [
 		on: self identity
 		thisSelector: #parameteredElement
 		otherSelector: #templateParameter
-		from: anOldParameteredElement
+		updateFrom: anOldParameteredElement
 		to: parameteredElement
 ]
 

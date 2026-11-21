@@ -60,7 +60,7 @@ OPUMLParameterableElement >> owningTemplateParameter: aTemplateParameter [
 		on: self identity
 		thisSelector: #owningTemplateParameter
 		otherSelector: #ownedParameteredElement
-		from: anOldOwningTemplateParameter
+		updateFrom: anOldOwningTemplateParameter
 		to: owningTemplateParameter
 ]
 
@@ -80,6 +80,6 @@ OPUMLParameterableElement >> templateParameter: aTemplateParameter [
 		on: self identity
 		thisSelector: #templateParameter
 		otherSelector: #parameteredElement
-		from: anOldTemplateParameter
+		updateFrom: anOldTemplateParameter
 		to: templateParameter
 ]
