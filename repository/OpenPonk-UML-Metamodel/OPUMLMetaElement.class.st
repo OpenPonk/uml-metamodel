@@ -22,16 +22,6 @@ OPUMLMetaElement class >> newOnShared: aDictionary [
 		yourself
 ]
 
-{ #category : 'accessing' }
-OPUMLMetaElement >> addTag: anAssociation [
-	tags add: anAssociation
-]
-
-{ #category : 'accessing' }
-OPUMLMetaElement >> addTagNamed: aKey value: aValue [
-	tags at: aKey put: aValue
-]
-
 { #category : 'accessing - stereotypes' }
 OPUMLMetaElement >> appliedStereotypes [
 	^ self tags at: #appliedStereotypes ifAbsentPut: [ OrderedCollection new ]
@@ -40,17 +30,9 @@ OPUMLMetaElement >> appliedStereotypes [
 { #category : 'accessing - stereotypes' }
 OPUMLMetaElement >> applyStereotype: aStereotype [
 
-	| meta attribute |
-	(self appliedStereotypes anySatisfy: [ :any | 
-		 any oclIsTypeOf: aStereotype umlClassName ]) ifTrue: [ ^ self ].
+	(self appliedStereotypes anySatisfy: [ :any | any oclIsTypeOf: aStereotype umlClassName ]) ifTrue: [ ^ self ].
 	self appliedStereotypes add: aStereotype.
-	meta := aStereotype umlMetaClass.
-	attribute := (meta allAttributes select: [ :each | 
-		              each name beginsWith: 'base_' ]) detect: [ :each | 
-		             self oclIsKindOf: each type name ].
-	self
-		perform: (attribute opposite name , ':') asSymbol
-		with: aStereotype
+	self setExtensionFor: aStereotype to: aStereotype
 ]
 
 { #category : 'accessing - tags' }
@@ -218,6 +200,20 @@ OPUMLMetaElement >> inspectorPropertiesSelectors [
 		  sorted
 ]
 
+{ #category : 'copying' }
+OPUMLMetaElement >> isBidirectionalToOneSlotNamed: aSlotName [
+
+	| setter |
+	setter := self class lookupSelector: (aSlotName , ':') asSymbol.
+	^ setter isNotNil and: [ setter refersToLiteral: OPUMLToOneLink binding ]
+]
+
+{ #category : 'accessing' }
+OPUMLMetaElement >> metaElementClass [
+
+	^ OPUMLMetaElement
+]
+
 { #category : 'inspecting' }
 OPUMLMetaElement >> nonEmptyinspectorProperties [
 	^ self inspectorProperties
@@ -229,11 +225,11 @@ OPUMLMetaElement >> oclAsType: aClassifier [
 	^ sharedGeneralizations at: (self oclClassifierNameFrom: aClassifier)
 ]
 
-{ #category : 'evaluating' }
+{ #category : 'ocl-experimental' }
 OPUMLMetaElement >> oclClassifierNameFrom: anObject [
-	(anObject isKindOf: OPUMLMetaElement class) ifTrue: [
-		^ anObject name withoutPrefix: 'OPUML' ].
-	(anObject isKindOf: OPUMLMetaElement) ifTrue: [ ^ anObject name ].
+
+	(anObject isKindOf: self metaElementClass class) ifTrue: [ ^ anObject name withoutPrefix: self umlClassPrefix ].
+	(anObject isKindOf: self metaElementClass) ifTrue: [ ^ anObject name ].
 	anObject isString ifTrue: [ ^ anObject ].
 	self error: 'Unknown classifier ' , anObject asString
 ]
@@ -250,6 +246,59 @@ OPUMLMetaElement >> oclIsKindOf: aClassifier [
 OPUMLMetaElement >> oclIsTypeOf: aClassifier [
 
 	^ sharedGeneralizations keys last = (self oclClassifierNameFrom: aClassifier)
+]
+
+{ #category : 'copying' }
+OPUMLMetaElement >> postCopy [
+
+	| originalShared copiedShared |
+	super postCopy.
+	uuid := nil.
+	tags ifNotNil: [
+			| originalTags |
+			originalTags := tags.
+			tags := OrderedDictionary new.
+			originalTags keysAndValuesDo: [ :key :value |
+				(key = #appliedStereotypes or: [ key asString beginsWith: 'extension_' ]) ifFalse: [ tags at: key put: value ] ] ].
+	sharedGeneralizations ifNil: [
+			self postCopyResetSliceSlots.
+			^ self ].
+	originalShared := sharedGeneralizations.
+	copiedShared := OrderedDictionary new: originalShared size.
+	originalShared keysAndValuesDo: [ :key :slice |
+			copiedShared at: key put: (slice class == self class
+					 ifTrue: [ self ]
+					 ifFalse: [ slice shallowCopy ]) ].
+	copiedShared valuesDo: [ :eachSlice | eachSlice postCopySliceWithShared: copiedShared ]
+]
+
+{ #category : 'copying' }
+OPUMLMetaElement >> postCopyResetSliceSlots [
+
+	| metaSlotNames |
+	metaSlotNames := self metaElementClass instVarNames.
+	self class allInstVarNames do: [ :slotName |
+			(metaSlotNames includes: slotName) ifFalse: [
+					| currentValue |
+					currentValue := self instVarNamed: slotName.
+					currentValue ifNotNil: [ self instVarNamed: slotName put: (self postCopySlotValue: currentValue forSlotNamed: slotName) ] ] ]
+]
+
+{ #category : 'copying' }
+OPUMLMetaElement >> postCopySliceWithShared: aDictionary [
+
+	sharedGeneralizations := aDictionary.
+	self initializeDirectGeneralizations.
+	self postCopyResetSliceSlots
+]
+
+{ #category : 'copying' }
+OPUMLMetaElement >> postCopySlotValue: aValue forSlotNamed: aSlotName [
+
+	(aValue isKindOf: OPUMLToManyLinks) ifTrue: [ ^ nil ].
+	aValue class == OrderedCollection ifTrue: [ ^ aValue copy ].
+	(self isBidirectionalToOneSlotNamed: aSlotName) ifTrue: [ ^ nil ].
+	^ aValue
 ]
 
 { #category : 'printing' }
@@ -279,9 +328,14 @@ OPUMLMetaElement >> removeTagAt: aKey [
 	tags removeKey: aKey
 ]
 
-{ #category : 'accessing' }
-OPUMLMetaElement >> removeTagNamed: aKey [
-	tags removeKey: aKey
+{ #category : 'accessing - stereotypes' }
+OPUMLMetaElement >> setExtensionFor: aStereotype to: aValue [
+
+	| meta attribute |
+	meta := aStereotype umlMetaClass.
+	attribute := (meta allAttributes select: [ :each | each name beginsWith: 'base_' ]) detect: [ :each |
+		             self oclIsKindOf: each type name ].
+	self perform: (attribute opposite name , ':') asSymbol with: aValue
 ]
 
 { #category : 'inspecting' }
@@ -319,7 +373,14 @@ OPUMLMetaElement >> tags [
 
 { #category : 'accessing' }
 OPUMLMetaElement >> umlClassName [
-	^ self className withoutPrefix: 'OPUML'
+
+	^ self className withoutPrefix: self umlClassPrefix
+]
+
+{ #category : 'accessing' }
+OPUMLMetaElement >> umlClassPrefix [
+
+	^ 'OPUML'
 ]
 
 { #category : 'accessing' }
@@ -329,12 +390,9 @@ OPUMLMetaElement >> umlMetaClass [
 
 { #category : 'accessing - stereotypes' }
 OPUMLMetaElement >> unapplyStereotype: aStereotype [
-	| meta attribute |
-	self appliedStereotypes remove: aStereotype ifAbsent: [  ].
-	meta := aStereotype umlMetaClass.
-	attribute := (meta allAttributes select: [ :each | each name beginsWith: 'base_' ])
-		detect: [ :each | self oclIsKindOf: each type name ].
-	self perform: (attribute opposite name , ':') asSymbol with: nil
+
+	self appliedStereotypes remove: aStereotype ifAbsent: [ ].
+	self setExtensionFor: aStereotype to: nil
 ]
 
 { #category : 'accessing' }

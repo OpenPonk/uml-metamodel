@@ -305,11 +305,10 @@ OPUMLProperty >> isMultivalued [
 { #category : 'operations' }
 OPUMLProperty >> isNavigable [
 	"The query isNavigable() indicates whether it is possible to navigate across the property."
-	
-	"{OCL} result = (not classifier->isEmpty() or association.navigableOwnedEnd->includes(self))"
-	
-	^ owningClass isNotNil or: [ association navigableOwnedEnds includes: self ]
 
+	"{OCL} result = (not classifier->isEmpty() or association.navigableOwnedEnd->includes(self))"
+
+	^ owningClass isNotNil or: [ association isNotNil and: [ association navigableOwnedEnds includes: self ] ]
 ]
 
 { #category : 'operations - stubs' }
